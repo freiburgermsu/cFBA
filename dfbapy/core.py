@@ -9,11 +9,7 @@ import json
 import re
 
 empty = ['', '-', '', None, nan]
-
-# import enzyme kinetics and rate equations
-with open('../scraping/SABIO/scraped_content/sabio_proccessed.json', 'rb') as f:
-    reaction_kinetics = json.load(f)
-    
+   
 # add the units of logarithm to the Magnesium concentration
 def isnumber(string):
     string = str(string)
