@@ -63,7 +63,6 @@ class scraping():
         print("Exiting now...")
         exit(0)
 
-
     """
     --------------------------------------------------------------------
         STEP 0: GET BIGG MODEL TO SCRAPE AND SETUP DIRECTORIES AND PROGRESS FILE
@@ -147,8 +146,6 @@ class scraping():
             f = open(entryids_json_file_path, "r")
             entry_id_json_out = json.load(f)
             f.close()
-
-
 
     """
     --------------------------------------------------------------------
