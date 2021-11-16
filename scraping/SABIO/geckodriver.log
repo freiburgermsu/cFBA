@@ -642,14 +642,28 @@ JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Cou
 JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
 JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
 JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
-1636691742056	geckodriver	INFO	Listening on 127.0.0.1:65118
-1636691745591	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\ANDREW~1\\AppData\\Local\\Temp\\rust_mozprofileQQACO8"
-1636691823677	geckodriver	INFO	Listening on 127.0.0.1:50807
-1636691827388	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\ANDREW~1\\AppData\\Local\\Temp\\rust_mozprofileV9H8pE"
-1636691828125	Marionette	INFO	Marionette enabled
-1636691829888	Marionette	INFO	Listening on port 50815
-1636691830043	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-1636691855370	Marionette	INFO	Stopped listening on port 50815
-
-###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
-
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
+JavaScript error: resource://gre/modules/PromiseWorker.jsm, line 106: Error: Could not get children of file(C:\Users\Andrew Freiburger\AppData\Local\Temp\rust_mozprofileH442TD\thumbnails) because it does not exist
