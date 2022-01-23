@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # import statements
+from scipy.constants import micro, milli
 from math import inf 
 import cobra
 import pandas
@@ -27,7 +28,14 @@ def average(num_1, num_2 = None):
         else:
             return num_1
     elif type(num_1) is list:
-        average = sum(num_1) / len(num_1)
+        average = None
+        summation = total = 0
+        for num in num_1:
+            if num is not None:
+                summation += num
+                total += 1
+        if total > 0:
+            average = summation/total
         return average
     else:
         return None
@@ -93,20 +101,16 @@ class dFBA():
                     entry = False
                     condition_instance = self.reaction_kinetics[enzyme][reaction][condition]
                     if "SubstitutedRateLaw" in condition_instance:     # Statistics of the aggregated data with each condition should be provided in a separate file for provenance of the scraped content.
-                        remainder = re.sub('([0-9ABC/()+.*])', '', condition_instance["SubstitutedRateLaw"])
+                        remainder = re.sub('([0-9ABC/()+.*millimicro])', '', condition_instance["SubstitutedRateLaw"])
+                        print(remainder)
                         if remainder == '':
-                            A = 0
-                            B = 0
-                            C = 0
-
+                            A = B = C = 0
                             if "A" in condition_instance["Parameters"]:   
                                 if condition_instance["Parameters"]["A"]["species"] in concentrations: 
                                     A = concentrations[condition_instance["Parameters"]["A"]["species"]]
-
                             if "B" in condition_instance["Parameters"]:   
                                 if condition_instance["Parameters"]["B"]["species"] in concentrations:    
                                     B = concentrations[condition_instance["Parameters"]["B"]["species"]]
-
                             if "C" in condition_instance["Parameters"]:   
                                 if condition_instance["Parameters"]["C"]["species"] in concentrations:    
                                     C = concentrations[condition_instance["Parameters"]["C"]["species"]]
@@ -114,9 +118,10 @@ class dFBA():
                             try:
                                 flux = eval(condition_instance["SubstitutedRateLaw"])
                             except:
+                                flux = None
                                 pass
                             
-                            add_or_write = self._find_data_match(enzyme, reaction, entry_id)
+                            add_or_write = self._find_data_match(enzyme, reaction, condition)
                             if add_or_write == 'a':                                    
                                 fluxes.append(flux) 
                             elif add_or_write == 'w':
@@ -127,11 +132,11 @@ class dFBA():
             if entry:
                 if self.verbose:
                     print(enzyme, self.timestep, fluxes)
-                self.df.at[enzyme, f'{self.timestep} (min)'] = average(fluxes)
+                self.fluxes.at[enzyme, f'{self.timestep*self.timestep_value} min'] = average(fluxes)
 
-    def _set_constraints(self, reaction, reaction_name, constant, first):
+    def _set_constraints(self, reaction, reaction_name, constant):
         reaction_name = re.sub('\s', '_', reaction_name)
-        if first:
+        if self.timestep == 1:
             expression = reaction.flux_expression
             constraint = self.model.problem.Constraint(expression, lb=constant, ub=constant, name=f'{reaction_name}_kinetics')
             self.model.add_cons_vars(constraint)
@@ -142,34 +147,36 @@ class dFBA():
             else:
                 reaction.upper_bound = reaction.lower_bound = constant
                 
-    def _update_concentrations(self, solution, first):
-        changed = set()
-        unchanged = set()
+    def _update_concentrations(self):
         for metabolite in self.model.metabolites:
             # define the initial concentrations
-            if first and metabolite.name in self.parameters['initial_concentrations']:
+            if self.timestep == 1 and metabolite.name in self.parameters['initial_concentrations']:
                 before = self.parameters['initial_concentrations'][metabolite.name]
-            elif first:
+            elif self.timestep == 1:
                 before = 0
-            elif not first: 
+            elif not self.timestep == 1: 
                 before = self.variables['concentrations'][metabolite.name]
+            else:
+                print(f'--> ERROR: The metabolite {metabolite.name} is unexpected')
             
             # calculate the change in concentrations from the reaction fluxes
-            for reaction in self.model.reactions:
-                if metabolite in reaction.metabolites:
-                    delta_conc = reaction.metabolites[metabolite] * solution.fluxes[reaction.id]
-                    if first:
+            for rxn in self.model.reactions:
+                if metabolite in rxn.metabolites:
+                    delta_conc = rxn.metabolites[metabolite] * self.fluxes.at[rxn.name, f'{self.timestep*self.timestep_value} min']
+                    if self.timestep == 1:
                         self.variables['concentrations'][metabolite.name] = delta_conc
                     else:
                         self.variables['concentrations'][metabolite.name] += delta_conc
-                        if before != self.variables['concentrations'][metabolite.name] and metabolite.name not in changed:
-                            changed.add(metabolite.name)
+                        if before != self.variables['concentrations'][metabolite.name] and metabolite.name not in self.changed:
+                            self.changed.add(metabolite.name)
                             if self.verbose:
                                 print('The {} concentration changed in timestep {}'.format(metabolite.name, self.timestep))
-                        if before == self.variables['concentrations'][metabolite.name] and metabolite.name not in unchanged.union(changed):
-                            unchanged.add(metabolite.name)
+                        if before == self.variables['concentrations'][metabolite.name] and metabolite.name not in self.unchanged.union(self.changed):
+                            self.unchanged.add(metabolite.name)
                             if self.printing:
                                 print('--> The {} concentration did not change in timestep {}'.format(metabolite.name, self.timestep))
+                                
+            self.concentrations.at[str(metabolite.name), f'{self.timestep*self.timestep_value} min'] = self.variables['concentrations'][metabolite.name]
                             
     def simulate(self, 
                  initial_concentrations: dict,
@@ -182,11 +189,21 @@ class dFBA():
         
         # define the dataframe for the time series content
         self.parameters['timesteps'] = round(total_time/timestep)
-        indices = [enzyme for enzyme in self.reaction_kinetics]
-        columns = [f'{(step+1)*timestep} (min)' for step in range(self.parameters['timesteps'])]
-        self.df = pandas.DataFrame(index = indices, columns = columns)
-        self.df.index.name = 'enzymes'
-        print(self.df)
+        self.timestep_value = timestep
+        self.changed = set()
+        self.unchanged = set()
+        
+        # define a concentrations DataFrame
+        indices= set(met.name for met in self.model.metabolites)
+        columns = [f'{(step+1)*self.timestep_value} min' for step in range(self.parameters['timesteps'])]
+        self.concentrations = pandas.DataFrame(index = indices, columns = columns)
+        self.concentrations.index.name = 'metabolite'
+        
+        # define a fluxes DataFrame
+        indices= set(rxn.name for rxn in self.model.reactions)
+        columns = [f'{(step+1)*self.timestep_value} min' for step in range(self.parameters['timesteps'])]
+        self.fluxes = pandas.DataFrame(index = indices, columns = columns)
+        self.fluxes.index.name = 'enzymes'
         
         # define experimental conditions
         self.parameters['initial_concentrations'] = initial_concentrations
@@ -195,12 +212,18 @@ class dFBA():
         self.variables['elapsed_time'] = 0
         
         #Simulate for each timestep within total time frame
-        first = True
         solutions = []
         for self.timestep in range(1,self.parameters['timesteps']+1):
             print('timestep', self.timestep)
             
-            if first:
+            # execute the model and update concentrations
+            solution = self.model.optimize()
+            solutions.append(solution)
+            print(f'\nobjective value for timestep {self.timestep}: ', solution.objective_value, '\n\n')
+            for rxn in self.model.reactions:
+                self.fluxes.at[rxn.name, f'{self.timestep*self.timestep_value} min'] = solution.fluxes[rxn.id]
+            
+            if self.timestep == 1:
                 self._calculate_kinetics(self.parameters['initial_concentrations'])
             else:
                 self._calculate_kinetics(self.variables['concentrations'])
@@ -210,30 +233,15 @@ class dFBA():
                 if any(rxn.lower() == reaction.name for rxn in self.parameters['calculated_rate_laws']):
                     kinetic_flux = self.parameters['calculated_rate_laws'][reaction.name]
 #                     print(kinetic_flux)
-                    self._set_constraints(reaction, reaction.name,kinetic_flux, first)
+                    self._set_constraints(reaction, reaction.name,kinetic_flux)
                 else:
                     if self.verbose and self.timestep == 1:
                         print(f'--> ERROR: The {reaction.name} reaction is not defined in the kinetics data.')                    
 
-            # execute the model and update concentrations
-            self.solution = self.model.optimize()
-            solutions.append(self.solution)
-            print(f'\nobjective value for timestep {self.timestep}: ', self.solution.objective_value, '\n\n')
-            self._update_concentrations(self.solution, first)
-            
+            self._update_concentrations()
             self.variables['elapsed_time'] += self.timestep
-        
-            if self.timestep == 1:
-                first = False
-        
-        if self.printing:
-            self._visualize()
-        
-        return self.df, solutions
-
-    def _visualize(self):
-        print('='*50)
-        print(self.df.to_string())
+                
+        return solutions
         
     def export(self,):
         pass
