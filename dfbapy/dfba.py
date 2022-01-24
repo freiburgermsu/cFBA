@@ -46,20 +46,19 @@ def average(num_1, num_2 = None):
 # define chemical concentrations
 class dFBA():
     def __init__(self, 
-                 model_path,                            # BiGG model            
+                 bigg_model_path,    # BiGG model            
                  reaction_kinetics: dict, # unsure about this structure 
                  verbose = False,
                  printing = False):
         
         # define object content
-        self.model = cobra.io.read_sbml_model(model_path)
+        self.model = cobra.io.read_sbml_model(bigg_model_path)
         self.reaction_kinetics = reaction_kinetics
         self.verbose = verbose
         self.printing = printing
         
         # define the parameter and variable dictionaries
         self.parameters = {}
-        self.parameters['calculated_rate_laws'] = {}
         
         self.variables = {}
         self.variables['concentrations'] = {}
@@ -71,7 +70,6 @@ class dFBA():
         
     def _find_data_match(self,enzyme, reaction, entry_id):        
         # define the closest match of the data to the parameterized conditions
-        minimum = inf
         if isnumber(self.reaction_kinetics[enzyme][reaction][entry_id]["Temperature"]):
             temperature_deviation = abs(self.parameters['temperature'] - float(self.reaction_kinetics[enzyme][reaction][entry_id]["Temperature"]))/self.parameters['temperature']
         else:
@@ -82,43 +80,50 @@ class dFBA():
         else:
             ph_deviation = 0
 
-        old_minimum = minimum
+        old_minimum = self.minimum
         deviation = average(temperature_deviation, ph_deviation)
-        minimum = min(deviation, minimum)
+        self.minimum = min(deviation, self.minimum)
 #        print('minimum', minimum)
 #        print('deviation', deviation)
 
-        if old_minimum == minimum:
+        if old_minimum == self.minimum:
             return 'a'
-        elif deviation == minimum:
+        elif deviation == self.minimum:
             return 'w'
     
-    def _calculate_kinetics(self, concentrations: dict):
+    def _calculate_kinetics(self):
+        previous_column = f'{(self.timestep-1)*self.timestep_value} min'
         for enzyme in self.reaction_kinetics:
             fluxes = []
             for reaction in self.reaction_kinetics[enzyme]:   
                 for condition in self.reaction_kinetics[enzyme][reaction]:    
-                    entry = False
                     condition_instance = self.reaction_kinetics[enzyme][reaction][condition]
                     if "SubstitutedRateLaw" in condition_instance:     # Statistics of the aggregated data with each condition should be provided in a separate file for provenance of the scraped content.
                         remainder = re.sub('([0-9ABC/()+.*millimicro])', '', condition_instance["SubstitutedRateLaw"])
-                        print(remainder)
                         if remainder == '':
                             A = B = C = 0
-                            if "A" in condition_instance["Parameters"]:   
-                                if condition_instance["Parameters"]["A"]["species"] in concentrations: 
-                                    A = concentrations[condition_instance["Parameters"]["A"]["species"]]
+                            if "A" in condition_instance["Parameters"]:  
+                                if condition_instance["Parameters"]["A"]["species"] in self.concentrations.index: 
+                                    A = self.concentrations.at[condition_instance["Parameters"]["A"]["species"], previous_column]
+                                else:
+                                    print('-->ERROR: The A parameter {} is named differently in the BiGG model'.format(condition_instance["Parameters"]["A"]["species"]))
                             if "B" in condition_instance["Parameters"]:   
-                                if condition_instance["Parameters"]["B"]["species"] in concentrations:    
-                                    B = concentrations[condition_instance["Parameters"]["B"]["species"]]
+                                if condition_instance["Parameters"]["B"]["species"] in self.concentrations.index:    
+                                    B = self.concentrations.at[condition_instance["Parameters"]["B"]["species"], previous_column]
+                                else:
+                                    print('-->ERROR: The A parameter {} is named differently in the BiGG model'.format(condition_instance["Parameters"]["B"]["species"]))
                             if "C" in condition_instance["Parameters"]:   
-                                if condition_instance["Parameters"]["C"]["species"] in concentrations:    
-                                    C = concentrations[condition_instance["Parameters"]["C"]["species"]]
+                                if condition_instance["Parameters"]["C"]["species"] in self.concentrations.index:    
+                                    C = self.concentrations.at[condition_instance["Parameters"]["C"]["species"], previous_column]
+                                else:
+                                    print('-->ERROR: The A parameter {} is named differently in the BiGG model'.format(condition_instance["Parameters"]["C"]["species"]))
 
                             try:
                                 flux = eval(condition_instance["SubstitutedRateLaw"])
+#                                print(A, B, condition_instance["SubstitutedRateLaw"])
                             except:
-                                flux = None
+                                print('-->ERROR: The kinetic expression {} is not valid'.format(condition_instance["SubstitutedRateLaw"]))
+                                flux = 0
                                 pass
                             
                             add_or_write = self._find_data_match(enzyme, reaction, condition)
@@ -126,57 +131,39 @@ class dFBA():
                                 fluxes.append(flux) 
                             elif add_or_write == 'w':
                                 fluxes = [flux]
-                                
-                            entry = True
+                        else:
+                            print('-->ERROR: The rate law {} is not executable, as the consequence of these excessive characters: {}'.format(condition_instance["SubstitutedRateLaw"], remainder))
 
-            if entry:
-                if self.verbose:
-                    print(enzyme, self.timestep, fluxes)
-                self.fluxes.at[enzyme, f'{self.timestep*self.timestep_value} min'] = average(fluxes)
 
-    def _set_constraints(self, reaction, reaction_name, constant):
-        reaction_name = re.sub('\s', '_', reaction_name)
-        if self.timestep == 1:
-            expression = reaction.flux_expression
-            constraint = self.model.problem.Constraint(expression, lb=constant, ub=constant, name=f'{reaction_name}_kinetics')
+            if fluxes != [] and float(average(fluxes)) != 0:
+                if self.printing:
+                    print(f'{enzyme} fluxes:', fluxes, '\n')
+                self.fluxes.at[enzyme, self.col] = average(fluxes)
+
+    def _set_constraints(self, reaction, constant):   
+        # initiate a new constraint
+#        self.model = cobra.io.read_sbml_model(self.bigg_model_path)
+        
+        # pass the constraint
+        reaction_name = re.sub(' ', '_', reaction.name)   
+        if self.timestep == 1 and reaction_name not in self.constrained:
+            self.constrained.append(reaction_name)
+            
+            constraint = self.model.problem.Constraint(reaction.flux_expression, lb=constant, ub=constant, name=f'{reaction_name}_kinetics')
+            self.model.solver.update()
             self.model.add_cons_vars(constraint)
             self.model.solver.update()
         else:
-            if not isnumber(constant):
-                print(f'--> ERROR: The constant for {reaction_name} is erronenous.')
-            else:
-                reaction.upper_bound = reaction.lower_bound = constant
+            reaction.upper_bound = reaction.lower_bound = constant
                 
     def _update_concentrations(self):
-        for metabolite in self.model.metabolites:
-            # define the initial concentrations
-            if self.timestep == 1 and metabolite.name in self.parameters['initial_concentrations']:
-                before = self.parameters['initial_concentrations'][metabolite.name]
-            elif self.timestep == 1:
-                before = 0
-            elif not self.timestep == 1: 
-                before = self.variables['concentrations'][metabolite.name]
-            else:
-                print(f'--> ERROR: The metabolite {metabolite.name} is unexpected')
-            
-            # calculate the change in concentrations from the reaction fluxes
+        for met in self.model.metabolites:      
+            self.concentrations.at[str(met.name), self.col] = 0
             for rxn in self.model.reactions:
-                if metabolite in rxn.metabolites:
-                    delta_conc = rxn.metabolites[metabolite] * self.fluxes.at[rxn.name, f'{self.timestep*self.timestep_value} min']
-                    if self.timestep == 1:
-                        self.variables['concentrations'][metabolite.name] = delta_conc
-                    else:
-                        self.variables['concentrations'][metabolite.name] += delta_conc
-                        if before != self.variables['concentrations'][metabolite.name] and metabolite.name not in self.changed:
-                            self.changed.add(metabolite.name)
-                            if self.verbose:
-                                print('The {} concentration changed in timestep {}'.format(metabolite.name, self.timestep))
-                        if before == self.variables['concentrations'][metabolite.name] and metabolite.name not in self.unchanged.union(self.changed):
-                            self.unchanged.add(metabolite.name)
-                            if self.printing:
-                                print('--> The {} concentration did not change in timestep {}'.format(metabolite.name, self.timestep))
-                                
-            self.concentrations.at[str(metabolite.name), f'{self.timestep*self.timestep_value} min'] = self.variables['concentrations'][metabolite.name]
+                if met in rxn.metabolites:
+                    delta_conc = rxn.metabolites[met] * self.fluxes.at[str(rxn.name), self.col]
+                    self.concentrations.at[str(met.name), self.col] += delta_conc
+#                    print(met, rxn.metabolites[met], self.fluxes.at[str(rxn.name), col], delta_conc)
                             
     def simulate(self, 
                  initial_concentrations: dict,
@@ -192,54 +179,78 @@ class dFBA():
         self.timestep_value = timestep
         self.changed = set()
         self.unchanged = set()
+        self.minimum = inf
+        self.constrained = []
         
         # define a concentrations DataFrame
         indices= set(met.name for met in self.model.metabolites)
-        columns = [f'{(step+1)*self.timestep_value} min' for step in range(self.parameters['timesteps'])]
+        print(indices)
+        columns = [f'{(step)*self.timestep_value} min' for step in range(self.parameters['timesteps']+1)]
         self.concentrations = pandas.DataFrame(index = indices, columns = columns)
         self.concentrations.index.name = 'metabolite'
         
         # define a fluxes DataFrame
         indices= set(rxn.name for rxn in self.model.reactions)
-        columns = [f'{(step+1)*self.timestep_value} min' for step in range(self.parameters['timesteps'])]
+        columns = [f'{(step)*self.timestep_value} min' for step in range(self.parameters['timesteps']+1)]
         self.fluxes = pandas.DataFrame(index = indices, columns = columns)
         self.fluxes.index.name = 'enzymes'
         
         # define experimental conditions
-        self.parameters['initial_concentrations'] = initial_concentrations
         self.parameters['temperature'] = temperature
         self.parameters['pH'] = p_h
         self.variables['elapsed_time'] = 0
+        
+        # assign the initial concentrations
+        for met in self.model.metabolites:
+            self.concentrations.at[str(met.name), '0 min'] = 0
+            if met.name in initial_concentrations:
+                self.concentrations.at[str(met.name), '0 min'] = initial_concentrations[str(met.name)]
+                
+        # determine the BiGG reactions for which kinetics are predefined
+        self.defined_reactions = []
+        for rxn in self.model.reactions:
+            if rxn.name in self.reaction_kinetics:
+                self.defined_reactions.append(rxn)
         
         #Simulate for each timestep within total time frame
         solutions = []
         for self.timestep in range(1,self.parameters['timesteps']+1):
             print('timestep', self.timestep)
+            self.col = f'{self.timestep*self.timestep_value} min'
             
-            # execute the model and update concentrations
+            # execute the COBRA model 
             solution = self.model.optimize()
             solutions.append(solution)
-            print(f'\nobjective value for timestep {self.timestep}: ', solution.objective_value, '\n\n')
+            print(f'\nobjective value for timestep {self.timestep}: ', solution.objective_value)
             for rxn in self.model.reactions:
-                self.fluxes.at[rxn.name, f'{self.timestep*self.timestep_value} min'] = solution.fluxes[rxn.id]
+                self.fluxes.at[rxn.name, self.col] = solution.fluxes[rxn.id]
             
-            if self.timestep == 1:
-                self._calculate_kinetics(self.parameters['initial_concentrations'])
-            else:
-                self._calculate_kinetics(self.variables['concentrations'])
-            
-            #Calcuate and parameterize fluxes from michaelis-menten kinetics
-            for reaction in self.model.reactions:
-                if any(rxn.lower() == reaction.name for rxn in self.parameters['calculated_rate_laws']):
-                    kinetic_flux = self.parameters['calculated_rate_laws'][reaction.name]
-#                     print(kinetic_flux)
-                    self._set_constraints(reaction, reaction.name,kinetic_flux)
-                else:
-                    if self.verbose and self.timestep == 1:
-                        print(f'--> ERROR: The {reaction.name} reaction is not defined in the kinetics data.')                    
-
+            # calculate custom fluxes, constrain the model, and update concentrations
+            self._calculate_kinetics()
             self._update_concentrations()
+            for reaction in self.defined_reactions:
+                self._set_constraints(reaction, self.fluxes.at[reaction.name, self.col])       
+
             self.variables['elapsed_time'] += self.timestep
+            
+        # identify the chemicals that dynamically changed in concentrations
+        for met in self.model.metabolites:
+            first = self.concentrations.at[str(met.name), '0 min']
+            final = self.concentrations.at[str(met.name), self.col]
+            if first != final:
+                self.changed.add(met.name)
+            if first == final:
+                self.unchanged.add(met.name)
+                
+        if self.verbose:
+            print('\n\nUnchanged metabolites', '\n', '='*2*len('unchanged metabolites'), '\n', self.unchanged)
+            print('\n\nChanged metabolites', '\n', '='*2*len('changed metabolites'), '\n', self.changed)
+            print(f'\nThe {self.constrained} reactions were constrained in the COBRA model.')     
+        elif self.printing:
+            if self.unchanged == set():
+                print('\n-->All of the metabolites changed concentration over the simulation')
+            else:
+                print('\n\nUnchanged metabolites', '\n', '='*2*len('unchanged metabolites'), '\n', self.unchanged)
                 
         return solutions
         

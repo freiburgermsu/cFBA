@@ -5,11 +5,38 @@
 from scipy.constants import minute, hour
 from selenium.webdriver.support.ui import Select
 from selenium import webdriver
-from itertools import islice
 from glob import glob
+import numpy as np
 import datetime
 import pandas
 import json, time, re, os
+
+#Taken from: https://github.com/hmallen/numpyencoder
+class NumpyEncoder(json.JSONEncoder):
+    """ Custom encoder for numpy data types """
+    def default(self, obj):
+        if isinstance(obj, (np.int_, np.intc, np.intp, np.int8,
+                            np.int16, np.int32, np.int64, np.uint8,
+                            np.uint16, np.uint32, np.uint64)):
+
+            return int(obj)
+
+        elif isinstance(obj, (np.float_, np.float16, np.float32, np.float64)):
+            return float(obj)
+
+        elif isinstance(obj, (np.complex_, np.complex64, np.complex128)):
+            return {'real': obj.real, 'imag': obj.imag}
+
+        elif isinstance(obj, (np.ndarray,)):
+            return obj.tolist()
+
+        elif isinstance(obj, (np.bool_)):
+            return bool(obj)
+
+        elif isinstance(obj, (np.void)): 
+            return None
+
+        return json.JSONEncoder.default(self, obj)
 
 
 class SABIO_scraping():
@@ -63,9 +90,8 @@ class SABIO_scraping():
     def start(self,bigg_model_path,bigg_model_name): # find the BiGG model that will be scraped
         if os.path.exists(bigg_model_path):
             self.model = json.load(open(bigg_model_path))
-            
         else:
-            print('-> ERROR: The BiGG model file does not exist')
+            self._fatal_error_handler('The BiGG model file does not exist')
             
         self.bigg_model_name = bigg_model_name 
         if bigg_model_name is None:
@@ -82,12 +108,13 @@ class SABIO_scraping():
         self.paths['scraped_model_json_file_path'] = os.path.join(self.paths['sub_directory_path'], "scraped_model") + ".json"
         self.paths['sel_xls_download_path'] = os.path.join(self.paths['sub_directory_path'],"downloaded_xls")
         
+        # monitor the scrapping progress
         self.paths['progress_path'] = os.path.join(self.paths['sub_directory_path'], "current_progress") + '.txt'
         if os.path.exists(self.paths['progress_path']):
-            f = open(self.paths['progress_path'], "r")
-            self.step_number = int(f.read(1))
-            if not re.search('[1-5]',str(self.step_number)):
-                self._fatal_error_handler("Progress file malformed. Please delete and restart")
+            with open(self.paths['progress_path'], "r") as f:
+                self.step_number = int(f.read(1))
+                if not re.search('[1-5]',str(self.step_number)):
+                    self._fatal_error_handler("Progress file malformed. Please delete and restart")
         else:
             self.step_number = 1
             self._progress_update(self.step_number)
@@ -118,10 +145,9 @@ class SABIO_scraping():
             f.close()
         else:
             self.variables['entryids_progress'] = {}
-        
-        # update the step counter
-        self.step_number = 1
-        self._progress_update(self.step_number)
+            
+        self.paths['xls_csv_path'] = os.path.join(self.paths['sub_directory_path'], "proccessed-xls") + ".csv"
+        self.paths['entryids_json_path'] = os.path.join(self.paths['sub_directory_path'], "scraped_entryids") + ".json"
 
     """
     --------------------------------------------------------------------
@@ -131,8 +157,10 @@ class SABIO_scraping():
 
     def scrape_xls(self,reaction_identifier, search_option):
         self.driver.get("http://sabiork.h-its.org/newSearch/index")
-        self._wait_for_id("resetbtn")
-        self._click_element_id("resetbtn")
+       
+        time.sleep(self.parameters['general_delay'])
+
+        self._click_element_id("resetbtn")        
         
         time.sleep(self.parameters['general_delay'])
         
@@ -185,10 +213,17 @@ class SABIO_scraping():
             return False
 
         self.driver.get("http://sabiork.h-its.org/newSearch/spreadsheetExport")
+        
         time.sleep(self.parameters['general_delay']*7.5)
-        self._click_element_id("excelExport")
+        
+        element = self.driver.find_element_by_xpath("//*[text()[contains(., 'Add all')]]")
+        element.click()
+        
         time.sleep(self.parameters['general_delay']*2.5)
-        #self.driver.close()
+        
+        self._click_element_id("excelExport")
+        
+        time.sleep(self.parameters['general_delay']*2.5)
 
         return True
     
@@ -277,55 +312,9 @@ class SABIO_scraping():
     
         return minutes_per_enzyme*reactions_quantity
 
-    def scrape_bigg_xls(self,):
-        """
-        chrome_options = webdriver.ChromeOptions()
-        prefs = {'download.default_directory' : self.paths['cwd'] + self.paths['sel_xls_download_path']}
-        chrome_options.add_experimental_option('prefs', prefs)
-        self.driver = webdriver.Chrome(chrome_options=chrome_options)
-        
-        self.driver.get("chrome://settings/security")
-        
-
-        
-        root = self.driver.find_element_by_tag_name("settings-ui")
-        shadow_root = self._expand_shadow_element(root)
-        
-        root1 = shadow_root.find_element_by_tag_name("settings-main")
-        shadow_root1 = self._expand_shadow_element(root1)
-        
-        root2 = shadow_root1.find_element_by_tag_name("settings-basic-page")
-        shadow_root2 = self._expand_shadow_element(root2)
-        
-        root3 = shadow_root2.find_element_by_tag_name("settings-privacy-page")
-        shadow_root3 = self._expand_shadow_element(root3)
-        
-        root4 = shadow_root3.find_element_by_tag_name("settings-security-page")
-        shadow_root4 = self._expand_shadow_element(root4)
-        
-        root5 = shadow_root4.find_element_by_css_selector("#safeBrowsingStandard")
-        shadow_root5 = self._expand_shadow_element(root5)
-        
-        security_button = shadow_root5.find_element_by_css_selector("div.disc-border")
-        
-        security_button.click()
-        """
-        
-        """
-        fp = webdriver.FirefoxProfile("l2pnahxq.scraper")
-        fp.set_preference("browser.download.folderList",2)
-        fp.set_preference("browser.download.dir", self.paths['cwd'] + self.paths['sel_xls_download_path'])
-        """
-        fp = webdriver.FirefoxProfile("l2pnahxq.scraper")
-        fp.set_preference("browser.download.folderList", 2)
-        fp.set_preference("browser.download.manager.showWhenStarting", False)
-        fp.set_preference("browser.download.dir", self.paths["sel_xls_download_path"])
-        fp.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-        self.driver = webdriver.Firefox(firefox_profile=fp, executable_path="geckodriver.exe")         
-        self.driver.get("http://sabiork.h-its.org/newSearch/index")
-        
+    def scrape_bigg_xls(self,):        
         # estimate the completion time
-        minutes_per_enzyme = 9.5
+        minutes_per_enzyme = 3
         reactions_quantity = len(self.model['reactions'])
         estimated_time = reactions_quantity*minutes_per_enzyme*minute
         estimated_completion = datetime.datetime.now() + datetime.timedelta(seconds = estimated_time)
@@ -333,6 +322,7 @@ class SABIO_scraping():
         print(f'Estimated completion of scraping data for {self.bigg_model_name}): {estimated_completion}, in {estimated_time/hour} hours')
         
         self.model_contents = {}
+        self.count = len(self.variables["scraped_xls"])
         for reaction in self.model["reactions"]:
             # parse the reaction
             annotations = reaction['annotation']
@@ -429,15 +419,17 @@ class SABIO_scraping():
 
     def _scrape_entry_id(self,entry_id):
         entry_id = str(entry_id)
-
-        fp = webdriver.FirefoxProfile("l2pnahxq.scraper")
-        fp.set_preference("browser.download.folderList", 2)
-        fp.set_preference("browser.download.manager.showWhenStarting", False)
-        fp.set_preference("browser.download.dir", self.paths["sel_xls_download_path"])
-        fp.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-        self.driver = webdriver.Firefox(firefox_profile=fp, executable_path="geckodriver.exe")         
-
+        self.driver = webdriver.Firefox(firefox_profile=self.fp, executable_path="geckodriver.exe")         
         self.driver.get("http://sabiork.h-its.org/newSearch/index")
+        
+        time.sleep(self.parameters['general_delay'])
+        
+        self._wait_for_id("resetbtn")
+        
+        time.sleep(self.parameters['general_delay'])
+        
+        self._click_element_id("resetbtn")
+        
         time.sleep(self.parameters['general_delay']*2)
 
         self._click_element_id("option")
@@ -446,9 +438,13 @@ class SABIO_scraping():
         text_area.send_keys(entry_id)
         
         time.sleep(self.parameters['general_delay'])
+        
         self._click_element_id("addsearch")
+        
         time.sleep(self.parameters['general_delay'])
+        
         self._click_element_id(entry_id + "img")
+        
         time.sleep(self.parameters['general_delay'])
         
         self.driver.switch_to.frame(self.driver.find_element_by_xpath("//iframe[@name='iframe_" + entry_id + "']"))
@@ -474,34 +470,25 @@ class SABIO_scraping():
                 return parameters_json
             counter += 1
             
-#        if self.printing:
-#            print(reaction_parameters_df)
-        for i in range(len(reaction_parameters_df[0])-2):
-            print('i', i)
-            parameter_name = reaction_parameters_df[0][i+2]
+        for row in range(2, len(reaction_parameters_df[0])):
+            parameter_name = reaction_parameters_df[0][row]
             inner_parameters_json = {}
-            for j in range(len(reaction_parameters_df)-3):
-                print('j', j)
-                inner_parameters_json[str(reaction_parameters_df[j+1][1])] = reaction_parameters_df[j+1][i+2]
+            for col in range(1, len(reaction_parameters_df.columns)):
+                inner_parameters_json[str(reaction_parameters_df[col][1])] = reaction_parameters_df[col][row]
 
             parameters_json[parameter_name] = inner_parameters_json
-            print(parameters_json)
-        self.driver.close()
         return parameters_json
 
     def scrape_entryids(self,):
         if 'concatenated_data' not in self.paths:
             self.paths['concatenated_data'] = os.path.join(self.paths['sub_directory_path'], "proccessed-xls") + ".csv"
         self.sabio_xls_df = pandas.read_csv(self.paths['concatenated_data'])
-        entryids = sabio_xls_df["EntryID"].unique().tolist()
+        entryids = self.sabio_xls_df["EntryID"].unique().tolist()
 
         for entryid in entryids:
-            if not entryid in self.variables['entryids_progress']:
-#                 try:
+            if not str(entryid) in self.variables['entryids_progress']:
                 self.variables['entryids_progress'][str(entryid)] = self._scrape_entry_id(entryid)
                 self.variables['scraped_entryids'][str(entryid)] = "yes"
-#                 except:
-#                     self.variables['scraped_entryids'][entryid] = "no"
             with open(self.paths["scraped_entryids_path"], 'w') as outfile:
                 json.dump(self.variables['scraped_entryids'], outfile, indent = 4)   
                 outfile.close()
@@ -524,10 +511,19 @@ class SABIO_scraping():
         with open(self.paths['entryids_progress_path']) as json_file: 
             entry_id_data = json.load(json_file)
 
+        try:
+            if self.sabio_xls_df:
+                pass
+            else:
+                self.sabio_xls_df = pandas.read_csv(self.paths['xls_csv_path'])
+        except:
+            self.sabio_xls_df = pandas.read_csv(self.paths['xls_csv_path'])
+            
+        print(self.sabio_xls_df)
         enzymenames = self.sabio_xls_df["Enzymename"].unique().tolist()
         enzyme_dict = {}
         missing_entry_ids = []
-        parameters = {}
+#        parameters = {}
 
         for enzyme in enzymenames:
             sabio_grouped_enzyme_df = self.sabio_xls_df.loc[self.sabio_xls_df["Enzymename"] == enzyme]
@@ -540,7 +536,7 @@ class SABIO_scraping():
                 rxn_string, compounds = self._split_reaction(reaction, sabio = True)
                 bigg_compounds = self.model_content[enzyme]['chemicals']
                 if set(compounds) != set(bigg_compounds):
-                    print(compunds, bigg_compounds)
+                    print(compounds, bigg_compounds)
                     continue
                 
                 dict_reactions_to_append = {}
@@ -610,8 +606,14 @@ class SABIO_scraping():
 
             enzyme_dict[enzyme] = dict_to_append
 
-        with open(self.paths["scraped_model_json_file_path"], 'w') as f:
-            json.dump(enzyme_dict, f, indent=4)
+        with open(self.paths["scraped_model_json_file_path"], 'w', encoding="utf-8") as f:
+            json.dump(enzyme_dict, f, indent=4, sort_keys=True,
+                      separators=(', ', ': '), ensure_ascii=False,
+                      cls=NumpyEncoder)
+            
+        # update the step counter
+        self.step_number = 5
+        self._progress_update(self.step_number)
         
         
     def _progress_update(self, step):
@@ -627,6 +629,15 @@ class SABIO_scraping():
              ):
         self.start(bigg_model_path, bigg_model_name)
 
+        # commence the browser
+        self.fp = webdriver.FirefoxProfile("l2pnahxq.scraper")
+        self.fp.set_preference("browser.download.folderList", 2)
+        self.fp.set_preference("browser.download.manager.showWhenStarting", False)
+        self.fp.set_preference("browser.download.dir", self.paths["sel_xls_download_path"])
+        self.fp.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
+        self.driver = webdriver.Firefox(firefox_profile=self.fp, executable_path="geckodriver.exe")
+        self.driver.get("http://sabiork.h-its.org/newSearch/index")
+
         while True:
             if self.step_number == 1:
                 self.scrape_bigg_xls()
@@ -639,11 +650,6 @@ class SABIO_scraping():
             elif self.step_number == 5:
                 print("Execution complete. Scraper finished.")
                 break
-            
-        # update the step counter
-        self.step_number = 5
-        self._progress_update(self.step_number)
-            
             
 scraping = SABIO_scraping()
 scraping.main('Ecoli core, BiGG, indented.json', 'test_Ecoli')
