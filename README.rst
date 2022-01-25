@@ -54,7 +54,7 @@ The simulation environment is defined:
     "Acetate kinase": {
         "source_1": {
             "Parameters": {
-                'A': {
+                "A": {
                     "unit": "mM",
                     "chemical": "ADP C10H12N5O10P2",
                     "value": "1.0"
@@ -79,10 +79,10 @@ The ``SubstitutedRateLaw`` key must contain a mathematically valid string of the
         "source_1": {
             "Organism": "Escherichia coli",
             "Parameters": {
-                'A': {
+                "A": {
                     "unit": "mM",
                     "chemical": "ADP C10H12N5O10P2",
-                    "v"': "1.0"
+                    "v": "1.0"
                     },
                 "B":{
                     "unit": "mM",
