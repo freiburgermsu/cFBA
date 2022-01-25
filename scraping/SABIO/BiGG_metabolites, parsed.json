@@ -75,7 +75,8 @@
     "name": "2-Phosphoglycolate"
   },
   "35cgmp": {
-    "name": "3',5'-Cyclic"
+    "name": "3',5'-Cyclic",
+    "bigg_name": "3',5'-Cyclic GMP"
   },
   "3c2hmp": {
     "name": "3-Carboxy-2-hydroxy-4-methylpentanoate"
@@ -174,10 +175,12 @@
     "name": "Acetyl phosphate"
   },
   "adp": {
-    "name": "ADP"
+    "name": "ADP",
+    "bigg_name": "ADP C10H12N5O10P2"
   },
   "adprib": {
-    "name": "ADPribose"
+    "name": "ADPribose",
+    "bigg_name": "ADPribose C15H21N5O14P2"
   },
   "ag": {
     "name": "Silver"
@@ -228,7 +231,8 @@
     "name": "Arsenite"
   },
   "btal": {
-    "name": "Butanal"
+    "name": "Butanal",
+    "bigg_name": "Butanal C4H8O"
   },
   "btcoa": {
     "name": "Butanoyl-CoA"
@@ -276,7 +280,8 @@
     "name": "Cytidine"
   },
   "datp": {
-    "name": "DATP"
+    "name": "DATP",
+    "bigg_name": "DATP C10H12N5O12P3"
   },
   "dcamp": {
     "name": "N6-(1,2-Dicarboxyethyl)-AMP"
@@ -285,13 +290,15 @@
     "name": "Dodecanoate (n-C12:0)"
   },
   "dgdp": {
-    "name": "DGDP"
+    "name": "DGDP",
+    "bigg_name": "DGDP C10H12N5O10P2"
   },
   "dgslnt": {
     "name": "Selenodiglutathione"
   },
   "dgtp": {
-    "name": "DGTP"
+    "name": "DGTP",
+    "bigg_name": "DGTP C10H12N5O13P3"
   },
   "dha": {
     "name": "Dihydroxyacetone"
@@ -306,7 +313,8 @@
     "name": "Dihydroneopterin"
   },
   "dimp": {
-    "name": "DIMP"
+    "name": "DIMP",
+    "bigg_name": "DIMP C10H12N4O7P"
   },
   "din": {
     "name": "Deoxyinosine"
@@ -318,13 +326,16 @@
     "name": "DTDPglucose"
   },
   "dttp": {
-    "name": "DTTP"
+    "name": "DTTP",
+    "bigg_name": "DTTP C10H13N2O14P3"
   },
   "dump": {
-    "name": "DUMP"
+    "name": "DUMP",
+    "bigg_name": "DUMP C9H11N2O8P"
   },
   "dutp": {
-    "name": "DUTP"
+    "name": "DUTP",
+    "bigg_name": "DUTP C9H11N2O14P3"
   },
   "eig3p": {
     "name": "D-erythro-1-(Imidazol-4-yl)glycerol 3-phosphate"
@@ -399,7 +410,8 @@
     "name": "Glycerol 2-phosphate"
   },
   "glyclt": {
-    "name": "Glycolate"
+    "name": "Glycolate",
+    "bigg_name": "Glycolate C2H3O3"
   },
   "grdp": {
     "name": "Geranyl diphosphate"
@@ -417,7 +429,8 @@
     "name": "Hydrogen"
   },
   "h2o": {
-    "name": "H2O"
+    "name": "H2O",
+    "bigg_name": "H2O H2O"
   },
   "hcys__L": {
     "name": "L-Homocysteine"
@@ -453,7 +466,8 @@
     "name": "Inner core oligosaccharide lipid A (E coli)"
   },
   "imp": {
-    "name": "IMP"
+    "name": "IMP",
+    "bigg_name": "IMP C10H11N4O8P"
   },
   "indole": {
     "name": "Indole"
@@ -465,7 +479,8 @@
     "name": "3-Deoxy-D-manno-octulosonate 8-phosphate"
   },
   "lcts": {
-    "name": "Lactose"
+    "name": "Lactose",
+    "bigg_name": "Lactose C12H22O11"
   },
   "lipa": {
     "name": "KDO(2)-lipid (A)"
@@ -483,7 +498,8 @@
     "name": "Malonyl-CoA methyl ester"
   },
   "malt": {
-    "name": "Maltose"
+    "name": "Maltose",
+    "bigg_name": "Maltose C12H22O11"
   },
   "malt6p": {
     "name": "Maltose 6'-phosphate"
@@ -630,7 +646,8 @@
     "name": "D-Ribose"
   },
   "ribflv": {
-    "name": "Riboflavin"
+    "name": "Riboflavin",
+    "bigg_name": "Riboflavin C17H20N4O6"
   },
   "rml": {
     "name": "L-Rhamnulose"
@@ -684,7 +701,8 @@
     "name": "L-Threonyl-tRNA(Thr)"
   },
   "thymd": {
-    "name": "Thymidine"
+    "name": "Thymidine",
+    "bigg_name": "Thymidine C10H14N2O5"
   },
   "tma": {
     "name": "Trimethylamine"
@@ -741,7 +759,8 @@
     "name": "UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine"
   },
   "ump": {
-    "name": "UMP"
+    "name": "UMP",
+    "bigg_name": "UMP C9H11N2O9P"
   },
   "ura": {
     "name": "Uracil"
@@ -750,7 +769,8 @@
     "name": "Ureidoacrylate peracid"
   },
   "urea": {
-    "name": "Urea"
+    "name": "Urea",
+    "bigg_name": "Urea CH4N2O"
   },
   "wco": {
     "name": "Tungsten binding cofactor"
@@ -801,7 +821,8 @@
     "name": "D-Allose"
   },
   "amp": {
-    "name": "AMP"
+    "name": "AMP",
+    "bigg_name": "AMP C10H12N5O7P"
   },
   "arbtn": {
     "name": "Aerobactin minus Fe3"
@@ -825,7 +846,8 @@
     "name": "Chloramphenicol"
   },
   "cmp": {
-    "name": "CMP"
+    "name": "CMP",
+    "bigg_name": "CMP C9H12N3O8P"
   },
   "crn__D": {
     "name": "D-Carnitine"
@@ -843,10 +865,12 @@
     "name": "Deoxycytidine"
   },
   "dgmp": {
-    "name": "DGMP"
+    "name": "DGMP",
+    "bigg_name": "DGMP C10H12N5O7P"
   },
   "dtmp": {
-    "name": "DTMP"
+    "name": "DTMP",
+    "bigg_name": "DTMP C10H13N2O8P"
   },
   "duri": {
     "name": "Deoxyuridine"
@@ -894,7 +918,8 @@
     "name": "Gamma-butyrobetaine"
   },
   "gdp": {
-    "name": "GDP"
+    "name": "GDP",
+    "bigg_name": "GDP C10H12N5O11P2"
   },
   "glc__D": {
     "name": "D-Glucose"
@@ -1011,7 +1036,8 @@
     "name": "Spermidine"
   },
   "taur": {
-    "name": "Taurine"
+    "name": "Taurine",
+    "bigg_name": "Taurine C2H7NO3S"
   },
   "thrp": {
     "name": "L-Threonine O-3-phosphate"
@@ -1044,7 +1070,8 @@
     "name": "1-Acyl-sn-glycero-3-phosphoethanolamine (n-C18:1)"
   },
   "3amp": {
-    "name": "3  AMP"
+    "name": "3  AMP",
+    "bigg_name": "3  AMP C10H12N5O7P"
   },
   "4hoxpacd": {
     "name": "4-Hydroxyphenylacetaldehyde"
@@ -1095,7 +1122,8 @@
     "name": "Phenethylamine"
   },
   "sucr": {
-    "name": "Sucrose"
+    "name": "Sucrose",
+    "bigg_name": "Sucrose C12H22O11"
   },
   "2kmb": {
     "name": "2-keto-4-methylthiobutyrate"
@@ -1110,76 +1138,97 @@
     "name": "Succinate semialdehyde-thiamin diphosphate anion"
   },
   "13BDglcn": {
-    "name": "1 3 beta D Glucan"
+    "name": "1 3 beta D Glucan",
+    "bigg_name": "1 3 beta D Glucan C6H10O5"
   },
   "1ag3p_SC": {
-    "name": "1 Acyl sn glycerol 3 phosphate"
+    "name": "1 Acyl sn glycerol 3 phosphate",
+    "bigg_name": "1 Acyl sn glycerol 3 phosphate C1920H3622O700P100"
   },
   "1mncam": {
-    "name": "1 Methylnicotinamide"
+    "name": "1 Methylnicotinamide",
+    "bigg_name": "1 Methylnicotinamide C7H9N2O"
   },
   "1p3h5c": {
-    "name": "L 1 Pyrroline 3 hydroxy 5 carboxylate"
+    "name": "L 1 Pyrroline 3 hydroxy 5 carboxylate",
+    "bigg_name": "L 1 Pyrroline 3 hydroxy 5 carboxylate C5H6NO3"
   },
   "23dhmb": {
     "name": "(R)-2,3-Dihydroxy-3-methylbutanoate"
   },
   "23dpg": {
-    "name": "2 3 Disphospho D glycerate"
+    "name": "2 3 Disphospho D glycerate",
+    "bigg_name": "2 3 Disphospho D glycerate C3H3O10P2"
   },
   "25dhpp": {
-    "name": "2 5 Diamino 6 hydroxy 4  5  phosphoribosylamino  pyrimidine"
+    "name": "2 5 Diamino 6 hydroxy 4  5  phosphoribosylamino  pyrimidine",
+    "bigg_name": "2 5 Diamino 6 hydroxy 4  5  phosphoribosylamino  pyrimidine C9H14N5O8P"
   },
   "2dglc": {
-    "name": "2 Deoxy D glucose"
+    "name": "2 Deoxy D glucose",
+    "bigg_name": "2 Deoxy D glucose C6H12O5"
   },
   "2hpmmbq": {
-    "name": "2 hexaprenyl 3 methyl 6 methoxy 1 4 benzoquinone"
+    "name": "2 hexaprenyl 3 methyl 6 methoxy 1 4 benzoquinone",
+    "bigg_name": "2 hexaprenyl 3 methyl 6 methoxy 1 4 benzoquinone C38H56O3"
   },
   "2mbac": {
-    "name": "2 methylbutyl acetate"
+    "name": "2 methylbutyl acetate",
+    "bigg_name": "2 methylbutyl acetate C7H14O2"
   },
   "2mbald": {
-    "name": "2 methylbutyraldehyde"
+    "name": "2 methylbutyraldehyde",
+    "bigg_name": "2 methylbutyraldehyde C5H10O"
   },
   "2mbtoh": {
-    "name": "2 methyl 1 butanol"
+    "name": "2 methyl 1 butanol",
+    "bigg_name": "2 methyl 1 butanol C5H12O"
   },
   "2mcit": {
     "name": "2-Methylcitrate"
   },
   "2mppal": {
-    "name": "2 methylpropanal"
+    "name": "2 methylpropanal",
+    "bigg_name": "2 methylpropanal C4H8O"
   },
   "2oxoadp": {
-    "name": "2 Oxoadipate"
+    "name": "2 Oxoadipate",
+    "bigg_name": "2 Oxoadipate C6H6O5"
   },
   "2phetoh": {
-    "name": "2 phenylethanol"
+    "name": "2 phenylethanol",
+    "bigg_name": "2 phenylethanol C8H10O"
   },
   "34hpp": {
     "name": "3-(4-Hydroxyphenyl)pyruvate"
   },
   "35ccmp": {
-    "name": "3  5  Cyclic CMP"
+    "name": "3  5  Cyclic CMP",
+    "bigg_name": "3  5  Cyclic CMP C9H11N3O7P"
   },
   "3dh5hpb": {
-    "name": "3 Hexaprenyl 4 5 dihydroxybenzoate"
+    "name": "3 Hexaprenyl 4 5 dihydroxybenzoate",
+    "bigg_name": "3 Hexaprenyl 4 5 dihydroxybenzoate C37H53O4"
   },
   "3hxccoa": {
-    "name": "S  3 Hydroxyhexacosyl CoA"
+    "name": "S  3 Hydroxyhexacosyl CoA",
+    "bigg_name": "S  3 Hydroxyhexacosyl CoA C47H82N7O18P3S"
   },
   "3ipmmest": {
-    "name": "3 isopropylmalate methyl ester"
+    "name": "3 isopropylmalate methyl ester",
+    "bigg_name": "3 isopropylmalate methyl ester C8H13O5"
   },
   "3mbald": {
-    "name": "3 Methylbutanal"
+    "name": "3 Methylbutanal",
+    "bigg_name": "3 Methylbutanal C5H10O"
   },
   "44mctr": {
-    "name": "4 4 dimethylcholesta 8 14 24 trienol"
+    "name": "4 4 dimethylcholesta 8 14 24 trienol",
+    "bigg_name": "4 4 dimethylcholesta 8 14 24 trienol C29H46O"
   },
   "4aabutn": {
-    "name": "4 Acetamidobutanoate"
+    "name": "4 Acetamidobutanoate",
+    "bigg_name": "4 Acetamidobutanoate C6H10NO3"
   },
   "4abut": {
     "name": "4-Aminobutanoate"
@@ -1188,19 +1237,24 @@
     "name": "4-Aminobenzoate"
   },
   "4gudbutn": {
-    "name": "4 Guanidinobutanoate"
+    "name": "4 Guanidinobutanoate",
+    "bigg_name": "4 Guanidinobutanoate C5H11N3O2"
   },
   "4h2oglt": {
-    "name": "4 Hydroxy 2 oxoglutarate"
+    "name": "4 Hydroxy 2 oxoglutarate",
+    "bigg_name": "4 Hydroxy 2 oxoglutarate C5H4O6"
   },
   "4hbzcoa": {
-    "name": "4 hydroxybenoyl CoA"
+    "name": "4 hydroxybenoyl CoA",
+    "bigg_name": "4 hydroxybenoyl CoA C28H36N7O18P3S"
   },
   "4hpro_LT": {
-    "name": "Trans 4 Hydroxy L proline"
+    "name": "Trans 4 Hydroxy L proline",
+    "bigg_name": "Trans 4 Hydroxy L proline C5H9NO3"
   },
   "5dpmev": {
-    "name": "R  5 Diphosphomevalonate"
+    "name": "R  5 Diphosphomevalonate",
+    "bigg_name": "R  5 Diphosphomevalonate C6H10O10P2"
   },
   "5fthf": {
     "name": "5-Formyltetrahydrofolate"
@@ -1209,37 +1263,46 @@
     "name": "Acyl carrier protein"
   },
   "L2aadp6sa": {
-    "name": "L 2 Aminoadipate 6 semialdehyde"
+    "name": "L 2 Aminoadipate 6 semialdehyde",
+    "bigg_name": "L 2 Aminoadipate 6 semialdehyde C6H11NO3"
   },
   "Lfmkynr": {
-    "name": "L Formylkynurenine"
+    "name": "L Formylkynurenine",
+    "bigg_name": "L Formylkynurenine C11H12N2O4"
   },
   "NPmehis": {
-    "name": "N pai  Methyl L histidine"
+    "name": "N pai  Methyl L histidine",
+    "bigg_name": "N pai  Methyl L histidine C7H11N3O2"
   },
   "Nbfortyr": {
-    "name": "N N bisformyl dityrosine"
+    "name": "N N bisformyl dityrosine",
+    "bigg_name": "N N bisformyl dityrosine C20H22N2O8"
   },
   "Nfortyr": {
-    "name": "N Formyl L tyrosine"
+    "name": "N Formyl L tyrosine",
+    "bigg_name": "N Formyl L tyrosine C10H10NO4"
   },
   "Ssq23epx": {
-    "name": "S  Squalene 2 3 epoxide"
+    "name": "S  Squalene 2 3 epoxide",
+    "bigg_name": "S  Squalene 2 3 epoxide C30H50O"
   },
   "T4hcinnm": {
-    "name": "Trans 4 Hydroxycinnamate"
+    "name": "Trans 4 Hydroxycinnamate",
+    "bigg_name": "Trans 4 Hydroxycinnamate C9H7O3"
   },
   "acACP": {
     "name": "Acetyl-ACP"
   },
   "aces": {
-    "name": "Acetic ester"
+    "name": "Acetic ester",
+    "bigg_name": "Acetic ester C4H8O2"
   },
   "acg5sa": {
     "name": "N-Acetyl-L-glutamate 5-semialdehyde"
   },
   "acrn": {
-    "name": "O Acetylcarnitine"
+    "name": "O Acetylcarnitine",
+    "bigg_name": "O Acetylcarnitine C9H17NO4"
   },
   "ade": {
     "name": "Adenine"
@@ -1248,61 +1311,76 @@
     "name": "Allantoate"
   },
   "amp2p": {
-    "name": "Adenosine 2  phosphate"
+    "name": "Adenosine 2  phosphate",
+    "bigg_name": "Adenosine 2  phosphate C10H14N5O7P"
   },
   "apep": {
-    "name": "Nalpha Acetylpeptide"
+    "name": "Nalpha Acetylpeptide",
+    "bigg_name": "Nalpha Acetylpeptide C6H7N2O4R2"
   },
   "aprop": {
-    "name": "Alpha Aminopropiononitrile"
+    "name": "Alpha Aminopropiononitrile",
+    "bigg_name": "Alpha Aminopropiononitrile C3H7N2"
   },
   "arab__D": {
-    "name": "D Arabinose"
+    "name": "D Arabinose",
+    "bigg_name": "D Arabinose C5H10O5"
   },
   "arg__L": {
     "name": "L-Arginine"
   },
   "atp": {
-    "name": "ATP"
+    "name": "ATP",
+    "bigg_name": "ATP C10H12N5O13P3"
   },
   "btd_RR": {
-    "name": "R R  2 3 Butanediol"
+    "name": "R R  2 3 Butanediol",
+    "bigg_name": "R R  2 3 Butanediol C4H10O2"
   },
   "cdp": {
-    "name": "CDP"
+    "name": "CDP",
+    "bigg_name": "CDP C9H12N3O11P2"
   },
   "cer2_26": {
-    "name": "Ceramide 2  Phytosphingosinen C260"
+    "name": "Ceramide 2  Phytosphingosinen C260",
+    "bigg_name": "Ceramide 2  Phytosphingosinen C260  C44H89NO4"
   },
   "cit": {
     "name": "Citrate"
   },
   "clpn_SC": {
-    "name": "Cardiolipin  yeast specific"
+    "name": "Cardiolipin  yeast specific",
+    "bigg_name": "Cardiolipin  yeast specific C7380H13688O1700P200"
   },
   "cmaphis": {
-    "name": "2 3 Carboxy 3  methylammonio propyl L histidine"
+    "name": "2 3 Carboxy 3  methylammonio propyl L histidine",
+    "bigg_name": "2 3 Carboxy 3  methylammonio propyl L histidine C11H18N4O4"
   },
   "co2": {
-    "name": "CO2"
+    "name": "CO2",
+    "bigg_name": "CO2 CO2"
   },
   "dadp": {
-    "name": "DADP"
+    "name": "DADP",
+    "bigg_name": "DADP C10H12N5O9P2"
   },
   "dagpy_SC": {
-    "name": "Diacylglycerol pyrophosphate  yeast specific"
+    "name": "Diacylglycerol pyrophosphate  yeast specific",
+    "bigg_name": "Diacylglycerol pyrophosphate  yeast specific C3540H6544O1100P200"
   },
   "dann": {
     "name": "7,8-Diaminononanoate"
   },
   "dcdp": {
-    "name": "DCDP"
+    "name": "DCDP",
+    "bigg_name": "DCDP C9H12N3O10P2"
   },
   "ddcaACP": {
     "name": "Dodecanoyl-ACP (n-C12:0ACP)"
   },
   "dhlam": {
-    "name": "Dihydrolipoamide"
+    "name": "Dihydrolipoamide",
+    "bigg_name": "Dihydrolipoamide C8H17NOS2"
   },
   "dhpt": {
     "name": "Dihydropteroate"
@@ -1311,31 +1389,38 @@
     "name": "Deamino-NAD+"
   },
   "dolp": {
-    "name": "Dolichol phosphate"
+    "name": "Dolichol phosphate",
+    "bigg_name": "Dolichol phosphate C15H27O4P"
   },
   "dpcoa": {
     "name": "Dephospho-CoA"
   },
   "epistest_SC": {
-    "name": "Episterol ester  yeast specific"
+    "name": "Episterol ester  yeast specific",
+    "bigg_name": "Episterol ester  yeast specific C1695H2995O101"
   },
   "ergstest_SC": {
-    "name": "Ergosterol ester  yeast specific"
+    "name": "Ergosterol ester  yeast specific",
+    "bigg_name": "Ergosterol ester  yeast specific C1695H2993O101"
   },
   "ergtrol": {
-    "name": "Ergosta 5 7 24 28  trienol"
+    "name": "Ergosta 5 7 24 28  trienol",
+    "bigg_name": "Ergosta 5 7 24 28  trienol C28H44O"
   },
   "fecost": {
-    "name": "Fecosterol"
+    "name": "Fecosterol",
+    "bigg_name": "Fecosterol C28H46O"
   },
   "fmn": {
-    "name": "FMN"
+    "name": "FMN",
+    "bigg_name": "FMN C17H19N4O9P"
   },
   "focytc": {
     "name": "Ferrocytochrome c C42H53FeN8O6S2"
   },
   "g6p_B": {
-    "name": "Beta D glucose 6 phosphate"
+    "name": "Beta D glucose 6 phosphate",
+    "bigg_name": "Beta D glucose 6 phosphate C6H11O9P"
   },
   "glu5sa": {
     "name": "L-Glutamate 5-semialdehyde"
@@ -1353,7 +1438,8 @@
     "name": "Hydrogen peroxide"
   },
   "hcit": {
-    "name": "2 Hydroxybutane 1 2 4 tricarboxylate"
+    "name": "2 Hydroxybutane 1 2 4 tricarboxylate",
+    "bigg_name": "2 Hydroxybutane 1 2 4 tricarboxylate C7H7O7"
   },
   "hco3": {
     "name": "Bicarbonate"
@@ -1365,49 +1451,63 @@
     "name": "Heme O C49H56FeN4O5"
   },
   "hexc": {
-    "name": "Hexacosanoate  n C260"
+    "name": "Hexacosanoate  n C260",
+    "bigg_name": "Hexacosanoate  n C260  C26H51O2"
   },
   "hexccoa": {
-    "name": "Hexacosanoyl CoA  n C260CoA"
+    "name": "Hexacosanoyl CoA  n C260CoA",
+    "bigg_name": "Hexacosanoyl CoA  n C260CoA  C47H82N7O17P3S"
   },
   "hexdp": {
-    "name": "All trans Hexaprenyl diphosphate"
+    "name": "All trans Hexaprenyl diphosphate",
+    "bigg_name": "All trans Hexaprenyl diphosphate C30H49O7P2"
   },
   "hmgcoa": {
-    "name": "Hydroxymethylglutaryl CoA"
+    "name": "Hydroxymethylglutaryl CoA",
+    "bigg_name": "Hydroxymethylglutaryl CoA C27H39N7O20P3S"
   },
   "iamoh": {
-    "name": "Isoamyl alcohol"
+    "name": "Isoamyl alcohol",
+    "bigg_name": "Isoamyl alcohol C5H12O"
   },
   "ibutac": {
-    "name": "Isobutyl acetate"
+    "name": "Isobutyl acetate",
+    "bigg_name": "Isobutyl acetate C6H12O2"
   },
   "ibutoh": {
-    "name": "Isobutyl alcohol"
+    "name": "Isobutyl alcohol",
+    "bigg_name": "Isobutyl alcohol C4H10O"
   },
   "id3acald": {
-    "name": "Indole 3 acetaldehyde"
+    "name": "Indole 3 acetaldehyde",
+    "bigg_name": "Indole 3 acetaldehyde C10H9NO"
   },
   "ind3ac": {
-    "name": "Indole 3 acetate"
+    "name": "Indole 3 acetate",
+    "bigg_name": "Indole 3 acetate C10H8NO2"
   },
   "ind3eth": {
-    "name": "Indole 3 ethanol"
+    "name": "Indole 3 ethanol",
+    "bigg_name": "Indole 3 ethanol C10H11NO"
   },
   "indpyr": {
-    "name": "Indolepyruvate"
+    "name": "Indolepyruvate",
+    "bigg_name": "Indolepyruvate C11H8NO3"
   },
   "ipc224_SC": {
-    "name": "Inositol phosphorylceramide  ceramide 2  24C   yeast specific"
+    "name": "Inositol phosphorylceramide  ceramide 2  24C   yeast specific",
+    "bigg_name": "Inositol phosphorylceramide  ceramide 2  24C   yeast specific C4800H9500N100O1200P100"
   },
   "ipc324_SC": {
-    "name": "Inositol phosphorylceramide  ceramide 3  24C   yeast specific"
+    "name": "Inositol phosphorylceramide  ceramide 3  24C   yeast specific",
+    "bigg_name": "Inositol phosphorylceramide  ceramide 3  24C   yeast specific C4800H9500N100O1300P100"
   },
   "ipdp": {
     "name": "Isopentenyl diphosphate"
   },
   "lanostest_SC": {
-    "name": "Lanosterol ester  yeast specific"
+    "name": "Lanosterol ester  yeast specific",
+    "bigg_name": "Lanosterol ester  yeast specific C1697H2999O101"
   },
   "leu__L": {
     "name": "L-Leucine"
@@ -1419,25 +1519,31 @@
     "name": "Malonyl-[acyl-carrier protein]"
   },
   "malcoa": {
-    "name": "Malonyl CoA"
+    "name": "Malonyl CoA",
+    "bigg_name": "Malonyl CoA C24H33N7O19P3S"
   },
   "manmi1p__D": {
-    "name": "Mannose 1D myo Inositol 1 phosphate"
+    "name": "Mannose 1D myo Inositol 1 phosphate",
+    "bigg_name": "Mannose 1D myo Inositol 1 phosphate C12H21O14P1"
   },
   "mettrna": {
     "name": "L-Methionyl-tRNA (Met)"
   },
   "mhpglu": {
-    "name": "5 Methyltetrahydropteroyltri L glutamate"
+    "name": "5 Methyltetrahydropteroyltri L glutamate",
+    "bigg_name": "5 Methyltetrahydropteroyltri L glutamate C25H36N8O12"
   },
   "mi1456p": {
-    "name": "1D myo Inositol 1 4 5 6 tetrakisphosphate"
+    "name": "1D myo Inositol 1 4 5 6 tetrakisphosphate",
+    "bigg_name": "1D myo Inositol 1 4 5 6 tetrakisphosphate C6H8O18P4"
   },
   "mip2c124_SC": {
-    "name": "Mannose  inositol P 2 ceramide  ceramide 1  24C   yeast specific"
+    "name": "Mannose  inositol P 2 ceramide  ceramide 1  24C   yeast specific",
+    "bigg_name": "Mannose  inositol P 2 ceramide  ceramide 1  24C   yeast specific C6000H11500N100O2400P200"
   },
   "mip2c226_SC": {
-    "name": "Mannose  inositol P 2 ceramide  ceramide 2  26C   yeast specific"
+    "name": "Mannose  inositol P 2 ceramide  ceramide 2  26C   yeast specific",
+    "bigg_name": "Mannose  inositol P 2 ceramide  ceramide 2  26C   yeast specific C6200H11900N100O2500P200"
   },
   "nac": {
     "name": "Nicotinate"
@@ -1458,19 +1564,23 @@
     "name": "Octadecanoyl-ACP (n-C18:0ACP)"
   },
   "ocdcyaACP": {
-    "name": "Octadecynoyl ACP  n C182ACP"
+    "name": "Octadecynoyl ACP  n C182ACP",
+    "bigg_name": "Octadecynoyl ACP  n C182ACP  C29H51N2O8PRS"
   },
   "ocdcya": {
-    "name": "Octadecadienoate  n C182"
+    "name": "Octadecadienoate  n C182",
+    "bigg_name": "Octadecadienoate  n C182  C18H31O2"
   },
   "orn": {
     "name": "Ornithine"
   },
   "oxag": {
-    "name": "Oxaloglutarate"
+    "name": "Oxaloglutarate",
+    "bigg_name": "Oxaloglutarate C7H5O7"
   },
   "pa_SC": {
-    "name": "Phosphatidate  yeast specific"
+    "name": "Phosphatidate  yeast specific",
+    "bigg_name": "Phosphatidate  yeast specific C3540H6544O800P100"
   },
   "pacald": {
     "name": "Phenylacetaldehyde"
@@ -1479,7 +1589,8 @@
     "name": "Adenosine 3',5'-bisphosphate"
   },
   "pe_SC": {
-    "name": "Phosphatidylethanolamine  yeast specific"
+    "name": "Phosphatidylethanolamine  yeast specific",
+    "bigg_name": "Phosphatidylethanolamine  yeast specific C3740H7244N100O800P100"
   },
   "pheme": {
     "name": "Protoheme C34H30FeN4O4"
@@ -1494,34 +1605,42 @@
     "name": "Diphosphate"
   },
   "ppmi12346p": {
-    "name": "5 Diphosphoinositol pentakisphosphate"
+    "name": "5 Diphosphoinositol pentakisphosphate",
+    "bigg_name": "5 Diphosphoinositol pentakisphosphate C6H6O27P7"
   },
   "ptd135bp_SC": {
-    "name": "1 Phosphatidyl D myo inositol 3 5 bisphosphate  yeast specific"
+    "name": "1 Phosphatidyl D myo inositol 3 5 bisphosphate  yeast specific",
+    "bigg_name": "1 Phosphatidyl D myo inositol 3 5 bisphosphate  yeast specific C4140H7444O1900P300"
   },
   "ptd145bp_SC": {
-    "name": "1 Phosphatidyl D myo inositol 4 5 bisphosphate  yeast specific"
+    "name": "1 Phosphatidyl D myo inositol 4 5 bisphosphate  yeast specific",
+    "bigg_name": "1 Phosphatidyl D myo inositol 4 5 bisphosphate  yeast specific C4140H7444O1900P300"
   },
   "ptd4ino_SC": {
-    "name": "Phosphatidyl 1D myo 4 inositol  yeast specific"
+    "name": "Phosphatidyl 1D myo 4 inositol  yeast specific",
+    "bigg_name": "Phosphatidyl 1D myo 4 inositol  yeast specific C4140H7544O1600P200"
   },
   "saccrp__L": {
-    "name": "L Saccharopine"
+    "name": "L Saccharopine",
+    "bigg_name": "L Saccharopine C11H19N2O6"
   },
   "sbt__L": {
-    "name": "L Sorbitol"
+    "name": "L Sorbitol",
+    "bigg_name": "L Sorbitol C6H14O6"
   },
   "thf": {
     "name": "5,6,7,8-Tetrahydrofolate"
   },
   "thfglu": {
-    "name": "Tetrahydrofolyl Glu 2"
+    "name": "Tetrahydrofolyl Glu 2",
+    "bigg_name": "Tetrahydrofolyl Glu 2  C24H27N8O9"
   },
   "thmpp": {
     "name": "Thiamine diphosphate"
   },
   "trnaasn": {
-    "name": "TRNA Asn"
+    "name": "TRNA Asn",
+    "bigg_name": "TRNA Asn  C10H17O10PR2"
   },
   "trnaasp": {
     "name": "TRNA(Asp)"
@@ -1542,13 +1661,16 @@
     "name": "UDPgalactose"
   },
   "xylt": {
-    "name": "Xylitol"
+    "name": "Xylitol",
+    "bigg_name": "Xylitol C5H12O5"
   },
   "zym_int1": {
-    "name": "Zymosterol intermediate 1"
+    "name": "Zymosterol intermediate 1",
+    "bigg_name": "Zymosterol intermediate 1 C28H44O3"
   },
   "zymstest_SC": {
-    "name": "Zymosterol ester  yeast specific"
+    "name": "Zymosterol ester  yeast specific",
+    "bigg_name": "Zymosterol ester  yeast specific C1694H2993O101"
   },
   "2ombz": {
     "name": "2-Octaprenyl-6-methoxy-1,4-benzoquinone"
@@ -1572,7 +1694,8 @@
     "name": "Cardiolipin (Saureus)"
   },
   "dhlpro": {
-    "name": "Dihydrolipolprotein"
+    "name": "Dihydrolipolprotein",
+    "bigg_name": "Dihydrolipolprotein H2S2X"
   },
   "fa10": {
     "name": "Fatty acid (Anteiso-C17:1)"
@@ -1596,19 +1719,22 @@
     "name": "Maleate"
   },
   "pala_SA2": {
-    "name": "Phosphatidylalanine"
+    "name": "Phosphatidylalanine",
+    "bigg_name": "Phosphatidylalanine SA2"
   },
   "pgly_SA": {
     "name": "Phosphatidylglycine SA"
   },
   "plys_SA2": {
-    "name": "Phosphatidyllysine"
+    "name": "Phosphatidyllysine",
+    "bigg_name": "Phosphatidyllysine SA2"
   },
   "feroxB": {
     "name": "Ferrioxamine-B"
   },
   "chitob": {
-    "name": "Chitobiose"
+    "name": "Chitobiose",
+    "bigg_name": "Chitobiose C16H28N2O11"
   },
   "airs": {
     "name": "Aminoimidazole-riboside"
@@ -1641,7 +1767,8 @@
     "name": "D-Tagatose"
   },
   "rnam": {
-    "name": "N Ribosylnicotinamide"
+    "name": "N Ribosylnicotinamide",
+    "bigg_name": "N Ribosylnicotinamide C11H15N2O5"
   },
   "copre2": {
     "name": "Cobalt-precorrin-2"
@@ -1656,31 +1783,39 @@
     "name": "Glutaryl-CoA mitochondria"
   },
   "salcn": {
-    "name": "Salicin"
+    "name": "Salicin",
+    "bigg_name": "Salicin C13H18O7"
   },
   "3hoxpac": {
-    "name": "3 Hydroxyphenylacetic acid"
+    "name": "3 Hydroxyphenylacetic acid",
+    "bigg_name": "3 Hydroxyphenylacetic acid C8H8O3"
   },
   "peng": {
-    "name": "Penicillin G"
+    "name": "Penicillin G",
+    "bigg_name": "Penicillin G C16H18N2O4S"
   },
   "6apa": {
-    "name": "6 Aminopenicillanic acid"
+    "name": "6 Aminopenicillanic acid",
+    "bigg_name": "6 Aminopenicillanic acid C8H12N2O3S"
   },
   "gagggicolipaBR1": {
-    "name": "R1 galactosyl glucosyl glucosyl glucosyl inner core oligosaccharide lipid A with laurate"
+    "name": "R1 galactosyl glucosyl glucosyl glucosyl inner core oligosaccharide lipid A with laurate",
+    "bigg_name": "R1 galactosyl glucosyl glucosyl glucosyl inner core oligosaccharide lipid A with laurate C153H246N2O83P4"
   },
   "LptA": {
     "name": "Periplasmic lipid A binding protein"
   },
   "enlipidA": {
-    "name": "1' Phosphoethanolamin lipidIVa"
+    "name": "1' Phosphoethanolamin lipidIVa",
+    "bigg_name": "1' Phosphoethanolamin lipidIVa C70H132N3O26P3"
   },
   "gicolipaAR1": {
-    "name": "R1 glucosyl inner core oligosaccharide lipid A"
+    "name": "R1 glucosyl inner core oligosaccharide lipid A",
+    "bigg_name": "R1 glucosyl inner core oligosaccharide lipid A C137H220N2O68P4"
   },
   "lipidA_core_e": {
-    "name": "2 3 2'3' Tetrakis beta hydroxymyristoyl  D glucosaminyl 1 6 beta D glucosamine 1 4' bisphosphate"
+    "name": "2 3 2'3' Tetrakis beta hydroxymyristoyl  D glucosaminyl 1 6 beta D glucosamine 1 4' bisphosphate",
+    "bigg_name": "2 3 2'3' Tetrakis beta hydroxymyristoyl  D glucosaminyl 1 6 beta D glucosamine 1 4' bisphosphate C68H126N2O23P2"
   },
   "cdigmp": {
     "name": "Cyclic diguanosine monophosphate"
@@ -1782,7 +1917,8 @@
     "name": "Cis,cis-Muconate"
   },
   "2ahhmp": {
-    "name": "2 Amino 4 hydroxy 6 hydroxymethyl 7 8 dihydropteridine"
+    "name": "2 Amino 4 hydroxy 6 hydroxymethyl 7 8 dihydropteridine",
+    "bigg_name": "2 Amino 4 hydroxy 6 hydroxymethyl 7 8 dihydropteridine C7H9N5O2"
   },
   "C141mclPHA": {
     "name": "C14:1-Medium-chain length Polyhydroxyalkanoate."
@@ -1842,7 +1978,8 @@
     "name": "Pimelate"
   },
   "4hglusa": {
-    "name": "L 4 Hydroxyglutamate semialdehyde"
+    "name": "L 4 Hydroxyglutamate semialdehyde",
+    "bigg_name": "L 4 Hydroxyglutamate semialdehyde C5H9NO4"
   },
   "acryl": {
     "name": "Acrylic acid"
@@ -1878,10 +2015,12 @@
     "name": "Rhamnose rhamnose phenol phthiocerol dimycocerosate (Mtb)"
   },
   "prephthACP": {
-    "name": "Phthiocerol precursor bound"
+    "name": "Phthiocerol precursor bound",
+    "bigg_name": "Phthiocerol precursor bound ACP"
   },
   "prepphthACP": {
-    "name": "Phenolic phthiocerol precursor bound"
+    "name": "Phenolic phthiocerol precursor bound",
+    "bigg_name": "Phenolic phthiocerol precursor bound ACP"
   },
   "prepphth": {
     "name": "Phenolic phthiocerol precursor"
@@ -1995,7 +2134,8 @@
     "name": "10 hydroxy octa-methyl tetracontatricosanoic acid (C34:0, 8 methyl-branched carbons, 1 hydroxylated carbon)"
   },
   "3dhphaccoa": {
-    "name": "2 3 Dihydroxy 2 3 dihydrophenylacetyl CoA"
+    "name": "2 3 Dihydroxy 2 3 dihydrophenylacetyl CoA",
+    "bigg_name": "2 3 Dihydroxy 2 3 dihydrophenylacetyl CoA C29H40N7O19P3S"
   },
   "rbt": {
     "name": "Ribitol"
@@ -2049,7 +2189,8 @@
     "name": "Phosphatidylserine (Ecoli)"
   },
   "diact": {
-    "name": "Diacetyl"
+    "name": "Diacetyl",
+    "bigg_name": "Diacetyl C4H6O2"
   },
   "malon": {
     "name": "Malonate"
@@ -2286,7 +2427,8 @@
     "name": "13(1)-Hydroxy-magnesium-protoporphyrin IX 13-monomethyl ester"
   },
   "peptido_syn": {
-    "name": "Peptidoglycan subunit of Synechocystis sp."
+    "name": "Peptidoglycan subunit of Synechocystis sp.",
+    "bigg_name": "Peptidoglycan subunit of Synechocystis sp. PCC8603"
   },
   "sqdg181": {
     "name": "Sulfoquinovosyldiacylglycerol (n-C18 1)"
@@ -2442,7 +2584,8 @@
     "name": "Cervonic acid, C22:6 n-3"
   },
   "cysam": {
-    "name": "Cysteamine"
+    "name": "Cysteamine",
+    "bigg_name": "Cysteamine C2H8NS"
   },
   "dedolp_U": {
     "name": "Dehydrodolichol phosphate, human uterine homolog"
@@ -2763,10 +2906,12 @@
     "name": "Hyaluronan"
   },
   "hpdca": {
-    "name": "Heptadecanoate  C170"
+    "name": "Heptadecanoate  C170",
+    "bigg_name": "Heptadecanoate  C170  C17H33O2"
   },
   "idp": {
-    "name": "IDP"
+    "name": "IDP",
+    "bigg_name": "IDP C10H11N4O11P2"
   },
   "ksi_deg1": {
     "name": "Keratan sulfate I, degradation product 1"
@@ -2808,7 +2953,8 @@
     "name": "Fatty acid retinol"
   },
   "sph1p": {
-    "name": "Sphinganine 1 phosphate"
+    "name": "Sphinganine 1 phosphate",
+    "bigg_name": "Sphinganine 1 phosphate C18H39NO5P"
   },
   "strdnc": {
     "name": "Stearidonic acid C18:4, n-3"
@@ -2838,10 +2984,12 @@
     "name": "Tyramine O-sulfate"
   },
   "udp": {
-    "name": "UDP"
+    "name": "UDP",
+    "bigg_name": "UDP C9H11N2O12P2"
   },
   "utp": {
-    "name": "UTP"
+    "name": "UTP",
+    "bigg_name": "UTP C9H11N2O15P3"
   },
   "whtststerone": {
     "name": "W hydroxy testosterone; 19-Hydroxytestosterone"
@@ -2865,7 +3013,8 @@
     "name": "VI3NeuAc-nLc6Cer"
   },
   "camp": {
-    "name": "CAMP"
+    "name": "CAMP",
+    "bigg_name": "CAMP C10H11N5O6P"
   },
   "core3": {
     "name": "Core3 g"
@@ -3063,7 +3212,8 @@
     "name": "Asn  X  Ser FSLASH Thr l"
   },
   "cholp": {
-    "name": "Choline phosphate"
+    "name": "Choline phosphate",
+    "bigg_name": "Choline phosphate C5H13NO4P"
   },
   "cs_a_deg3": {
     "name": "Chondroitin sulfate A (GalNAc4S-GlcA), degradation product 3"
@@ -3099,7 +3249,8 @@
     "name": "Glucocerebroside (homo sapiens)"
   },
   "gmp": {
-    "name": "GMP"
+    "name": "GMP",
+    "bigg_name": "GMP C10H12N5O8P"
   },
   "hs_deg12": {
     "name": "Heparan sulfate, degradation product 12"
@@ -3231,7 +3382,8 @@
     "name": "5-Hydroxyindoleacetate"
   },
   "L2aadp": {
-    "name": "L 2 Aminoadipate"
+    "name": "L 2 Aminoadipate",
+    "bigg_name": "L 2 Aminoadipate C6H10NO4"
   },
   "aact": {
     "name": "Aminoacetone"
@@ -3255,7 +3407,8 @@
     "name": "C20:4-CoA"
   },
   "btamp": {
-    "name": "Biotinyl 5  AMP"
+    "name": "Biotinyl 5  AMP",
+    "bigg_name": "Biotinyl 5  AMP C20H27N7O9PS"
   },
   "cbl1": {
     "name": "Cob(I)alamin"
@@ -3264,7 +3417,8 @@
     "name": "CDP diacylglycerol (homo sapiens)"
   },
   "chol": {
-    "name": "Choline"
+    "name": "Choline",
+    "bigg_name": "Choline C5H14NO"
   },
   "citr__L": {
     "name": "L-Citrulline"
@@ -3276,7 +3430,8 @@
     "name": "Hydrogen cyanide"
   },
   "dctp": {
-    "name": "DCTP"
+    "name": "DCTP",
+    "bigg_name": "DCTP C9H12N3O13P3"
   },
   "dd2coa": {
     "name": "Trans-Dodec-2-enoyl-CoA"
@@ -3294,7 +3449,8 @@
     "name": "4,8 dimethylnonanoyl-CoA"
   },
   "dtdp": {
-    "name": "DTDP"
+    "name": "DTDP",
+    "bigg_name": "DTDP C10H13N2O11P2"
   },
   "eicostetcoa": {
     "name": "Eicosatetranoyl coenzyme A"
@@ -3315,7 +3471,8 @@
     "name": "Mesaconate;(E)-2-Methyl-2-butenedioic acid"
   },
   "n4abutn": {
-    "name": "N4 Acetylaminobutanal"
+    "name": "N4 Acetylaminobutanal",
+    "bigg_name": "N4 Acetylaminobutanal C6H11NO2"
   },
   "od2coa": {
     "name": "Trans-Octadec-2-enoyl-CoA"
@@ -3381,7 +3538,8 @@
     "name": "Diacylglycerol (homo sapiens)"
   },
   "dcmp": {
-    "name": "DCMP"
+    "name": "DCMP",
+    "bigg_name": "DCMP C9H12N3O7P"
   },
   "didp": {
     "name": "DIDP; 2'-deoxyinosine-5'-diphosphate(3-)"
@@ -3393,7 +3551,8 @@
     "name": "Formate"
   },
   "gtp": {
-    "name": "GTP"
+    "name": "GTP",
+    "bigg_name": "GTP C10H12N5O14P3"
   },
   "mi1346p": {
     "name": "1D-myo-Inositol 1,3,4,6-tetrakisphosphate"
@@ -3402,10 +3561,12 @@
     "name": "Nicotinamide adenine dinucleotide phosphate - reduced"
   },
   "nmn": {
-    "name": "NMN"
+    "name": "NMN",
+    "bigg_name": "NMN C11H14N2O8P"
   },
   "ppmi1346p": {
-    "name": "Diphosphoinositol tetrakisphosphate"
+    "name": "Diphosphoinositol tetrakisphosphate",
+    "bigg_name": "Diphosphoinositol tetrakisphosphate C6H7O24P6"
   },
   "retn": {
     "name": "Retinoate"
@@ -3669,7 +3830,8 @@
     "name": "1-Acyl-sn-glycero-3-phosphoethanolamine (18:1(11Z))"
   },
   "1Dgali": {
-    "name": "1 alpha D Galactosyl myo inositol"
+    "name": "1 alpha D Galactosyl myo inositol",
+    "bigg_name": "1 alpha D Galactosyl myo inositol C12H22O11"
   },
   "1odecg3p": {
     "name": "1-octadecanoyl-sn-glycerol 3-phosphate"
@@ -3741,7 +3903,8 @@
     "name": "Hyp(4-b1)Ara[(2-b1)Ara](3-a1)Gal(2-b1)Ara"
   },
   "4mlacac": {
-    "name": "4 Maleylacetoacetate"
+    "name": "4 Maleylacetoacetate",
+    "bigg_name": "4 Maleylacetoacetate C8H6O6"
   },
   "4r5au": {
     "name": "4-(1-D-Ribitylamino)-5-aminouracil"
@@ -3750,7 +3913,8 @@
     "name": "Acetyl-CoA"
   },
   "achms": {
-    "name": "O Acetyl L homoserine"
+    "name": "O Acetyl L homoserine",
+    "bigg_name": "O Acetyl L homoserine C6H11NO4"
   },
   "actACP": {
     "name": "Acetoacetyl-ACP"
@@ -3759,7 +3923,8 @@
     "name": "5-Amino-1-(5-Phospho-D-ribosyl)imidazole-4-carboxamide"
   },
   "allphn": {
-    "name": "Allophanate"
+    "name": "Allophanate",
+    "bigg_name": "Allophanate C2H3N2O3"
   },
   "alltn": {
     "name": "Allantoin"
@@ -3816,7 +3981,8 @@
     "name": "Carbon monoxide"
   },
   "cpppg3": {
-    "name": "Coproporphyrinogen"
+    "name": "Coproporphyrinogen",
+    "bigg_name": "Coproporphyrinogen III"
   },
   "cytc": {
     "name": "Cytochrome c"
@@ -3915,13 +4081,15 @@
     "name": "Gamma-Carotene"
   },
   "ggdp": {
-    "name": "Geranylgeranyl diphosphate"
+    "name": "Geranylgeranyl diphosphate",
+    "bigg_name": "Geranylgeranyl diphosphate C20H33O7P2"
   },
   "glucys": {
     "name": "Gamma-L-Glutamyl-L-cysteine"
   },
   "hgentis": {
-    "name": "Homogentisate"
+    "name": "Homogentisate",
+    "bigg_name": "Homogentisate C8H7O4"
   },
   "hisp": {
     "name": "L-Histidinol phosphate"
@@ -3933,7 +4101,8 @@
     "name": "Lumirhodopsin"
   },
   "melib": {
-    "name": "Melibiose"
+    "name": "Melibiose",
+    "bigg_name": "Melibiose C12H22O11"
   },
   "mfecostrl": {
     "name": "4alpha-Methylfecosterol"
@@ -4089,7 +4258,8 @@
     "name": "Pyropheophorbide a"
   },
   "raffin": {
-    "name": "Raffinose"
+    "name": "Raffinose",
+    "bigg_name": "Raffinose C18H32O16"
   },
   "rb15bp": {
     "name": "D-Ribulose 1,5-bisphosphate"
@@ -4191,40 +4361,52 @@
     "name": "Omega hydroxy dodecanoate (n-C12:0)"
   },
   "2hxmp": {
-    "name": "2  Hydroxymethyl phenol"
+    "name": "2  Hydroxymethyl phenol",
+    "bigg_name": "2  Hydroxymethyl phenol C7H8O2"
   },
   "3amba": {
-    "name": "3 aminobutanoic acid"
+    "name": "3 aminobutanoic acid",
+    "bigg_name": "3 aminobutanoic acid C4H9NO2"
   },
   "DPA": {
-    "name": "Dipicolinate"
+    "name": "Dipicolinate",
+    "bigg_name": "Dipicolinate C7H3NO4"
   },
   "L_alagly": {
-    "name": "L alanylglycine"
+    "name": "L alanylglycine",
+    "bigg_name": "L alanylglycine C5H10N2O3"
   },
   "L_sergly": {
-    "name": "L Serylglycine"
+    "name": "L Serylglycine",
+    "bigg_name": "L Serylglycine C5H10N2O4"
   },
   "abt__L": {
-    "name": "L Arabinitol"
+    "name": "L Arabinitol",
+    "bigg_name": "L Arabinitol C5H12O5"
   },
   "ala_L_Thr__L": {
-    "name": "Ala L Thr L"
+    "name": "Ala L Thr L",
+    "bigg_name": "Ala L Thr L C7H14N2O4"
   },
   "ala_L_gln__L": {
-    "name": "Ala Gln"
+    "name": "Ala Gln",
+    "bigg_name": "Ala Gln C8H15N3O4"
   },
   "ala_L_glu__L": {
-    "name": "Ala L glu L"
+    "name": "Ala L glu L",
+    "bigg_name": "Ala L glu L C8H13N2O5"
   },
   "ala_L_ile__L": {
-    "name": "Ala Ile"
+    "name": "Ala Ile",
+    "bigg_name": "Ala Ile C9H18N2O3"
   },
   "ala_L_ser__L": {
-    "name": "Ala Ser"
+    "name": "Ala Ser",
+    "bigg_name": "Ala Ser C6H12N2O4"
   },
   "ala_L_trp__L": {
-    "name": "Ala Trp"
+    "name": "Ala Trp",
+    "bigg_name": "Ala Trp C14H17N3O3"
   },
   "antim": {
     "name": "Antimonite Sb"
@@ -4239,13 +4421,16 @@
     "name": "Crotonobetaine"
   },
   "ddcal": {
-    "name": "Dodecanal"
+    "name": "Dodecanal",
+    "bigg_name": "Dodecanal C12H24O"
   },
   "diala__L": {
-    "name": "Ala Ala"
+    "name": "Ala Ala",
+    "bigg_name": "Ala Ala C6H12N2O3"
   },
   "fa3coa": {
-    "name": "Iso C150 CoA"
+    "name": "Iso C150 CoA",
+    "bigg_name": "Iso C150 CoA C36H60N7O17P3S1"
   },
   "ferrich": {
     "name": "Ferrichrome C24H38FeN9O11"
@@ -4254,112 +4439,145 @@
     "name": "Ferroxamine C25H46FeN6O8"
   },
   "fmnRD": {
-    "name": "Flavin mononucleotide reduced"
+    "name": "Flavin mononucleotide reduced",
+    "bigg_name": "Flavin mononucleotide reduced C17H21N4O9P"
   },
   "g15lac": {
-    "name": "D Glucono 1 5 lactone"
+    "name": "D Glucono 1 5 lactone",
+    "bigg_name": "D Glucono 1 5 lactone C6H10O6"
   },
   "g16bp": {
-    "name": "D Glucose 1 6 bisphosphate"
+    "name": "D Glucose 1 6 bisphosphate",
+    "bigg_name": "D Glucose 1 6 bisphosphate C6H10O12P2"
   },
   "galctr__D": {
-    "name": "D Galactarate"
+    "name": "D Galactarate",
+    "bigg_name": "D Galactarate C6H8O8"
   },
   "glcurn": {
-    "name": "D Glucurone"
+    "name": "D Glucurone",
+    "bigg_name": "D Glucurone C6H8O6"
   },
   "gly_asn__L": {
-    "name": "Gly asn L"
+    "name": "Gly asn L",
+    "bigg_name": "Gly asn L C6H11N3O4"
   },
   "gly_gln__L": {
-    "name": "Gly Gln"
+    "name": "Gly Gln",
+    "bigg_name": "Gly Gln C7H13N3O4"
   },
   "gly_glu__L": {
-    "name": "Gly glu L"
+    "name": "Gly glu L",
+    "bigg_name": "Gly glu L C7H11N2O5"
   },
   "gly_phe__L": {
-    "name": "Gly Phe"
+    "name": "Gly Phe",
+    "bigg_name": "Gly Phe C11H14N2O3"
   },
   "gly_tyr__L": {
-    "name": "Gly Try"
+    "name": "Gly Try",
+    "bigg_name": "Gly Try C11H14N2O4"
   },
   "glycogen": {
-    "name": "Glycogen"
+    "name": "Glycogen",
+    "bigg_name": "Glycogen C6H10O5"
   },
   "hemeD": {
     "name": "Heme D C34H30FeN4O6"
   },
   "hexs": {
-    "name": "Hexanesulfonate"
+    "name": "Hexanesulfonate",
+    "bigg_name": "Hexanesulfonate C6H13O3S"
   },
   "hibcoa": {
-    "name": "S  3 Hydroxyisobutyryl CoA"
+    "name": "S  3 Hydroxyisobutyryl CoA",
+    "bigg_name": "S  3 Hydroxyisobutyryl CoA C25H38N7O18P3S"
   },
   "hqn": {
     "name": "Hydroquinone"
   },
   "lanth": {
-    "name": "Lanthionine"
+    "name": "Lanthionine",
+    "bigg_name": "Lanthionine C6H12N2O4S"
   },
   "m12dg_BS": {
-    "name": "Monoglucosyl 1 2 diacylglycerol"
+    "name": "Monoglucosyl 1 2 diacylglycerol",
+    "bigg_name": "Monoglucosyl 1 2 diacylglycerol C4036H7672O1000"
   },
   "man1p": {
     "name": "D-Mannose 1-phosphate"
   },
   "met_L_his__L": {
-    "name": "Met His"
+    "name": "Met His",
+    "bigg_name": "Met His C11H18N4O3S"
   },
   "met_L_met__L": {
-    "name": "Met Met"
+    "name": "Met Met",
+    "bigg_name": "Met Met C10H20N2O3S2"
   },
   "mql7": {
-    "name": "Menaquinol 7"
+    "name": "Menaquinol 7",
+    "bigg_name": "Menaquinol 7 C46H66O2"
   },
   "mqn7": {
-    "name": "Menaquinone 7"
+    "name": "Menaquinone 7",
+    "bigg_name": "Menaquinone 7 C46H64O2"
   },
   "nonal": {
-    "name": "Nonanal"
+    "name": "Nonanal",
+    "bigg_name": "Nonanal C9H18O"
   },
   "ocdcal": {
-    "name": "Octadecanal"
+    "name": "Octadecanal",
+    "bigg_name": "Octadecanal C18H36O"
   },
   "orn__L": {
-    "name": "L Ornithine"
+    "name": "L Ornithine",
+    "bigg_name": "L Ornithine C5H13N2O2"
   },
   "pala": {
-    "name": "Palatinose"
+    "name": "Palatinose",
+    "bigg_name": "Palatinose C12H22O11"
   },
   "prolb": {
-    "name": "Proline betaine"
+    "name": "Proline betaine",
+    "bigg_name": "Proline betaine C7H13NO2"
   },
   "ps_BS": {
-    "name": "Phosphatidylserine  B subtilis"
+    "name": "Phosphatidylserine  B subtilis",
+    "bigg_name": "Phosphatidylserine  B subtilis  C3736H7172N100O1000P100"
   },
   "pur": {
-    "name": "Puromycin"
+    "name": "Puromycin",
+    "bigg_name": "Puromycin C22H30N7O5"
   },
   "quc": {
-    "name": "Quercetin"
+    "name": "Quercetin",
+    "bigg_name": "Quercetin C15H7O7"
   },
   "ribflvRD": {
-    "name": "Reduced riboflavin"
+    "name": "Reduced riboflavin",
+    "bigg_name": "Reduced riboflavin C17H22N4O6"
   },
   "starch": {
-    "name": "Starch"
+    "name": "Starch",
+    "bigg_name": "Starch C12H20O10"
   },
   "subtilisin": {
-    "name": "Mature Bacillus subtilis subtilisin"
+    "name": "Mature Bacillus subtilis subtilisin",
+    "bigg_name": "Mature Bacillus subtilis subtilisin C1588H2486N436O518S6"
   },
   "tcggrpp": {
-    "name": "Trans trans cis Geranylgeranyl pyrophosphate"
+    "name": "Trans trans cis Geranylgeranyl pyrophosphate",
+    "bigg_name": "Trans trans cis Geranylgeranyl pyrophosphate C20H33O7P2"
   },
   "thiog": {
-    "name": "Thioglycolate"
+    "name": "Thioglycolate",
+    "bigg_name": "Thioglycolate C2H3O2S"
   },
   "udcal": {
-    "name": "Undecanal"
+    "name": "Undecanal",
+    "bigg_name": "Undecanal C11H22O"
   },
   "dag_hs_18_2_20_4": {
     "name": "Dag hs 18 2 20 4[c]"
@@ -5337,7 +5555,8 @@
     "name": "Chondroitin sulfate/heparan sulfate linkage region (GlcA-(Gal)2-Xyl-L-Ser (protein))"
   },
   "ctp": {
-    "name": "CTP"
+    "name": "CTP",
+    "bigg_name": "CTP C9H12N3O14P3"
   },
   "dad_2": {
     "name": "Deoxyadenosine"
@@ -5349,7 +5568,8 @@
     "name": "1-alkenyl 2-acylglycerol 3-phosphoethanolamine plasmalogen"
   },
   "damp": {
-    "name": "DAMP"
+    "name": "DAMP",
+    "bigg_name": "DAMP C10H12N5O6P"
   },
   "dchac": {
     "name": "Deoxycholate"
@@ -5505,7 +5725,8 @@
     "name": "N-acetyl-beta-D-galactosaminyl-(1->4)-[alpha-N-acetylneuraminosyl-(2->3)]-beta-D-galactosyl-beta-D-glucosyl-(1<->1)-ceramide anion"
   },
   "gm3_cho": {
-    "name": "Alpha-N-acetylneuraminosyl-(2->3)-beta-D-galactosyl-(1->4)-beta-D-glucosylceramide(1-);"
+    "name": "Alpha-N-acetylneuraminosyl-(2->3)-beta-D-galactosyl-(1->4)-beta-D-glucosylceramide(1-);",
+    "bigg_name": "Alpha-N-acetylneuraminosyl-(2->3)-beta-D-galactosyl-(1->4)-beta-D-glucosylceramide(1-); GM3"
   },
   "gp1c_cho": {
     "name": "GP1c"
@@ -5604,10 +5825,12 @@
     "name": "Ndl4n4m2masn[g]"
   },
   "oagd3_cho": {
-    "name": "9-O-Acetylated"
+    "name": "9-O-Acetylated",
+    "bigg_name": "9-O-Acetylated GD3"
   },
   "oagt3_cho": {
-    "name": "9-O-Acetylated"
+    "name": "9-O-Acetylated",
+    "bigg_name": "9-O-Acetylated GT3"
   },
   "pa_cho": {
     "name": "Phosphatidate(2-)"
@@ -5658,7 +5881,8 @@
     "name": "Ubiquinol-10"
   },
   "s2l2n2m2masn": {
-    "name": "De-Fuc form of"
+    "name": "De-Fuc form of",
+    "bigg_name": "De-Fuc form of PA6"
   },
   "s3lnl3fn3m2masn": {
     "name": "S3lnl3fn3m2masn[g]"
@@ -5694,7 +5918,8 @@
     "name": "Trihexosyl ceramide"
   },
   "thym": {
-    "name": "Thymine"
+    "name": "Thymine",
+    "bigg_name": "Thymine C5H6N2O2"
   },
   "tmndnc": {
     "name": "Timnodonic acid C20:5, n-3"
@@ -5703,7 +5928,8 @@
     "name": "Tetradecanoyl carnitine"
   },
   "urate": {
-    "name": "Urate"
+    "name": "Urate",
+    "bigg_name": "Urate C5H4N4O3"
   },
   "xolest_cho": {
     "name": "Cholesterol ester"
@@ -5928,10 +6154,12 @@
     "name": "Inner core oligosaccharide lipid A (Synechococcus elongatus 7942)"
   },
   "p700": {
-    "name": "PSI reaction center"
+    "name": "PSI reaction center",
+    "bigg_name": "PSI reaction center P700"
   },
   "p680": {
-    "name": "PSII reaction center"
+    "name": "PSII reaction center",
+    "bigg_name": "PSII reaction center P680"
   },
   "ps2d1": {
     "name": "PSII D1 protein"
@@ -6573,7 +6801,8 @@
     "name": "Thiamine biosynthesis intermediate 4"
   },
   "thmtp": {
-    "name": "Thiamin triphosphate"
+    "name": "Thiamin triphosphate",
+    "bigg_name": "Thiamin triphosphate C12H16N4O10P3S"
   },
   "sephcpc": {
     "name": "2-Succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylate"
@@ -6615,7 +6844,8 @@
     "name": "(E)-hexadec-2-enoyl-CoA"
   },
   "biomass_rna": {
-    "name": "Biomass:"
+    "name": "Biomass:",
+    "bigg_name": "Biomass: RNA"
   },
   "gdpman2s": {
     "name": "GDP-mannose-2-sulfate"
@@ -6654,10 +6884,12 @@
     "name": "Beta-1,3-glucan"
   },
   "isomal": {
-    "name": "Isomaltose"
+    "name": "Isomaltose",
+    "bigg_name": "Isomaltose C12H22O11"
   },
   "itp": {
-    "name": "ITP"
+    "name": "ITP",
+    "bigg_name": "ITP C10H11N4O14P3"
   },
   "HC00617": {
     "name": "Ferricytochrome B5"
@@ -6885,10 +7117,12 @@
     "name": "4-Hydroxy-2-quinolinecarboxylic acid"
   },
   "3hanthrn": {
-    "name": "3 Hydroxyanthranilate"
+    "name": "3 Hydroxyanthranilate",
+    "bigg_name": "3 Hydroxyanthranilate C7H7NO3"
   },
   "hLkynr": {
-    "name": "3 Hydroxy L kynurenine"
+    "name": "3 Hydroxy L kynurenine",
+    "bigg_name": "3 Hydroxy L kynurenine C10H12N2O4"
   },
   "dmgly": {
     "name": "N,N-Dimethylglycine"
@@ -6960,7 +7194,8 @@
     "name": "1-Heptadecanoylglycerophosphoethanolamine (C17:0 Pe)"
   },
   "pcholn24_hs": {
-    "name": "1-Lignocericylglycerophosphocholine (24:0), Lysopc A"
+    "name": "1-Lignocericylglycerophosphocholine (24:0), Lysopc A",
+    "bigg_name": "1-Lignocericylglycerophosphocholine (24:0), Lysopc A C24"
   },
   "pcholn261_hs": {
     "name": "Lysopc A C26:1 (Delta 5)"
@@ -7029,13 +7264,15 @@
     "name": "1-Eicosadienoylglycerophosphocholine (Delta 11,14)"
   },
   "3mtp": {
-    "name": "3 Methylthiopropionate"
+    "name": "3 Methylthiopropionate",
+    "bigg_name": "3 Methylthiopropionate C4H7O2S"
   },
   "phlac": {
     "name": "Phenyllactate"
   },
   "34hpl": {
-    "name": "3  4 Hydroxyphenyl lactate"
+    "name": "3  4 Hydroxyphenyl lactate",
+    "bigg_name": "3  4 Hydroxyphenyl lactate C9H9O4"
   },
   "3hmp": {
     "name": "3-Hydroxy-2-methylpropanoate"
@@ -7101,7 +7338,8 @@
     "name": "Hexanoyl-CoA (n-C6:0CoA)"
   },
   "mev__R": {
-    "name": "R  Mevalonate"
+    "name": "R  Mevalonate",
+    "bigg_name": "R  Mevalonate C6H11O4"
   },
   "mi1p__D": {
     "name": "1D-myo-Inositol 1-phosphate"
@@ -7131,7 +7369,8 @@
     "name": "N6,N6,N6-Trimethyl-L-lysine"
   },
   "urcan": {
-    "name": "Urocanate"
+    "name": "Urocanate",
+    "bigg_name": "Urocanate C6H5N2O2"
   },
   "acile__L": {
     "name": "Acetyl Isoleucine (Chemspider Id: 9964364)"
@@ -7686,7 +7925,8 @@
     "name": "15(R)-HEPE"
   },
   "sql": {
-    "name": "Squalene"
+    "name": "Squalene",
+    "bigg_name": "Squalene C30H50"
   },
   "CE1617": {
     "name": "9-cis-retinoate"
@@ -8823,40 +9063,52 @@
     "name": "Arbutin 6-phosphate"
   },
   "ohed": {
-    "name": "2 oxo hept 3 ene 1 7 dioic acid"
+    "name": "2 oxo hept 3 ene 1 7 dioic acid",
+    "bigg_name": "2 oxo hept 3 ene 1 7 dioic acid C7H8O5"
   },
   "14denlipidA_LptA": {
-    "name": "1' 4' bisphosphoethanolamin lipidIVa"
+    "name": "1' 4' bisphosphoethanolamin lipidIVa",
+    "bigg_name": "1' 4' bisphosphoethanolamin lipidIVa C72H138N4O29P4"
   },
   "lipidAp": {
-    "name": "Lipid IVa with palmitoyl"
+    "name": "Lipid IVa with palmitoyl",
+    "bigg_name": "Lipid IVa with palmitoyl C84H156N2O24P2"
   },
   "lipa_LptA": {
-    "name": "KDO 2  lipid  A"
+    "name": "KDO 2  lipid  A",
+    "bigg_name": "KDO 2  lipid  A  C110H196N2O39P2"
   },
   "phhlipaA": {
-    "name": "Phospho heptosyl heptosyl kdo2 lipidA"
+    "name": "Phospho heptosyl heptosyl kdo2 lipidA",
+    "bigg_name": "Phospho heptosyl heptosyl kdo2 lipidA C124H199N2O54P3"
   },
   "hlipaB": {
-    "name": "Heptosyl kdo2 lipidA with laurate"
+    "name": "Heptosyl kdo2 lipidA with laurate",
+    "bigg_name": "Heptosyl kdo2 lipidA with laurate C115H204N2O45P2"
   },
   "colipaF": {
-    "name": "Core oligosaccharide lipid A with 1' diphosphate"
+    "name": "Core oligosaccharide lipid A with 1' diphosphate",
+    "bigg_name": "Core oligosaccharide lipid A with 1' diphosphate  C161H260N2O91P5"
   },
   "gammagund": {
-    "name": "N acetylgalactosamyl mannosyl mannosyl N acetylglucosamyl undecaprenyl diphosphate"
+    "name": "N acetylgalactosamyl mannosyl mannosyl N acetylglucosamyl undecaprenyl diphosphate",
+    "bigg_name": "N acetylgalactosamyl mannosyl mannosyl N acetylglucosamyl undecaprenyl diphosphate C83H139N2O27P2"
   },
   "o6a2und": {
-    "name": "O6 antigen x2 undecaprenyl diphosphate"
+    "name": "O6 antigen x2 undecaprenyl diphosphate",
+    "bigg_name": "O6 antigen x2 undecaprenyl diphosphate C123H210NO54P2"
   },
   "o6a3und": {
-    "name": "O6 antigen x3 undecaprenyl diphosphate"
+    "name": "O6 antigen x3 undecaprenyl diphosphate",
+    "bigg_name": "O6 antigen x3 undecaprenyl diphosphate C157H270N2O76P2"
   },
   "o6a4und": {
-    "name": "O6 antigen x4 undecaprenyl diphosphate"
+    "name": "O6 antigen x4 undecaprenyl diphosphate",
+    "bigg_name": "O6 antigen x4 undecaprenyl diphosphate C191H330N2O98P2"
   },
   "acolipa_LptA": {
-    "name": "4 Amino 4 deoxy L arabinose modified core oligosaccharide lipid A"
+    "name": "4 Amino 4 deoxy L arabinose modified core oligosaccharide lipid A",
+    "bigg_name": "4 Amino 4 deoxy L arabinose modified core oligosaccharide lipid A C181H314N3O103P4"
   },
   "cdprbt": {
     "name": "CDP-ribitol(2-)"
@@ -9117,7 +9369,8 @@
     "name": "Diacylglycerol(plasmodium,C20:4,C18:2)"
   },
   "ethamp": {
-    "name": "Ethanolamine phosphate"
+    "name": "Ethanolamine phosphate",
+    "bigg_name": "Ethanolamine phosphate C2H7NO4P"
   },
   "pchol_pf_16_0_16_0": {
     "name": "Phosphatidyl choline(plasmodium,C16:0,C16:0)"
@@ -9150,22 +9403,27 @@
     "name": "A DASH D DASH glucose c"
   },
   "mmalsa": {
-    "name": "S  Methylmalonate semialdehyde"
+    "name": "S  Methylmalonate semialdehyde",
+    "bigg_name": "S  Methylmalonate semialdehyde C4H5O3"
   },
   "2theACP": {
-    "name": "Trans Hex 2 enoyl acp"
+    "name": "Trans Hex 2 enoyl acp",
+    "bigg_name": "Trans Hex 2 enoyl acp C6H9OX"
   },
   "2toceACP": {
-    "name": "Trans Oct 2 enoyl acp"
+    "name": "Trans Oct 2 enoyl acp",
+    "bigg_name": "Trans Oct 2 enoyl acp C8H13OX"
   },
   "3hocACP": {
     "name": "R-3-Hydroxyoctanoyl-acyl-carrier protein"
   },
   "2tdeACP": {
-    "name": "Trans Dec 2 enoyl acyl carrier protein"
+    "name": "Trans Dec 2 enoyl acyl carrier protein",
+    "bigg_name": "Trans Dec 2 enoyl acyl carrier protein C10H17OX"
   },
   "2tddACP": {
-    "name": "Trans Dodec 2 enoyl acyl carrier protein"
+    "name": "Trans Dodec 2 enoyl acyl carrier protein",
+    "bigg_name": "Trans Dodec 2 enoyl acyl carrier protein C12H21OX"
   },
   "3oxocACP": {
     "name": "3-oxooctanoyl-acp"
@@ -9174,40 +9432,52 @@
     "name": "3 Oxooctadecanoyl acp"
   },
   "ddcoa": {
-    "name": "Dodecanoyl CoA  n C120CoA"
+    "name": "Dodecanoyl CoA  n C120CoA",
+    "bigg_name": "Dodecanoyl CoA  n C120CoA  C33H54N7O17P3S"
   },
   "ocd2coa": {
-    "name": "Trans Oct 2 enoyl CoA"
+    "name": "Trans Oct 2 enoyl CoA",
+    "bigg_name": "Trans Oct 2 enoyl CoA C29H44N7O17P3S"
   },
   "alincoa": {
-    "name": "Alpha Linoyl CoA  n C1839 12 15CoA"
+    "name": "Alpha Linoyl CoA  n C1839 12 15CoA",
+    "bigg_name": "Alpha Linoyl CoA  n C1839 12 15CoA  C39H60N7O17P3S"
   },
   "lincoa": {
-    "name": "Linoleoyl CoA  n C1829 12CoA"
+    "name": "Linoleoyl CoA  n C1829 12CoA",
+    "bigg_name": "Linoleoyl CoA  n C1829 12CoA  C39H62N7O17P3S"
   },
   "gdpman": {
-    "name": "GDP D mannose"
+    "name": "GDP D mannose",
+    "bigg_name": "GDP D mannose C16H23N5O16P2"
   },
   "mag_LM": {
-    "name": "Monoacylglycerol  L major"
+    "name": "Monoacylglycerol  L major",
+    "bigg_name": "Monoacylglycerol  L major  C2070H3862O400"
   },
   "ethap": {
-    "name": "Ethanolamine phosphate"
+    "name": "Ethanolamine phosphate",
+    "bigg_name": "Ethanolamine phosphate C2H7NO4P"
   },
   "strcoa": {
-    "name": "Stearyl CoA  n C180CoA"
+    "name": "Stearyl CoA  n C180CoA",
+    "bigg_name": "Stearyl CoA  n C180CoA  C39H66N7O17P3S"
   },
   "CDPdag_LM": {
-    "name": "CDP diacylglycerol  L major"
+    "name": "CDP diacylglycerol  L major",
+    "bigg_name": "CDP diacylglycerol  L major  C4740H8024N300O1500P200"
   },
   "pe_LM": {
-    "name": "Phosphatidylethanolamine"
+    "name": "Phosphatidylethanolamine",
+    "bigg_name": "Phosphatidylethanolamine C4040H7524N100O800P100"
   },
   "ptd3ino_LM": {
-    "name": "1 Phosphatidyl 1D myo inositol 3 phosphate"
+    "name": "1 Phosphatidyl 1D myo inositol 3 phosphate",
+    "bigg_name": "1 Phosphatidyl 1D myo inositol 3 phosphate C4440H7824O1600P200"
   },
   "trpdrd": {
-    "name": "Reduced tryparedoxin"
+    "name": "Reduced tryparedoxin",
+    "bigg_name": "Reduced tryparedoxin XH2"
   },
   "co1dam": {
     "name": "Cob(I)yrinate a,c diamide"
@@ -9279,7 +9549,8 @@
     "name": "Deoxyribonucleic acid"
   },
   "hicit": {
-    "name": "Homoisocitrate"
+    "name": "Homoisocitrate",
+    "bigg_name": "Homoisocitrate C7H7O7"
   },
   "c1yda": {
     "name": "Cob(I)yrinate a,c-diamide"
@@ -9618,10 +9889,12 @@
     "name": "Trans cis cis octadeca 2 9 12 trienoyl CoA"
   },
   "lpp181": {
-    "name": "Lipoprotein acylated"
+    "name": "Lipoprotein acylated",
+    "bigg_name": "Lipoprotein acylated  C181"
   },
   "lpspput": {
-    "name": "Lipopolysacharide  LPS  from P putida"
+    "name": "Lipopolysacharide  LPS  from P putida",
+    "bigg_name": "Lipopolysacharide  LPS  from P putida KT2440"
   },
   "manur": {
     "name": "D Mannuronate"
@@ -9633,7 +9906,8 @@
     "name": "Nona 2 enoyl CoA"
   },
   "nona": {
-    "name": "Nonanoate"
+    "name": "Nonanoate",
+    "bigg_name": "Nonanoate C9H17O2"
   },
   "o_xyl": {
     "name": "O methyltoluene"
@@ -9963,7 +10237,8 @@
     "name": "Extracellular lipopolysaccharide group O:50 with a long O antigen polysaccharide"
   },
   "LPS9_46_VL": {
-    "name": "Lipopolysaccharide O:9 46: Lipid A - [Undecaprenyl-diphosphate-galactose-(alpha 1->3)-rhamnose-(alpha 1->4)-mannose-(alpha1->3)-tyvelose]"
+    "name": "Lipopolysaccharide O:9 46: Lipid A - [Undecaprenyl-diphosphate-galactose-(alpha 1->3)-rhamnose-(alpha 1->4)-mannose-(alpha1->3)-tyvelose]",
+    "bigg_name": "Lipopolysaccharide O:9 46: Lipid A - [Undecaprenyl-diphosphate-galactose-(alpha 1->3)-rhamnose-(alpha 1->4)-mannose-(alpha1->3)-tyvelose] 100"
   },
   "LPS44_ST": {
     "name": "Extracellular lipopolysaccharide group O:44 with a short O antigen polysaccharide"
@@ -10218,7 +10493,8 @@
     "name": "Cis-3-(3-carboxyethyl)-3,5-cyclohexadiene-1,2-diol"
   },
   "cgly": {
-    "name": "Cys Gly"
+    "name": "Cys Gly",
+    "bigg_name": "Cys Gly C5H10N2O3S"
   },
   "cinnm": {
     "name": "Trans-Cinnamate"
@@ -10395,13 +10671,16 @@
     "name": "D-Xylulose"
   },
   "23camp": {
-    "name": "2',3'-Cyclic"
+    "name": "2',3'-Cyclic",
+    "bigg_name": "2',3'-Cyclic AMP"
   },
   "23ccmp": {
-    "name": "2',3'-Cyclic"
+    "name": "2',3'-Cyclic",
+    "bigg_name": "2',3'-Cyclic CMP"
   },
   "23cgmp": {
-    "name": "2',3'-Cyclic"
+    "name": "2',3'-Cyclic",
+    "bigg_name": "2',3'-Cyclic GMP"
   },
   "23dappa": {
     "name": "2,3-diaminopropionate"
@@ -10410,7 +10689,8 @@
     "name": "2-Dehydro-3-deoxy-D-gluconate"
   },
   "3gmp": {
-    "name": "Guanosine 3  phosphate"
+    "name": "Guanosine 3  phosphate",
+    "bigg_name": "Guanosine 3  phosphate C10H12N5O8P"
   },
   "3hcinnm": {
     "name": "3-hydroxycinnamic acid"
@@ -10428,7 +10708,8 @@
     "name": "D-Alanyl-D-alanine"
   },
   "arbt": {
-    "name": "Arbutin"
+    "name": "Arbutin",
+    "bigg_name": "Arbutin C12H16O7"
   },
   "ascb__L": {
     "name": "L-Ascorbate"
@@ -10524,7 +10805,8 @@
     "name": "L-Malate"
   },
   "malttr": {
-    "name": "Maltotriose"
+    "name": "Maltotriose",
+    "bigg_name": "Maltotriose C18H32O16"
   },
   "man6p": {
     "name": "D-Mannose 6-phosphate"
@@ -10548,7 +10830,8 @@
     "name": "Octanoate (n-C8:0)"
   },
   "orot": {
-    "name": "Orotate"
+    "name": "Orotate",
+    "bigg_name": "Orotate C5H3N2O4"
   },
   "pnto__R": {
     "name": "(R)-Pantothenate"
@@ -10599,16 +10882,19 @@
     "name": "1-Acyl-sn-glycero-3-phosphoglycerol (n-C18:0)"
   },
   "23cump": {
-    "name": "2',3'-Cyclic"
+    "name": "2',3'-Cyclic",
+    "bigg_name": "2',3'-Cyclic UMP"
   },
   "34dhpac": {
     "name": "3,4-Dihydroxyphenylacetaldehyde"
   },
   "3cmp": {
-    "name": "3  CMP"
+    "name": "3  CMP",
+    "bigg_name": "3  CMP C9H12N3O8P"
   },
   "3ump": {
-    "name": "3  UMP"
+    "name": "3  UMP",
+    "bigg_name": "3  UMP C9H11N2O9P"
   },
   "acgal1p": {
     "name": "N-Acetyl-D-galactosamine 1-phosphate"
@@ -10662,70 +10948,91 @@
     "name": "4-hydroxy-5-methyl-3(2H)-furanone"
   },
   "14glun": {
-    "name": "1 4 alpha D Glucosyl n"
+    "name": "1 4 alpha D Glucosyl n",
+    "bigg_name": "1 4 alpha D Glucosyl n C6H12O6"
   },
   "1agly3p_SC": {
-    "name": "1 Acyl glycerone 3 phosphate  yeast specific"
+    "name": "1 Acyl glycerone 3 phosphate  yeast specific",
+    "bigg_name": "1 Acyl glycerone 3 phosphate  yeast specific C1920H3422O700P100"
   },
   "25dthpp": {
-    "name": "2 5 diamino 6 ribitylamino 4 3H  pyrimidinone 5  phosphate"
+    "name": "2 5 diamino 6 ribitylamino 4 3H  pyrimidinone 5  phosphate",
+    "bigg_name": "2 5 diamino 6 ribitylamino 4 3H  pyrimidinone 5  phosphate C9H16N5O8P"
   },
   "2hb": {
-    "name": "2 Hydroxybutyrate"
+    "name": "2 Hydroxybutyrate",
+    "bigg_name": "2 Hydroxybutyrate C4H7O3"
   },
   "2hhxdal": {
-    "name": "2 Hydroxy hexadecanal"
+    "name": "2 Hydroxy hexadecanal",
+    "bigg_name": "2 Hydroxy hexadecanal C16H32O2"
   },
   "2hp6mp": {
-    "name": "2 Hexaprenyl 6 methoxyphenol"
+    "name": "2 Hexaprenyl 6 methoxyphenol",
+    "bigg_name": "2 Hexaprenyl 6 methoxyphenol C37H56O2"
   },
   "2hpmhmbq": {
-    "name": "2 hexaprenyl 3 methyl 5 hydroxy 6 methoxy 1 4 benzoquinone"
+    "name": "2 hexaprenyl 3 methyl 5 hydroxy 6 methoxy 1 4 benzoquinone",
+    "bigg_name": "2 hexaprenyl 3 methyl 5 hydroxy 6 methoxy 1 4 benzoquinone C38H56O4"
   },
   "3dsphgn": {
-    "name": "3 Dehydrosphinganine"
+    "name": "3 Dehydrosphinganine",
+    "bigg_name": "3 Dehydrosphinganine C18H38NO2"
   },
   "4fumacac": {
-    "name": "4 Fumarylacetoacetate"
+    "name": "4 Fumarylacetoacetate",
+    "bigg_name": "4 Fumarylacetoacetate C8H6O6"
   },
   "4gudbd": {
-    "name": "4 Guanidinobutanamide"
+    "name": "4 Guanidinobutanamide",
+    "bigg_name": "4 Guanidinobutanamide C5H13N4O"
   },
   "5pmev": {
-    "name": "R  5 Phosphomevalonate"
+    "name": "R  5 Phosphomevalonate",
+    "bigg_name": "R  5 Phosphomevalonate C6H10O7P"
   },
   "Dara14lac": {
-    "name": "D Arabinono 1 4 lactone"
+    "name": "D Arabinono 1 4 lactone",
+    "bigg_name": "D Arabinono 1 4 lactone C5H8O5"
   },
   "N1sprm": {
-    "name": "N1 Acetylspermine"
+    "name": "N1 Acetylspermine",
+    "bigg_name": "N1 Acetylspermine C12H31N4O"
   },
   "abt": {
-    "name": "L Arabinitol"
+    "name": "L Arabinitol",
+    "bigg_name": "L Arabinitol C5H12O5"
   },
   "acon5m": {
-    "name": "E 3 carboxyl 2 pentenedioate 5 methyl ester"
+    "name": "E 3 carboxyl 2 pentenedioate 5 methyl ester",
+    "bigg_name": "E 3 carboxyl 2 pentenedioate 5 methyl ester C7H6O6"
   },
   "actn__R": {
-    "name": "R  Acetoin"
+    "name": "R  Acetoin",
+    "bigg_name": "R  Acetoin C4H8O2"
   },
   "cbp": {
     "name": "Carbamoyl phosphate"
   },
   "cer3_26": {
-    "name": "Ceramide 3  Phytosphingosinen C260OH"
+    "name": "Ceramide 3  Phytosphingosinen C260OH",
+    "bigg_name": "Ceramide 3  Phytosphingosinen C260OH  C44H89NO5"
   },
   "dudp": {
-    "name": "DUDP"
+    "name": "DUDP",
+    "bigg_name": "DUDP C9H11N2O11P2"
   },
   "epist": {
-    "name": "Episterol"
+    "name": "Episterol",
+    "bigg_name": "Episterol C28H46O"
   },
   "ergst": {
-    "name": "Ergosterol"
+    "name": "Ergosterol",
+    "bigg_name": "Ergosterol C28H44O"
   },
   "fecostest_SC": {
-    "name": "Fecosterol ester  yeast specific"
+    "name": "Fecosterol ester  yeast specific",
+    "bigg_name": "Fecosterol ester  yeast specific C1695H2995O101"
   },
   "gcald": {
     "name": "Glycolaldehyde"
@@ -10737,76 +11044,100 @@
     "name": "Glyoxylate"
   },
   "hxc2coa": {
-    "name": "Trans Hexacos 2 enoyl CoA"
+    "name": "Trans Hexacos 2 enoyl CoA",
+    "bigg_name": "Trans Hexacos 2 enoyl CoA C47H80N7O17P3S"
   },
   "hxdcal": {
-    "name": "Hexadecanal"
+    "name": "Hexadecanal",
+    "bigg_name": "Hexadecanal C16H32O"
   },
   "iad": {
-    "name": "Indole 3 acetamide"
+    "name": "Indole 3 acetamide",
+    "bigg_name": "Indole 3 acetamide C10H10N2O"
   },
   "iamac": {
-    "name": "Isoamyl acetate"
+    "name": "Isoamyl acetate",
+    "bigg_name": "Isoamyl acetate C7H14O2"
   },
   "lanost": {
-    "name": "Lanosterol"
+    "name": "Lanosterol",
+    "bigg_name": "Lanosterol C30H50O"
   },
   "m3macchitppdol": {
-    "name": "alpha D mannosyl 3 beta D mannosyl diacetylchitodiphosphodolichol"
+    "name": "alpha D mannosyl 3 beta D mannosyl diacetylchitodiphosphodolichol",
+    "bigg_name": "alpha D mannosyl 3 beta D mannosyl diacetylchitodiphosphodolichol C55H94N2O37P2"
   },
   "mannan": {
-    "name": "Mannan"
+    "name": "Mannan",
+    "bigg_name": "Mannan C6H10O5"
   },
   "mi13456p": {
-    "name": "1D myo Inositol 1 3 4 5 6 pentakisphosphate"
+    "name": "1D myo Inositol 1 3 4 5 6 pentakisphosphate",
+    "bigg_name": "1D myo Inositol 1 3 4 5 6 pentakisphosphate C6H7O21P5"
   },
   "mi145p": {
-    "name": "1D myo Inositol 1 4 5 trisphosphate"
+    "name": "1D myo Inositol 1 4 5 trisphosphate",
+    "bigg_name": "1D myo Inositol 1 4 5 trisphosphate C6H9O15P3"
   },
   "mip2c126_SC": {
-    "name": "Mannose  inositol P 2 ceramide  ceramide 1  26C   yeast specific"
+    "name": "Mannose  inositol P 2 ceramide  ceramide 1  26C   yeast specific",
+    "bigg_name": "Mannose  inositol P 2 ceramide  ceramide 1  26C   yeast specific C6200H11900N100O2400P200"
   },
   "mipc126_SC": {
-    "name": "Mannose inositol phosphorylceramide  ceramide 1  26C   yeast specific"
+    "name": "Mannose inositol phosphorylceramide  ceramide 1  26C   yeast specific",
+    "bigg_name": "Mannose inositol phosphorylceramide  ceramide 1  26C   yeast specific C5600H10900N100O1600P100"
   },
   "mipc224_SC": {
-    "name": "Mannose inositol phosphorylceramide  ceramide 2  24C   yeast specific"
+    "name": "Mannose inositol phosphorylceramide  ceramide 2  24C   yeast specific",
+    "bigg_name": "Mannose inositol phosphorylceramide  ceramide 2  24C   yeast specific C5400H10500N100O1700P100"
   },
   "pc_SC": {
-    "name": "Phosphatidylcholine  yeast specific"
+    "name": "Phosphatidylcholine  yeast specific",
+    "bigg_name": "Phosphatidylcholine  yeast specific C4040H7844N100O800P100"
   },
   "pepd": {
-    "name": "Peptide"
+    "name": "Peptide",
+    "bigg_name": "Peptide C2H4NO2RC2H2NOR"
   },
   "pheac": {
-    "name": "Phenethyl acetate"
+    "name": "Phenethyl acetate",
+    "bigg_name": "Phenethyl acetate C10H12O2"
   },
   "ps_SC": {
-    "name": "Phosphatidylserine  yeast specific"
+    "name": "Phosphatidylserine  yeast specific",
+    "bigg_name": "Phosphatidylserine  yeast specific C3840H7144N100O1000P100"
   },
   "psd5p": {
-    "name": "Pseudouridine 5  phosphate"
+    "name": "Pseudouridine 5  phosphate",
+    "bigg_name": "Pseudouridine 5  phosphate C9H11N2O9P"
   },
   "ptd134bp_SC": {
-    "name": "Phosphatidyl 1D myo inositol 3 4 bisphosphate  yeast specific"
+    "name": "Phosphatidyl 1D myo inositol 3 4 bisphosphate  yeast specific",
+    "bigg_name": "Phosphatidyl 1D myo inositol 3 4 bisphosphate  yeast specific C4140H7444O1900P300"
   },
   "ptd1ino_SC": {
-    "name": "Phosphatidyl 1D myo inositol  yeast specific"
+    "name": "Phosphatidyl 1D myo inositol  yeast specific",
+    "bigg_name": "Phosphatidyl 1D myo inositol  yeast specific C4140H7644O1300P100"
   },
   "ptd2meeta_SC": {
-    "name": "Phosphatidyl N dimethylethanolamine"
+    "name": "Phosphatidyl N dimethylethanolamine",
+    "bigg_name": "Phosphatidyl N dimethylethanolamine C3940H7644N100O800P100"
   },
   "sphgn": {
-    "name": "Sphinganine"
+    "name": "Sphinganine",
+    "bigg_name": "Sphinganine C18H40NO2"
   },
   "sprm": {
-    "name": "Spermine"
+    "name": "Spermine",
+    "bigg_name": "Spermine C10H30N4"
   },
   "srb__L": {
-    "name": "L Sorbose"
+    "name": "L Sorbose",
+    "bigg_name": "L Sorbose C6H12O6"
   },
   "tglp": {
-    "name": "N Tetradecanoylglycylpeptide"
+    "name": "N Tetradecanoylglycylpeptide",
+    "bigg_name": "N Tetradecanoylglycylpeptide C18H32N2O4R"
   },
   "trdox": {
     "name": "Oxidized thioredoxin"
@@ -10815,10 +11146,12 @@
     "name": "Reduced thioredoxin"
   },
   "ttccoa": {
-    "name": "Tetracosanoyl CoA   n C240CoA"
+    "name": "Tetracosanoyl CoA   n C240CoA",
+    "bigg_name": "Tetracosanoyl CoA   n C240CoA  C45H78N7O17P3S"
   },
   "zymst": {
-    "name": "Zymosterol"
+    "name": "Zymosterol",
+    "bigg_name": "Zymosterol C27H44O"
   },
   "2ommb": {
     "name": "2-Octaprenyl-3-methyl-6-methoxy-1,4-benzoquinone"
@@ -10866,7 +11199,8 @@
     "name": "Phosphatidylglycerophosphate (Saureus)"
   },
   "drib": {
-    "name": "Deoxyribose"
+    "name": "Deoxyribose",
+    "bigg_name": "Deoxyribose C5H10O4"
   },
   "4hphac": {
     "name": "4-Hydroxyphenylacetate"
@@ -10890,7 +11224,8 @@
     "name": "Salmochelin-S4-Fe-III"
   },
   "cysi__L": {
-    "name": "L Cystine"
+    "name": "L Cystine",
+    "bigg_name": "L Cystine C6H12N2O4S2"
   },
   "fe3dhbzs3": {
     "name": "2-3-dihydroxybenzoylserine trimer-Fe-III"
@@ -10941,28 +11276,35 @@
     "name": "KO-KDO-LIPID A"
   },
   "galam": {
-    "name": "D Galactosamine"
+    "name": "D Galactosamine",
+    "bigg_name": "D Galactosamine C6H13NO5"
   },
   "ggicolipaBR1": {
-    "name": "R1 glucosyl glucosyl inner core oligosaccharide lipid A with laurate"
+    "name": "R1 glucosyl glucosyl inner core oligosaccharide lipid A with laurate",
+    "bigg_name": "R1 glucosyl glucosyl inner core oligosaccharide lipid A with laurate C141H226N2O73P4"
   },
   "hphhlipaB": {
-    "name": "Heptosyl phospho heptosyl heptosyl kdo2 lipidA with laurate"
+    "name": "Heptosyl phospho heptosyl heptosyl kdo2 lipidA with laurate",
+    "bigg_name": "Heptosyl phospho heptosyl heptosyl kdo2 lipidA with laurate C122H195N2O54P3"
   },
   "icolipaBR1": {
-    "name": "R1 inner core oligosaccharide lipid A  E coli  with laurate"
+    "name": "R1 inner core oligosaccharide lipid A  E coli  with laurate",
+    "bigg_name": "R1 inner core oligosaccharide lipid A  E coli  with laurate C129H206N2O63P4"
   },
   "pac": {
     "name": "Phenylacetic acid"
   },
   "acgal6p": {
-    "name": "N Acetyl D galactosamine 6 phosphate"
+    "name": "N Acetyl D galactosamine 6 phosphate",
+    "bigg_name": "N Acetyl D galactosamine 6 phosphate C8H16NO9P"
   },
   "icolipaAR1": {
-    "name": "R1 inner core oligosaccharide lipid A  E coli"
+    "name": "R1 inner core oligosaccharide lipid A  E coli",
+    "bigg_name": "R1 inner core oligosaccharide lipid A  E coli  C131H210N2O63P4"
   },
   "gggicolipaAR1": {
-    "name": "R1 glucosyl glucosyl glucosyl inner core oligosaccharide lipid A"
+    "name": "R1 glucosyl glucosyl glucosyl inner core oligosaccharide lipid A",
+    "bigg_name": "R1 glucosyl glucosyl glucosyl inner core oligosaccharide lipid A C149H240N2O78P4"
   },
   "srb1p": {
     "name": "Sorbose 1-phosphate"
@@ -10986,7 +11328,8 @@
     "name": "KO-KDO-LIPID A"
   },
   "tmp": {
-    "name": "Trimetaphosphate"
+    "name": "Trimetaphosphate",
+    "bigg_name": "Trimetaphosphate P3O9"
   },
   "CDP_4keto_36dideox_glc": {
     "name": "CDP-4-keto-3;6-dideoxy-D-glucose"
@@ -11241,7 +11584,8 @@
     "name": "10methyl stearyoyl-ACP"
   },
   "mmeroacidACP": {
-    "name": "Methoxy meroacid"
+    "name": "Methoxy meroacid",
+    "bigg_name": "Methoxy meroacid ACP"
   },
   "rmyc": {
     "name": "Mycolate compounds (all)"
@@ -11259,7 +11603,8 @@
     "name": "Cyclopropanated alpha meroacid ACP (2 cyclopropane rings)"
   },
   "mmmeroacidACP": {
-    "name": "Methyl hydroxy methoxy meroacid"
+    "name": "Methyl hydroxy methoxy meroacid",
+    "bigg_name": "Methyl hydroxy methoxy meroacid ACP"
   },
   "arpp": {
     "name": "5-phosphoarabinose pyrophosphate"
@@ -11283,13 +11628,16 @@
     "name": "Dimethyl lignoceric acid"
   },
   "3ntym": {
-    "name": "3 Nitrotyramine"
+    "name": "3 Nitrotyramine",
+    "bigg_name": "3 Nitrotyramine C8H15N2"
   },
   "35dhphaccoa": {
-    "name": "3 5 Dihydroxyphenylacetyl CoA"
+    "name": "3 5 Dihydroxyphenylacetyl CoA",
+    "bigg_name": "3 5 Dihydroxyphenylacetyl CoA C29H42N7O19P3S"
   },
   "4h3npac": {
-    "name": "4 Hydroxy 3 Nitro Phenylacetic acid"
+    "name": "4 Hydroxy 3 Nitro Phenylacetic acid",
+    "bigg_name": "4 Hydroxy 3 Nitro Phenylacetic acid C8H10NO2"
   },
   "d5kg": {
     "name": "2-Deoxy-5-keto-D-gluconic acid"
@@ -11322,7 +11670,8 @@
     "name": "Gold-Au"
   },
   "4hoxpac": {
-    "name": "4 Hydroxyphenylacetic acid"
+    "name": "4 Hydroxyphenylacetic acid",
+    "bigg_name": "4 Hydroxyphenylacetic acid C8H8O3"
   },
   "34dhpacet": {
     "name": "3-4-Dihydroxyphenylacetate"
@@ -11682,7 +12031,8 @@
     "name": "N-Methylhistamine"
   },
   "mi1345p": {
-    "name": "1D myo Inositol 1 3 4 5 tetrakisphosphate"
+    "name": "1D myo Inositol 1 3 4 5 tetrakisphosphate",
+    "bigg_name": "1D myo Inositol 1 3 4 5 tetrakisphosphate C6H8O18P4"
   },
   "mi14p": {
     "name": "1D-myo-Inositol 1,4-bisphosphate"
@@ -11835,7 +12185,8 @@
     "name": "Folate"
   },
   "gluala": {
-    "name": "5 L Glutamyl L alanine"
+    "name": "5 L Glutamyl L alanine",
+    "bigg_name": "5 L Glutamyl L alanine C8H13N2O5"
   },
   "ha_pre1": {
     "name": "Hyaluronan biosynthesis, precursor 1"
@@ -11871,7 +12222,8 @@
     "name": "Phosphatidylglycerol (homo sapiens)"
   },
   "ptdca": {
-    "name": "Pentadecanoate  C150"
+    "name": "Pentadecanoate  C150",
+    "bigg_name": "Pentadecanoate  C150  C15H29O2"
   },
   "retinol_9_cis": {
     "name": "9-cis-retinol"
@@ -11880,10 +12232,12 @@
     "name": "Retpalm  LSQBKT deleted 10 FSLASH 09 FSLASH 2005  06:18:49 PM RSQBKT  e"
   },
   "sarcs": {
-    "name": "Sarcosine"
+    "name": "Sarcosine",
+    "bigg_name": "Sarcosine C3H7NO2"
   },
   "tchola": {
-    "name": "Taurocholic acid"
+    "name": "Taurocholic acid",
+    "bigg_name": "Taurocholic acid C26H45NO7S"
   },
   "tetpent6": {
     "name": "Tetracosapentaenoic acid, n-6"
@@ -12258,7 +12612,8 @@
     "name": "2-O-(3'-hydroxy)geranyl-3-O-geranyl-sn-glyceroserine"
   },
   "ch4s": {
-    "name": "Methanethiol"
+    "name": "Methanethiol",
+    "bigg_name": "Methanethiol CH4S"
   },
   "ch4": {
     "name": "Methane"
@@ -12708,31 +13063,40 @@
     "name": "Violaxanthin"
   },
   "12d3k5m": {
-    "name": "1 2 dihydroxy 3 keto 5 methylthiopentene"
+    "name": "1 2 dihydroxy 3 keto 5 methylthiopentene",
+    "bigg_name": "1 2 dihydroxy 3 keto 5 methylthiopentene C6H8O3S"
   },
   "12dgr_BS": {
-    "name": "1 2 diacylglycerol"
+    "name": "1 2 diacylglycerol",
+    "bigg_name": "1 2 diacylglycerol C3436H6672O500"
   },
   "2o3mpt": {
-    "name": "R  2 Oxo 3 methylpentanoate"
+    "name": "R  2 Oxo 3 methylpentanoate",
+    "bigg_name": "R  2 Oxo 3 methylpentanoate C6H9O3"
   },
   "2pcpgc": {
-    "name": "2 Protocatechoylphloroglucinolcarboxylate"
+    "name": "2 Protocatechoylphloroglucinolcarboxylate",
+    "bigg_name": "2 Protocatechoylphloroglucinolcarboxylate C14H7O8"
   },
   "Lglyald": {
-    "name": "L Glyceraldehyde"
+    "name": "L Glyceraldehyde",
+    "bigg_name": "L Glyceraldehyde C3H6O3"
   },
   "ala_L_asp__L": {
-    "name": "Ala L asp L"
+    "name": "Ala L asp L",
+    "bigg_name": "Ala L asp L C7H11N2O5"
   },
   "ala_L_his__L": {
-    "name": "Ala His"
+    "name": "Ala His",
+    "bigg_name": "Ala His C9H14N4O3"
   },
   "ala_L_leu__L": {
-    "name": "Ala Leu"
+    "name": "Ala Leu",
+    "bigg_name": "Ala Leu C9H18N2O3"
   },
   "argp": {
-    "name": "L Arginine phosphate"
+    "name": "L Arginine phosphate",
+    "bigg_name": "L Arginine phosphate C6H14N4O5P"
   },
   "arsna": {
     "name": "Arsenate AsHO4"
@@ -12741,136 +13105,178 @@
     "name": "Arsenite AsH3O3"
   },
   "bilea": {
-    "name": "Bile acid"
+    "name": "Bile acid",
+    "bigg_name": "Bile acid C24H39O5"
   },
   "buts": {
-    "name": "Butanesulfonate"
+    "name": "Butanesulfonate",
+    "bigg_name": "Butanesulfonate C4H9O3S"
   },
   "chor": {
     "name": "Chorismate"
   },
   "dextrin": {
-    "name": "Dextrin"
+    "name": "Dextrin",
+    "bigg_name": "Dextrin C12H20O10"
   },
   "djenk": {
-    "name": "Djenkolate"
+    "name": "Djenkolate",
+    "bigg_name": "Djenkolate C7H14N2O4S2"
   },
   "ectoine": {
-    "name": "Ectoine"
+    "name": "Ectoine",
+    "bigg_name": "Ectoine C6H12N2O2"
   },
   "eths": {
-    "name": "Ethanesulfonate"
+    "name": "Ethanesulfonate",
+    "bigg_name": "Ethanesulfonate C2H5O3S"
   },
   "fa12coa": {
-    "name": "Anteiso C170 CoA"
+    "name": "Anteiso C170 CoA",
+    "bigg_name": "Anteiso C170 CoA C38H64N7O17P3S1"
   },
   "fa4coa": {
-    "name": "Anteiso C150 CoA"
+    "name": "Anteiso C150 CoA",
+    "bigg_name": "Anteiso C150 CoA C36H60N7O17P3S1"
   },
   "g1p_B": {
-    "name": "Beta D Glucose 1 phosphate"
+    "name": "Beta D Glucose 1 phosphate",
+    "bigg_name": "Beta D Glucose 1 phosphate C6H11O9P"
   },
   "galman": {
-    "name": "Galactomannan"
+    "name": "Galactomannan",
+    "bigg_name": "Galactomannan C6H10O5"
   },
   "glcn__D": {
-    "name": "D Gluconate"
+    "name": "D Gluconate",
+    "bigg_name": "D Gluconate C6H11O7"
   },
   "gly_asp__L": {
-    "name": "Gly asp L"
+    "name": "Gly asp L",
+    "bigg_name": "Gly asp L C6H9N2O5"
   },
   "gly_cys__L": {
-    "name": "Gly Cys"
+    "name": "Gly Cys",
+    "bigg_name": "Gly Cys C5H10N2O3S"
   },
   "gly_met__L": {
-    "name": "Gly Met"
+    "name": "Gly Met",
+    "bigg_name": "Gly Met C7H14N2O3S"
   },
   "gly_pro__L": {
-    "name": "Gly pro L"
+    "name": "Gly pro L",
+    "bigg_name": "Gly pro L C7H12N2O3"
   },
   "gtca2_45_BS": {
-    "name": "Glycerol teichoic acid  n45   unlinked  D ala substituted"
+    "name": "Glycerol teichoic acid  n45   unlinked  D ala substituted",
+    "bigg_name": "Glycerol teichoic acid  n45   unlinked  D ala substituted C286H612N47O328P46"
   },
   "gtca3_45_BS": {
-    "name": "Glycerol teichoic acid  n45   unlinked  glucose substituted"
+    "name": "Glycerol teichoic acid  n45   unlinked  glucose substituted",
+    "bigg_name": "Glycerol teichoic acid  n45   unlinked  glucose substituted C421H749N2O464P46"
   },
   "hpal": {
-    "name": "Heptanal"
+    "name": "Heptanal",
+    "bigg_name": "Heptanal C7H14O"
   },
   "hxal": {
-    "name": "Hexanal"
+    "name": "Hexanal",
+    "bigg_name": "Hexanal C6H12O"
   },
   "inospp1": {
-    "name": "1D myo inositol 1 3 4 5 6 pentakisphosphate"
+    "name": "1D myo inositol 1 3 4 5 6 pentakisphosphate",
+    "bigg_name": "1D myo inositol 1 3 4 5 6 pentakisphosphate C6H7O21P5"
   },
   "istnt": {
-    "name": "Isethionate"
+    "name": "Isethionate",
+    "bigg_name": "Isethionate C2H5O4S"
   },
   "lipt": {
-    "name": "Lipoate"
+    "name": "Lipoate",
+    "bigg_name": "Lipoate C8H13O2S2"
   },
   "met_L_ala__L": {
-    "name": "Met L ala L"
+    "name": "Met L ala L",
+    "bigg_name": "Met L ala L C8H16N2O3S"
   },
   "metox__R": {
-    "name": "L methionine R oxide"
+    "name": "L methionine R oxide",
+    "bigg_name": "L methionine R oxide C5H11NO3S"
   },
   "metox": {
-    "name": "L Methionine S oxide"
+    "name": "L Methionine S oxide",
+    "bigg_name": "L Methionine S oxide C5H11NO3S"
   },
   "mmal": {
-    "name": "Methylmalonate"
+    "name": "Methylmalonate",
+    "bigg_name": "Methylmalonate C4H4O4"
   },
   "mmalsa__S": {
-    "name": "S  Methylmalonate semialdehyde"
+    "name": "S  Methylmalonate semialdehyde",
+    "bigg_name": "S  Methylmalonate semialdehyde C4H5O3"
   },
   "mops": {
-    "name": "MOPS"
+    "name": "MOPS",
+    "bigg_name": "MOPS C7H14NO4S"
   },
   "oxglyc": {
-    "name": "Oxaloglycolate"
+    "name": "Oxaloglycolate",
+    "bigg_name": "Oxaloglycolate C4H2O6"
   },
   "peptido_BS": {
-    "name": "Peptidoglycan subunit of Bacillus subtilis"
+    "name": "Peptidoglycan subunit of Bacillus subtilis",
+    "bigg_name": "Peptidoglycan subunit of Bacillus subtilis C40H62N8O21"
   },
   "pgly_BS": {
-    "name": "Phosphatidylglycerol  B subtils"
+    "name": "Phosphatidylglycerol  B subtils",
+    "bigg_name": "Phosphatidylglycerol  B subtils  C3736H7272O1000P100"
   },
   "pser__D": {
     "name": "D-O-Phosphoserine"
   },
   "ptdcal": {
-    "name": "Pentadecanal"
+    "name": "Pentadecanal",
+    "bigg_name": "Pentadecanal C15H30O"
   },
   "purine": {
-    "name": "Purine"
+    "name": "Purine",
+    "bigg_name": "Purine C5H5N4"
   },
   "ser_L_ala__L": {
-    "name": "Ser Ala"
+    "name": "Ser Ala",
+    "bigg_name": "Ser Ala C6H12N2O4"
   },
   "ser_L_ile__L": {
-    "name": "Ser Ile"
+    "name": "Ser Ile",
+    "bigg_name": "Ser Ile C9H18N2O4"
   },
   "ser_L_leu__L": {
-    "name": "Ser Leu"
+    "name": "Ser Leu",
+    "bigg_name": "Ser Leu C9H18N2O4"
   },
   "sula": {
-    "name": "Sulfoacetate"
+    "name": "Sulfoacetate",
+    "bigg_name": "Sulfoacetate C2H2O5S"
   },
   "thr_L_phe__L": {
-    "name": "Thr Phe"
+    "name": "Thr Phe",
+    "bigg_name": "Thr Phe C13H18N2O4"
   },
   "trdca": {
-    "name": "Tridecanoate"
+    "name": "Tridecanoate",
+    "bigg_name": "Tridecanoate C13H25O2"
   },
   "trdcal": {
-    "name": "Tridecanal"
+    "name": "Tridecanal",
+    "bigg_name": "Tridecanal C13H26O"
   },
   "uacgala": {
-    "name": "UDP N acetyl D galactosamine"
+    "name": "UDP N acetyl D galactosamine",
+    "bigg_name": "UDP N acetyl D galactosamine C17H25N3O17P2"
   },
   "unk2_BS": {
-    "name": "Unknown 2"
+    "name": "Unknown 2",
+    "bigg_name": "Unknown 2 C5H17O11NP"
   },
   "2coum": {
     "name": "Cis-2-Hydroxy cinnamate"
@@ -13629,7 +14035,8 @@
     "name": "Beta glucan-glycocholate complex"
   },
   "glygly": {
-    "name": "Glycylglycine"
+    "name": "Glycylglycine",
+    "bigg_name": "Glycylglycine C4H8N2O3"
   },
   "gm2a_cho": {
     "name": "GM2alpha"
@@ -14466,7 +14873,8 @@
     "name": "Selenomethionyl-tRNA(Met)"
   },
   "biomass_dna": {
-    "name": "Biomass:"
+    "name": "Biomass:",
+    "bigg_name": "Biomass: DNA"
   },
   "mgdg1801619Z": {
     "name": "1,2-Diacyl-3-O-galactosyl-sn-glycerol(18:0/16:1(9Z))"
@@ -14511,7 +14919,8 @@
     "name": "Androsterone Sulfate"
   },
   "cdpea": {
-    "name": "CDPethanolamine"
+    "name": "CDPethanolamine",
+    "bigg_name": "CDPethanolamine C11H19N4O11P2"
   },
   "c101crn": {
     "name": "Decenoyl Carnitine"
@@ -14589,7 +14998,8 @@
     "name": "Cis2Trans4Decadienoyl Coenzyme A"
   },
   "Lkynr": {
-    "name": "L Kynurenine"
+    "name": "L Kynurenine",
+    "bigg_name": "L Kynurenine C10H12N2O3"
   },
   "pcreat": {
     "name": "Phosphocreatine"
@@ -14682,7 +15092,8 @@
     "name": "Linoleyl carnitine"
   },
   "15kprostgf2": {
-    "name": "15-Keto-Prostaglandin"
+    "name": "15-Keto-Prostaglandin",
+    "bigg_name": "15-Keto-Prostaglandin F2A"
   },
   "acthr__L": {
     "name": "Acetyl-Threonine"
@@ -15129,7 +15540,8 @@
     "name": "De-Fuc form of PA6 (w/o peptide linkage)"
   },
   "lpam": {
-    "name": "Lipoamide"
+    "name": "Lipoamide",
+    "bigg_name": "Lipoamide C8H15NOS2"
   },
   "34dhpha": {
     "name": "3-4-Dihydroxyphenylacetate"
@@ -15201,7 +15613,8 @@
     "name": "5,10-Methylenetetrahydrofolate"
   },
   "13dampp": {
-    "name": "1 3 Diaminopropane"
+    "name": "1 3 Diaminopropane",
+    "bigg_name": "1 3 Diaminopropane C3H12N2"
   },
   "N1aspmd": {
     "name": "N1-Acetylspermidine"
@@ -15537,7 +15950,8 @@
     "name": "Maltohexaose"
   },
   "itacon": {
-    "name": "Itaconate"
+    "name": "Itaconate",
+    "bigg_name": "Itaconate C5H4O4"
   },
   "M01989": {
     "name": "Glycodeoxycholic Acid"
@@ -16065,7 +16479,8 @@
     "name": "[FeO(OH)] monomer"
   },
   "fecpp3": {
-    "name": "Fe-Coproporphyrin"
+    "name": "Fe-Coproporphyrin",
+    "bigg_name": "Fe-Coproporphyrin III"
   },
   "fos": {
     "name": "Fosfomycin"
@@ -16179,22 +16594,28 @@
     "name": "Alpha-Methyl-D-glucoside"
   },
   "lipidA_core": {
-    "name": "2 3 2'3' Tetrakis beta hydroxymyristoyl  D glucosaminyl 1 6 beta D glucosamine 1 4' bisphosphate"
+    "name": "2 3 2'3' Tetrakis beta hydroxymyristoyl  D glucosaminyl 1 6 beta D glucosamine 1 4' bisphosphate",
+    "bigg_name": "2 3 2'3' Tetrakis beta hydroxymyristoyl  D glucosaminyl 1 6 beta D glucosamine 1 4' bisphosphate C68H126N2O23P2"
   },
   "14denlipidA": {
-    "name": "1' 4' bisphosphoethanolamin lipidIVa"
+    "name": "1' 4' bisphosphoethanolamin lipidIVa",
+    "bigg_name": "1' 4' bisphosphoethanolamin lipidIVa C72H138N4O29P4"
   },
   "hlipaA": {
-    "name": "Heptosyl kdo2 lipidA"
+    "name": "Heptosyl kdo2 lipidA",
+    "bigg_name": "Heptosyl kdo2 lipidA C117H208N2O45P2"
   },
   "mmagund": {
-    "name": "Mannosyl mannosyl N acetylglucosamyl undecaprenyl diphosphate"
+    "name": "Mannosyl mannosyl N acetylglucosamyl undecaprenyl diphosphate",
+    "bigg_name": "Mannosyl mannosyl N acetylglucosamyl undecaprenyl diphosphate C75H125NO22P2"
   },
   "o6a4colipa": {
-    "name": "O6 antigen x4 core oligosaccharide lipid A"
+    "name": "O6 antigen x4 core oligosaccharide lipid A",
+    "bigg_name": "O6 antigen x4 core oligosaccharide lipid A O225H390N2O120P2"
   },
   "eca4colipa_LptA": {
-    "name": "enterobacterial common antigen x4 core oligosaccharide lipid A"
+    "name": "enterobacterial common antigen x4 core oligosaccharide lipid A",
+    "bigg_name": "enterobacterial common antigen x4 core oligosaccharide lipid A C272H447N14O160P4"
   },
   "23tart": {
     "name": "(2R,3S)-tartrate"
@@ -16536,49 +16957,63 @@
     "name": "B DASH D DASH glucose c"
   },
   "3hhACP": {
-    "name": "R  3 Hydroxyhexanoyl acp"
+    "name": "R  3 Hydroxyhexanoyl acp",
+    "bigg_name": "R  3 Hydroxyhexanoyl acp C6H11O2X"
   },
   "3hdeACP": {
-    "name": "3R  3 Hydroxydecanoyl acyl carrier protein"
+    "name": "3R  3 Hydroxydecanoyl acyl carrier protein",
+    "bigg_name": "3R  3 Hydroxydecanoyl acyl carrier protein C10H19O2X"
   },
   "2tocdACP": {
-    "name": "Trans Octadec 2 enoyl acyl carrier protein"
+    "name": "Trans Octadec 2 enoyl acyl carrier protein",
+    "bigg_name": "Trans Octadec 2 enoyl acyl carrier protein C18H33OX"
   },
   "3hbutcoa": {
-    "name": "S  3 Hydroxybutyryl CoA"
+    "name": "S  3 Hydroxybutyryl CoA",
+    "bigg_name": "S  3 Hydroxybutyryl CoA C25H38N7O18P3S"
   },
   "decACP": {
-    "name": "Decanoyl acyl carrier protein"
+    "name": "Decanoyl acyl carrier protein",
+    "bigg_name": "Decanoyl acyl carrier protein C10H19OX"
   },
   "3oxtdACP": {
-    "name": "3 Oxotetradecanoyl acyl carrier protein"
+    "name": "3 Oxotetradecanoyl acyl carrier protein",
+    "bigg_name": "3 Oxotetradecanoyl acyl carrier protein C14H25O2X"
   },
   "tdd2coa": {
-    "name": "Trans Tetradec 2 enoyl CoA"
+    "name": "Trans Tetradec 2 enoyl CoA",
+    "bigg_name": "Trans Tetradec 2 enoyl CoA C35H56N7O17P3S"
   },
   "ddd2coa": {
-    "name": "Trans Dodec 2 enoyl CoA"
+    "name": "Trans Dodec 2 enoyl CoA",
+    "bigg_name": "Trans Dodec 2 enoyl CoA C33H52N7O17P3S"
   },
   "hxd2coa": {
-    "name": "Trans Hex 2 enoyl CoA"
+    "name": "Trans Hex 2 enoyl CoA",
+    "bigg_name": "Trans Hex 2 enoyl CoA C27H40N7O17P3S"
   },
   "butd2coa": {
-    "name": "Trans But 2 enoyl CoA"
+    "name": "Trans But 2 enoyl CoA",
+    "bigg_name": "Trans But 2 enoyl CoA C25H36N7O17P3S"
   },
   "pglyp_LM": {
-    "name": "Phosphatidylglycerophosphate  L major"
+    "name": "Phosphatidylglycerophosphate  L major",
+    "bigg_name": "Phosphatidylglycerophosphate  L major  C4140H7424O1300P200"
   },
   "5a4icam": {
-    "name": "5 Amino 4 imidazolecarboxyamide"
+    "name": "5 Amino 4 imidazolecarboxyamide",
+    "bigg_name": "5 Amino 4 imidazolecarboxyamide C4H6N4O"
   },
   "trpdox": {
     "name": "Oxidized tryparedoxin X"
   },
   "3mbutdhla": {
-    "name": "S  3 Methylbutanoyl  dihydrolipoamide"
+    "name": "S  3 Methylbutanoyl  dihydrolipoamide",
+    "bigg_name": "S  3 Methylbutanoyl  dihydrolipoamide C13H25NO2S2"
   },
   "clpn_LM": {
-    "name": "Cardiolipin  L major"
+    "name": "Cardiolipin  L major",
+    "bigg_name": "Cardiolipin  L major  C7980H14248O1700P200"
   },
   "CLP": {
     "name": "Cross-linked peptidoglycan"
@@ -16986,7 +17421,8 @@
     "name": "Phenyl nonanoyl CoA  Phe C90CoA"
   },
   "pqqA_kt": {
-    "name": "Peptide pqqA from Pseudomonas putida"
+    "name": "Peptide pqqA from Pseudomonas putida",
+    "bigg_name": "Peptide pqqA from Pseudomonas putida  MWTKPAYTDLRIGFEVTMYFANR"
   },
   "prealg_MG_32": {
     "name": "Beta 1 4 glycosidic  3  beta D mannuronic  2L guluronic acid"
@@ -17376,7 +17812,8 @@
     "name": "[Undecaprenyl-diphosphate-galactose-(alpha 1->3)-rhamnose-(alpha 1->4)-mannose-(alpha1->3)-tyvelose] 15"
   },
   "OA9_46_VL": {
-    "name": "[Undecaprenyl-diphosphate-galactose-(alpha 1->3)-rhamnose-(alpha 1->4)-mannose-(alpha1->3)-tyvelose]"
+    "name": "[Undecaprenyl-diphosphate-galactose-(alpha 1->3)-rhamnose-(alpha 1->4)-mannose-(alpha1->3)-tyvelose]",
+    "bigg_name": "[Undecaprenyl-diphosphate-galactose-(alpha 1->3)-rhamnose-(alpha 1->4)-mannose-(alpha1->3)-tyvelose] 100"
   },
   "LPS4__L": {
     "name": "Periplasmic lipopolysaccharide group O:XX with a long O antigen polysaccharide"
@@ -17580,7 +18017,8 @@
     "name": "Adenosyl cobinamide"
   },
   "adpglc": {
-    "name": "ADPglucose"
+    "name": "ADPglucose",
+    "bigg_name": "ADPglucose C16H23N5O15P2"
   },
   "agdpcbi": {
     "name": "Adenosine-GDP-cobinamide"
@@ -17940,7 +18378,8 @@
     "name": "Undecaprenyl-diphospho N-acetylglucosamine-N-acetylmannosaminuronate-N-acetamido-4,6-dideoxy-D-galactose"
   },
   "uppg3": {
-    "name": "Uroporphyrinogen"
+    "name": "Uroporphyrinogen",
+    "bigg_name": "Uroporphyrinogen III"
   },
   "xu5p__L": {
     "name": "L-Xylulose 5-phosphate"
@@ -17979,10 +18418,12 @@
     "name": "Flavodoxin (oxidized) - obsolete"
   },
   "16BDglcn": {
-    "name": "1 6 beta D Glucan"
+    "name": "1 6 beta D Glucan",
+    "bigg_name": "1 6 beta D Glucan C6H10O5"
   },
   "1agpc_SC": {
-    "name": "1 Acyl sn glycerol 3 phosphocholine  yeast specific"
+    "name": "1 Acyl sn glycerol 3 phosphocholine  yeast specific",
+    "bigg_name": "1 Acyl sn glycerol 3 phosphocholine  yeast specific C2420H4922N100O700P100"
   },
   "1pyr5c": {
     "name": "1-Pyrroline-5-carboxylate"
@@ -17994,76 +18435,96 @@
     "name": "(S)-2-Aceto-2-hydroxybutanoate"
   },
   "2ahhmd": {
-    "name": "2 Amino 4 hydroxy 6 hydroxymethyl 7 8 dihydropteridine diphosphate"
+    "name": "2 Amino 4 hydroxy 6 hydroxymethyl 7 8 dihydropteridine diphosphate",
+    "bigg_name": "2 Amino 4 hydroxy 6 hydroxymethyl 7 8 dihydropteridine diphosphate C7H8N5O8P2"
   },
   "2dda7p": {
     "name": "2-Dehydro-3-deoxy-D-arabino-heptonate 7-phosphate"
   },
   "35cimp": {
-    "name": "3  5  Cyclic IMP"
+    "name": "3  5  Cyclic IMP",
+    "bigg_name": "3  5  Cyclic IMP C10H10N4O7P"
   },
   "3ophb_5": {
-    "name": "3 Hexaprenyl 4 hydroxybenzoate"
+    "name": "3 Hexaprenyl 4 hydroxybenzoate",
+    "bigg_name": "3 Hexaprenyl 4 hydroxybenzoate C37H53O3"
   },
   "4mzym": {
-    "name": "4 methylzymosterol"
+    "name": "4 methylzymosterol",
+    "bigg_name": "4 methylzymosterol C28H46O"
   },
   "alpam": {
-    "name": "S aminomethyldihydrolipoamide"
+    "name": "S aminomethyldihydrolipoamide",
+    "bigg_name": "S aminomethyldihydrolipoamide C9H21N2OS2"
   },
   "aproa": {
-    "name": "3 Aminopropanal"
+    "name": "3 Aminopropanal",
+    "bigg_name": "3 Aminopropanal C3H8NO"
   },
   "asptrna": {
     "name": "L-Aspartyl-tRNA(Asp)"
   },
   "caphis": {
-    "name": "2  3 Carboxy 3 aminopropyl  L histidine"
+    "name": "2  3 Carboxy 3 aminopropyl  L histidine",
+    "bigg_name": "2  3 Carboxy 3 aminopropyl  L histidine C10H16N4O4"
   },
   "cdpchol": {
-    "name": "CDPcholine"
+    "name": "CDPcholine",
+    "bigg_name": "CDPcholine C14H25N4O11P2"
   },
   "cdpdag_SC": {
-    "name": "CDPdiacylglycerol  yeast specific"
+    "name": "CDPdiacylglycerol  yeast specific",
+    "bigg_name": "CDPdiacylglycerol  yeast specific C4440H7744N300O1500P200"
   },
   "cer1_26": {
-    "name": "Ceramide 1  Sphinganinen C260"
+    "name": "Ceramide 1  Sphinganinen C260",
+    "bigg_name": "Ceramide 1  Sphinganinen C260  C44H89NO3"
   },
   "cer3_24": {
-    "name": "Ceramide 3  Phytosphingosinen C240OH"
+    "name": "Ceramide 3  Phytosphingosinen C240OH",
+    "bigg_name": "Ceramide 3  Phytosphingosinen C240OH  C42H85NO5"
   },
   "chitin": {
-    "name": "Chitin  monomer"
+    "name": "Chitin  monomer",
+    "bigg_name": "Chitin  monomer  C8H13NO5"
   },
   "cmusa": {
-    "name": "2 Amino 3 carboxymuconate semialdehyde"
+    "name": "2 Amino 3 carboxymuconate semialdehyde",
+    "bigg_name": "2 Amino 3 carboxymuconate semialdehyde C7H6NO5"
   },
   "dolichol": {
-    "name": "Dolichol"
+    "name": "Dolichol",
+    "bigg_name": "Dolichol C15H28O"
   },
   "dolmanp": {
-    "name": "Dolichyl phosphate D mannose"
+    "name": "Dolichyl phosphate D mannose",
+    "bigg_name": "Dolichyl phosphate D mannose C21H38O9P"
   },
   "e4hglu": {
-    "name": "L erythro 4 Hydroxyglutamate"
+    "name": "L erythro 4 Hydroxyglutamate",
+    "bigg_name": "L erythro 4 Hydroxyglutamate C5H8NO5"
   },
   "e4p": {
     "name": "D-Erythrose 4-phosphate"
   },
   "epm": {
-    "name": "Epimelibiose"
+    "name": "Epimelibiose",
+    "bigg_name": "Epimelibiose C12H22O11"
   },
   "ergtetrol": {
-    "name": "Ergosta 5 7 22 24  28  tetraen 3beta ol"
+    "name": "Ergosta 5 7 22 24  28  tetraen 3beta ol",
+    "bigg_name": "Ergosta 5 7 22 24  28  tetraen 3beta ol C28H42O"
   },
   "f26bp": {
-    "name": "D Fructose 2 6 bisphosphate"
+    "name": "D Fructose 2 6 bisphosphate",
+    "bigg_name": "D Fructose 2 6 bisphosphate C6H10O12P2"
   },
   "fmettrna": {
     "name": "N-Formylmethionyl-tRNA"
   },
   "glp": {
-    "name": "Glycylpeptide"
+    "name": "Glycylpeptide",
+    "bigg_name": "Glycylpeptide C4H7N2O3R"
   },
   "glutrna": {
     "name": "L-Glutamyl-tRNA(Glu)"
@@ -18075,73 +18536,92 @@
     "name": "L-Histidyl-tRNA(His)"
   },
   "hpglu": {
-    "name": "Tetrahydropteroyltri L glutamate"
+    "name": "Tetrahydropteroyltri L glutamate",
+    "bigg_name": "Tetrahydropteroyltri L glutamate C24H34N8O12"
   },
   "iletrna": {
     "name": "L-Isoleucyl-tRNA(Ile)"
   },
   "ind3acnl": {
-    "name": "Indole 3 acetonitrile"
+    "name": "Indole 3 acetonitrile",
+    "bigg_name": "Indole 3 acetonitrile C10H8N2"
   },
   "ipc126_SC": {
-    "name": "Inositol phosphorylceramide  ceramide 1  26C   yeast specific"
+    "name": "Inositol phosphorylceramide  ceramide 1  26C   yeast specific",
+    "bigg_name": "Inositol phosphorylceramide  ceramide 1  26C   yeast specific C5000H9900N100O1100P100"
   },
   "ipc226_SC": {
-    "name": "Inositol phosphorylceramide  ceramide 2  26C   yeast specific"
+    "name": "Inositol phosphorylceramide  ceramide 2  26C   yeast specific",
+    "bigg_name": "Inositol phosphorylceramide  ceramide 2  26C   yeast specific C5000H9900N100O1200P100"
   },
   "ipc326_SC": {
-    "name": "Inositol phosphorylceramide  ceramide 3  26C   yeast specific"
+    "name": "Inositol phosphorylceramide  ceramide 3  26C   yeast specific",
+    "bigg_name": "Inositol phosphorylceramide  ceramide 3  26C   yeast specific C5000H9900N100O1300P100"
   },
   "leutrna": {
     "name": "L-Leucyl-tRNA(Leu)"
   },
   "m1macchitppdol": {
-    "name": "Alpha D mannosyl beta D mannosyl diacylchitobiosyldiphosphodolichol"
+    "name": "Alpha D mannosyl beta D mannosyl diacylchitobiosyldiphosphodolichol",
+    "bigg_name": "Alpha D mannosyl beta D mannosyl diacylchitobiosyldiphosphodolichol C43H74N2O27P2"
   },
   "m4macchitppdol": {
-    "name": "alpha D Mannosyl 4 beta D mannosyl diacetylchitobiosyldiphosphodolichol"
+    "name": "alpha D Mannosyl 4 beta D mannosyl diacetylchitobiosyldiphosphodolichol",
+    "bigg_name": "alpha D Mannosyl 4 beta D mannosyl diacetylchitobiosyldiphosphodolichol C61H104N2O42P2"
   },
   "macchitppdol": {
-    "name": "Beta D Mannosyldiacetylchitobiosyldiphosphodolichol"
+    "name": "Beta D Mannosyldiacetylchitobiosyldiphosphodolichol",
+    "bigg_name": "Beta D Mannosyldiacetylchitobiosyldiphosphodolichol C37H64N2O22P2"
   },
   "mip2c224_SC": {
-    "name": "Mannose  inositol P 2 ceramide  ceramide 2  24C   yeast specific"
+    "name": "Mannose  inositol P 2 ceramide  ceramide 2  24C   yeast specific",
+    "bigg_name": "Mannose  inositol P 2 ceramide  ceramide 2  24C   yeast specific C6000H11500N100O2500P200"
   },
   "mip2c324_SC": {
-    "name": "Mannose  inositol P 2 ceramide  ceramide 3  24C   yeast specific"
+    "name": "Mannose  inositol P 2 ceramide  ceramide 3  24C   yeast specific",
+    "bigg_name": "Mannose  inositol P 2 ceramide  ceramide 3  24C   yeast specific C6000H11500N100O2600P200"
   },
   "mipc226_SC": {
-    "name": "Mannose inositol phosphorylceramide  ceramide 2  26C   yeast specific"
+    "name": "Mannose inositol phosphorylceramide  ceramide 2  26C   yeast specific",
+    "bigg_name": "Mannose inositol phosphorylceramide  ceramide 2  26C   yeast specific C5600H10900N100O1700P100"
   },
   "ocdycacoa": {
-    "name": "Octadecynoyl CoA  n C182CoA"
+    "name": "Octadecynoyl CoA  n C182CoA",
+    "bigg_name": "Octadecynoyl CoA  n C182CoA  C39H62N7O17P3S"
   },
   "octeACP": {
     "name": "Cis-octadec-11-enoyl-[acyl-carrier protein] (n-C18:1)"
   },
   "pendp": {
-    "name": "All trans Pentaprenyl diphosphate"
+    "name": "All trans Pentaprenyl diphosphate",
+    "bigg_name": "All trans Pentaprenyl diphosphate C25H41O7P2"
   },
   "pg_SC": {
-    "name": "Phosphatidylglycerol  yeast specific"
+    "name": "Phosphatidylglycerol  yeast specific",
+    "bigg_name": "Phosphatidylglycerol  yeast specific C3840H7244O1000P100"
   },
   "phetrna": {
     "name": "L-Phenylalanyl-tRNA(Phe)"
   },
   "psph1p": {
-    "name": "Phytosphingosine 1 phosphate"
+    "name": "Phytosphingosine 1 phosphate",
+    "bigg_name": "Phytosphingosine 1 phosphate C18H39NO6P"
   },
   "ptd3ino_SC": {
-    "name": "Phosphatidyl 1D myo 3 inositol  yeast specific"
+    "name": "Phosphatidyl 1D myo 3 inositol  yeast specific",
+    "bigg_name": "Phosphatidyl 1D myo 3 inositol  yeast specific C4140H7544O1600P200"
   },
   "q6h2": {
-    "name": "Ubiquinol 6"
+    "name": "Ubiquinol 6",
+    "bigg_name": "Ubiquinol 6 C39H60O4"
   },
   "sdhlam": {
-    "name": "S Succinyldihydrolipoamide"
+    "name": "S Succinyldihydrolipoamide",
+    "bigg_name": "S Succinyldihydrolipoamide C12H20NO4S2"
   },
   "triglyc_SC": {
-    "name": "Triglyceride  yeast specific"
+    "name": "Triglyceride  yeast specific",
+    "bigg_name": "Triglyceride  yeast specific C5160H9566O600"
   },
   "trnaleu": {
     "name": "TRNA(Leu)"
@@ -18156,7 +18636,8 @@
     "name": "TRNA(Val)"
   },
   "ttc": {
-    "name": "Tetracosanoate  n C240"
+    "name": "Tetracosanoate  n C240",
+    "bigg_name": "Tetracosanoate  n C240  C24H47O2"
   },
   "tyrtrna": {
     "name": "L-Tyrosyl-tRNA(Tyr)"
@@ -18165,7 +18646,8 @@
     "name": "L-Valyl-tRNA(Val)"
   },
   "zym_int2": {
-    "name": "Zymosterol intermediate 2"
+    "name": "Zymosterol intermediate 2",
+    "bigg_name": "Zymosterol intermediate 2 C27H42O"
   },
   "3AStmyn": {
     "name": "3\"-Adenylylstreptomycin"
@@ -18180,7 +18662,8 @@
     "name": "N-Acetyl-D-muramoyl-L-alanine"
   },
   "alpro": {
-    "name": "S Aminomethyldihydrolipoylprotein"
+    "name": "S Aminomethyldihydrolipoylprotein",
+    "bigg_name": "S Aminomethyldihydrolipoylprotein CH6NS2X"
   },
   "dgdcg_SA": {
     "name": "Diglucosyl-diacylglycerol (SA)"
@@ -18198,7 +18681,8 @@
     "name": "Lactose-6-phosphate"
   },
   "lpro": {
-    "name": "Lipoylprotein"
+    "name": "Lipoylprotein",
+    "bigg_name": "Lipoylprotein S2X"
   },
   "nop": {
     "name": "D-Nopaline"
@@ -18210,7 +18694,8 @@
     "name": "Phosphatidylglycerol (Saureus)"
   },
   "pleu_SA2": {
-    "name": "Phosphatidylleucine"
+    "name": "Phosphatidylleucine",
+    "bigg_name": "Phosphatidylleucine SA2"
   },
   "plys_SA": {
     "name": "Phosphatidyllysine SA"
@@ -18234,13 +18719,16 @@
     "name": "5-Oxopentanoate"
   },
   "gicolipaBR1": {
-    "name": "R1 glucosyl inner core oligosaccharide lipid A with laurate"
+    "name": "R1 glucosyl inner core oligosaccharide lipid A with laurate",
+    "bigg_name": "R1 glucosyl inner core oligosaccharide lipid A with laurate C135H216N2O68P4"
   },
   "colipaB": {
-    "name": "Core oligosaccharide lipid A with laurate"
+    "name": "Core oligosaccharide lipid A with laurate",
+    "bigg_name": "Core oligosaccharide lipid A with laurate C159H256N2O88P4"
   },
   "gggicolipaBR1": {
-    "name": "R1 glucosyl glucosyl glucosyl inner core oligosaccharide lipid A with laurate"
+    "name": "R1 glucosyl glucosyl glucosyl inner core oligosaccharide lipid A with laurate",
+    "bigg_name": "R1 glucosyl glucosyl glucosyl inner core oligosaccharide lipid A with laurate C147H236N2O78P4"
   },
   "6pgg": {
     "name": "6-Phospho-beta-D-glucosyl-(1,4)-D-glucose"
@@ -18285,7 +18773,8 @@
     "name": "3-methylbenzyl alcohol"
   },
   "coucoa": {
-    "name": "P coumaroyl CoA"
+    "name": "P coumaroyl CoA",
+    "bigg_name": "P coumaroyl CoA C30H38N7O18P3S1"
   },
   "4mbzald": {
     "name": "P-methylbenzaldehyde"
@@ -18396,7 +18885,8 @@
     "name": "Ubiquinol"
   },
   "phdcaACP": {
-    "name": "Phenol palmitic acid"
+    "name": "Phenol palmitic acid",
+    "bigg_name": "Phenol palmitic acid ACP"
   },
   "pphthiocerol": {
     "name": "Phenolphtiocerol"
@@ -18453,10 +18943,12 @@
     "name": "Reduced adrenal ferredoxin"
   },
   "kmeroacidACP": {
-    "name": "Keto meroacid"
+    "name": "Keto meroacid",
+    "bigg_name": "Keto meroacid ACP"
   },
   "meroacidACP": {
-    "name": "Alpha meroacid"
+    "name": "Alpha meroacid",
+    "bigg_name": "Alpha meroacid ACP"
   },
   "chexccoa": {
     "name": "Carboxy hexacosanoyl-CoA"
@@ -18510,13 +19002,16 @@
     "name": "Methyl octadecanoate"
   },
   "4hbzACP": {
-    "name": "4-hydroxybenzoyl"
+    "name": "4-hydroxybenzoyl",
+    "bigg_name": "4-hydroxybenzoyl ACP"
   },
   "4h3npacald": {
-    "name": "4 Hydroxy 3 Nitro Phenylacetaldehyde"
+    "name": "4 Hydroxy 3 Nitro Phenylacetaldehyde",
+    "bigg_name": "4 Hydroxy 3 Nitro Phenylacetaldehyde C8H11NO"
   },
   "hphaccoa": {
-    "name": "4 Hydroxyphenylacetyl CoA"
+    "name": "4 Hydroxyphenylacetyl CoA",
+    "bigg_name": "4 Hydroxyphenylacetyl CoA C29H42N7O18P3S"
   },
   "im4act": {
     "name": "Imidazole-4-acetaldehyde"
@@ -19251,7 +19746,8 @@
     "name": "Methyl-3-hydroxyl diphosphate"
   },
   "f430": {
-    "name": "Coenzyme"
+    "name": "Coenzyme",
+    "bigg_name": "Coenzyme F430"
   },
   "mphen": {
     "name": "Methanophenazine (oxidized)"
@@ -19506,7 +20002,8 @@
     "name": "Beta-D-fructose"
   },
   "ggl": {
-    "name": "Galactosylglycerol"
+    "name": "Galactosylglycerol",
+    "bigg_name": "Galactosylglycerol C9H18O8"
   },
   "Glc_aD": {
     "name": "Alpha-D-glucose"
@@ -19524,7 +20021,8 @@
     "name": "Trans-Hex-2-enoyl-CoA"
   },
   "melt": {
-    "name": "Melibiitol"
+    "name": "Melibiitol",
+    "bigg_name": "Melibiitol C12H24O11"
   },
   "metarhodopsin": {
     "name": "Metarhodopsin"
@@ -19659,7 +20157,8 @@
     "name": "TRNA(SeCys)"
   },
   "upp3": {
-    "name": "Uroporphyrin"
+    "name": "Uroporphyrin",
+    "bigg_name": "Uroporphyrin III"
   },
   "urdglyc": {
     "name": "(-)-Ureidoglycolate"
@@ -19674,145 +20173,191 @@
     "name": "Zeinoxanthin"
   },
   "12dag3p_BS": {
-    "name": "1 2 diacyl sn glycerol 3 phosphate"
+    "name": "1 2 diacyl sn glycerol 3 phosphate",
+    "bigg_name": "1 2 diacyl sn glycerol 3 phosphate C3436H6572O800P100"
   },
   "14bxyl": {
-    "name": "1 4 beta D Xylan"
+    "name": "1 4 beta D Xylan",
+    "bigg_name": "1 4 beta D Xylan C5H8O4"
   },
   "2dmmq7": {
-    "name": "2 Demethylmenaquinone 7"
+    "name": "2 Demethylmenaquinone 7",
+    "bigg_name": "2 Demethylmenaquinone 7 C45H62O2"
   },
   "2h3k5m": {
-    "name": "2 hydroxy 3 keto 5 methylthiopentenyl 1 phosphate"
+    "name": "2 hydroxy 3 keto 5 methylthiopentenyl 1 phosphate",
+    "bigg_name": "2 hydroxy 3 keto 5 methylthiopentenyl 1 phosphate C6H8O6PS"
   },
   "2h3opp": {
-    "name": "2 Hydroxy 3 oxopropanoate"
+    "name": "2 Hydroxy 3 oxopropanoate",
+    "bigg_name": "2 Hydroxy 3 oxopropanoate C3H3O4"
   },
   "3hbycoa": {
-    "name": "S  3 Hydroxybutyryl CoA"
+    "name": "S  3 Hydroxybutyryl CoA",
+    "bigg_name": "S  3 Hydroxybutyryl CoA C25H38N7O18P3S"
   },
   "6ampenc": {
-    "name": "6 Aminopenicillanate"
+    "name": "6 Aminopenicillanate",
+    "bigg_name": "6 Aminopenicillanate C8H13N2O3S"
   },
   "L_thrgly": {
-    "name": "Thr Gly"
+    "name": "Thr Gly",
+    "bigg_name": "Thr Gly C6H12N2O4"
   },
   "Larab": {
-    "name": "Alpha L Arabinan"
+    "name": "Alpha L Arabinan",
+    "bigg_name": "Alpha L Arabinan C15H24O12"
   },
   "ala_L_met__L": {
-    "name": "Ala Met"
+    "name": "Ala Met",
+    "bigg_name": "Ala Met C8H16N2O3S"
   },
   "ala_L_phe__L": {
-    "name": "Ala Phe"
+    "name": "Ala Phe",
+    "bigg_name": "Ala Phe C12H16N2O3"
   },
   "ala_L_val__L": {
-    "name": "Ala Val"
+    "name": "Ala Val",
+    "bigg_name": "Ala Val C8H16N2O3"
   },
   "cdpdag_BS": {
-    "name": "CDPdiacylglycerol  B subtilis"
+    "name": "CDPdiacylglycerol  B subtilis",
+    "bigg_name": "CDPdiacylglycerol  B subtilis  C4336H7772N300O1500P200"
   },
   "dcal": {
-    "name": "Decanal"
+    "name": "Decanal",
+    "bigg_name": "Decanal C10H20O"
   },
   "dccoa": {
-    "name": "Decanoyl CoA"
+    "name": "Decanoyl CoA",
+    "bigg_name": "Decanoyl CoA C31H50N7O17P3S"
   },
   "fa11coa": {
-    "name": "Iso C170 CoA"
+    "name": "Iso C170 CoA",
+    "bigg_name": "Iso C170 CoA C38H64N7O17P3S1"
   },
   "fa1coa": {
-    "name": "Iso C140 CoA"
+    "name": "Iso C140 CoA",
+    "bigg_name": "Iso C140 CoA C35H58N7O17P3S1"
   },
   "fa9coa": {
-    "name": "Iso C171 CoA"
+    "name": "Iso C171 CoA",
+    "bigg_name": "Iso C171 CoA C38H62N7O17P3S1"
   },
   "fmet": {
-    "name": "N Formyl L methionine"
+    "name": "N Formyl L methionine",
+    "bigg_name": "N Formyl L methionine C6H10NO3S"
   },
   "galogs": {
-    "name": "Galactose oligosaccharide"
+    "name": "Galactose oligosaccharide",
+    "bigg_name": "Galactose oligosaccharide C6H10O5"
   },
   "gly_leu__L": {
-    "name": "Gly Leu"
+    "name": "Gly Leu",
+    "bigg_name": "Gly Leu C8H16N2O3"
   },
   "hemeC": {
     "name": "Heme C C40H42FeN6O8S2"
   },
   "hpdcal": {
-    "name": "Heptadecanal"
+    "name": "Heptadecanal",
+    "bigg_name": "Heptadecanal C17H34O"
   },
   "imzac": {
-    "name": "Imidazole 4 acetate"
+    "name": "Imidazole 4 acetate",
+    "bigg_name": "Imidazole 4 acetate C5H6N2O2"
   },
   "imzacd": {
-    "name": "Imidazole 4 acetaldehyde"
+    "name": "Imidazole 4 acetaldehyde",
+    "bigg_name": "Imidazole 4 acetaldehyde C5H7N2O"
   },
   "inoshp": {
-    "name": "Myo Inositol hexakisphosphate"
+    "name": "Myo Inositol hexakisphosphate",
+    "bigg_name": "Myo Inositol hexakisphosphate C6H6O24P6"
   },
   "lipo1_24_BS": {
-    "name": "Lipoteichoic acid  n24   linked  glucose substituted"
+    "name": "Lipoteichoic acid  n24   linked  glucose substituted",
+    "bigg_name": "Lipoteichoic acid  n24   linked  glucose substituted C26236H47072O25500P2400"
   },
   "lipo3_24_BS": {
-    "name": "Lipoteichoic acid  n24   linked  D alanine substituted"
+    "name": "Lipoteichoic acid  n24   linked  D alanine substituted",
+    "bigg_name": "Lipoteichoic acid  n24   linked  D alanine substituted C19036H39872N2400O18300P2400"
   },
   "lipo4_24_BS": {
-    "name": "Lipoteichoic acid  n24   linked  unsubstituted"
+    "name": "Lipoteichoic acid  n24   linked  unsubstituted",
+    "bigg_name": "Lipoteichoic acid  n24   linked  unsubstituted C11836H23072O13500P2400"
   },
   "lysylpgly_BS": {
-    "name": "Lysylphophatidylglycerol"
+    "name": "Lysylphophatidylglycerol",
+    "bigg_name": "Lysylphophatidylglycerol C4336H8572N200O1100P100"
   },
   "met_L_tyr__L": {
-    "name": "Met Tyr"
+    "name": "Met Tyr",
+    "bigg_name": "Met Tyr C14H20N2O4S"
   },
   "nebari": {
-    "name": "Nebularine"
+    "name": "Nebularine",
+    "bigg_name": "Nebularine C10H12N4O4"
   },
   "octal": {
-    "name": "Octanal"
+    "name": "Octanal",
+    "bigg_name": "Octanal C8H16O"
   },
   "pencil": {
-    "name": "Penicillin"
+    "name": "Penicillin",
+    "bigg_name": "Penicillin C9H11N2O4S"
   },
   "pencilca": {
-    "name": "Penicilloic acid"
+    "name": "Penicilloic acid",
+    "bigg_name": "Penicilloic acid C9H12N2O5S"
   },
   "ser_L_gln__L": {
-    "name": "Ser Gln"
+    "name": "Ser Gln",
+    "bigg_name": "Ser Gln C8H15N3O5"
   },
   "ser_L_phe__L": {
-    "name": "Ser Phe"
+    "name": "Ser Phe",
+    "bigg_name": "Ser Phe C12H16N2O4"
   },
   "ser_L_ser__L": {
-    "name": "Ser Ser"
+    "name": "Ser Ser",
+    "bigg_name": "Ser Ser C6H12N2O5"
   },
   "ser_L_trp__L": {
-    "name": "Ser Trp"
+    "name": "Ser Trp",
+    "bigg_name": "Ser Trp C14H17N3O4"
   },
   "ser_L_tyr__L": {
-    "name": "Ser Tyr"
+    "name": "Ser Tyr",
+    "bigg_name": "Ser Tyr C12H16N2O5"
   },
   "ser_L_val__L": {
-    "name": "Ser Val"
+    "name": "Ser Val",
+    "bigg_name": "Ser Val C8H16N2O4"
   },
   "shcl": {
-    "name": "Dihydrosirohydrochlorin"
+    "name": "Dihydrosirohydrochlorin",
+    "bigg_name": "Dihydrosirohydrochlorin C42H40N4O16"
   },
   "stchs": {
-    "name": "Stachyose"
+    "name": "Stachyose",
+    "bigg_name": "Stachyose C24H42O21"
   },
   "tartr__M": {
-    "name": "Meso Tartaric acid"
+    "name": "Meso Tartaric acid",
+    "bigg_name": "Meso Tartaric acid C4H4O6"
   },
   "trans_dd2coa": {
-    "name": "Trans Dodec 2 enoyl CoA"
+    "name": "Trans Dodec 2 enoyl CoA",
+    "bigg_name": "Trans Dodec 2 enoyl CoA C33H52N7O17P3S"
   },
   "ttdcal": {
-    "name": "Tetradecanal"
+    "name": "Tetradecanal",
+    "bigg_name": "Tetradecanal C14H28O"
   },
   "udca": {
-    "name": "Undecanoate"
+    "name": "Undecanoate",
+    "bigg_name": "Undecanoate C11H21O2"
   },
   "acngalacglcgalgluside_hs": {
     "name": "(Gal)3 (Glc)1 (GlcNAc)1 (Cer)1"
@@ -20493,7 +21038,8 @@
     "name": "GD2"
   },
   "gm1_cho": {
-    "name": "Ganglioside"
+    "name": "Ganglioside",
+    "bigg_name": "Ganglioside GM1"
   },
   "gq1c_cho": {
     "name": "GQ1c"
@@ -22104,7 +22650,8 @@
     "name": "Coenzyme A disulfide"
   },
   "cpp3": {
-    "name": "Coproporphyrin"
+    "name": "Coproporphyrin",
+    "bigg_name": "Coproporphyrin III"
   },
   "dhsq": {
     "name": "15-cis-dehydrosqualene"
@@ -22191,28 +22738,36 @@
     "name": "nan"
   },
   "chm": {
-    "name": "5 Carboxymethyl 2 hydroxymuconiC ACID"
+    "name": "5 Carboxymethyl 2 hydroxymuconiC ACID",
+    "bigg_name": "5 Carboxymethyl 2 hydroxymuconiC ACID C8H8O7"
   },
   "opet": {
-    "name": "5 oxo pent 3 ene 1 2 5 tricarboxylic acid"
+    "name": "5 oxo pent 3 ene 1 2 5 tricarboxylic acid",
+    "bigg_name": "5 oxo pent 3 ene 1 2 5 tricarboxylic acid C8H8O7"
   },
   "hhdd": {
-    "name": "2 hydroxy hepta 2 4 diene 1 7 dioic acid"
+    "name": "2 hydroxy hepta 2 4 diene 1 7 dioic acid",
+    "bigg_name": "2 hydroxy hepta 2 4 diene 1 7 dioic acid C7H8O5"
   },
   "hhed": {
-    "name": "2 4 dihydroxy hept 2 ene 1 7 dioic acid"
+    "name": "2 4 dihydroxy hept 2 ene 1 7 dioic acid",
+    "bigg_name": "2 4 dihydroxy hept 2 ene 1 7 dioic acid C7H10O6"
   },
   "lipaB": {
-    "name": "KDO 2  lipid  A   with laurate"
+    "name": "KDO 2  lipid  A   with laurate",
+    "bigg_name": "KDO 2  lipid  A   with laurate C108H192N2O39P2"
   },
   "lipaF": {
-    "name": "KDO 2  lipid  A  with 1 diphosphate"
+    "name": "KDO 2  lipid  A  with 1 diphosphate",
+    "bigg_name": "KDO 2  lipid  A  with 1 diphosphate C110H196N2O42P3"
   },
   "hhlipaB": {
-    "name": "Heptosyl heptosyl kdo2 lipidA with laurate"
+    "name": "Heptosyl heptosyl kdo2 lipidA with laurate",
+    "bigg_name": "Heptosyl heptosyl kdo2 lipidA with laurate C122H196N2O51P2"
   },
   "magund": {
-    "name": "Mannosyl N acetylglucosamyl undecaprenyl diphosphate"
+    "name": "Mannosyl N acetylglucosamyl undecaprenyl diphosphate",
+    "bigg_name": "Mannosyl N acetylglucosamyl undecaprenyl diphosphate C69H114NO17P2"
   },
   "colipa_LptA": {
     "name": "Core oligosaccharide lipid A with abundances"
@@ -22425,7 +22980,8 @@
     "name": "Menaquinone4"
   },
   "3hddACP": {
-    "name": "R  3 Hydroxydodecanoyl acyl carrier protein"
+    "name": "R  3 Hydroxydodecanoyl acyl carrier protein",
+    "bigg_name": "R  3 Hydroxydodecanoyl acyl carrier protein C12H23O2X"
   },
   "3hpaACP": {
     "name": "R-3-hydroxypalmitoyl-acyl-carrierprotein-"
@@ -22437,52 +22993,67 @@
     "name": "3-oxododecanoyl-acp"
   },
   "dcd2coa": {
-    "name": "Trans Dec 2 enoyl CoA"
+    "name": "Trans Dec 2 enoyl CoA",
+    "bigg_name": "Trans Dec 2 enoyl CoA C31H48N7O17P3S"
   },
   "gamla": {
-    "name": "Gamma linolenic acid  183"
+    "name": "Gamma linolenic acid  183",
+    "bigg_name": "Gamma linolenic acid  183  C18H29O2"
   },
   "triglyc_LM": {
-    "name": "Triglyceride  L major"
+    "name": "Triglyceride  L major",
+    "bigg_name": "Triglyceride  L major  C5610H9986O600"
   },
   "12dgr_LM": {
-    "name": "1 2 Diacylglycerol  L major"
+    "name": "1 2 Diacylglycerol  L major",
+    "bigg_name": "1 2 Diacylglycerol  L major  C3840H6924O500"
   },
   "1ag3p_LM": {
-    "name": "1 Acyl sn glycerol 3 phosphate  L major"
+    "name": "1 Acyl sn glycerol 3 phosphate  L major",
+    "bigg_name": "1 Acyl sn glycerol 3 phosphate  L major  C2070H3762O700P100"
   },
   "glincoa": {
-    "name": "Gamma Linoyl CoA  n C1836 9 12CoA"
+    "name": "Gamma Linoyl CoA  n C1836 9 12CoA",
+    "bigg_name": "Gamma Linoyl CoA  n C1836 9 12CoA  C39H60N7O17P3S"
   },
   "olcoa": {
-    "name": "Oleoyl CoA  n C1819CoA"
+    "name": "Oleoyl CoA  n C1819CoA",
+    "bigg_name": "Oleoyl CoA  n C1819CoA  C39H64N7O17P3S"
   },
   "pa_LM": {
-    "name": "Phosphatidate"
+    "name": "Phosphatidate",
+    "bigg_name": "Phosphatidate C3840H6824O800P100"
   },
   "1agly3p_LM": {
-    "name": "Glycerone phosphate  L major"
+    "name": "Glycerone phosphate  L major",
+    "bigg_name": "Glycerone phosphate  L major  C2070H3562O700P100"
   },
   "pg_LM": {
-    "name": "Phosphatidylglycerol  L major"
+    "name": "Phosphatidylglycerol  L major",
+    "bigg_name": "Phosphatidylglycerol  L major  C4140H7524O1000P100"
   },
   "DMino14bp": {
-    "name": "D myo Inositol 1 4 bisphosphate"
+    "name": "D myo Inositol 1 4 bisphosphate",
+    "bigg_name": "D myo Inositol 1 4 bisphosphate C6H10O12P2"
   },
   "ptd145bp_LM": {
-    "name": "Phosphatidylinositol 4 5 bisphosphate"
+    "name": "Phosphatidylinositol 4 5 bisphosphate",
+    "bigg_name": "Phosphatidylinositol 4 5 bisphosphate C4440H7724O1900P300"
   },
   "ptd4ino_LM": {
-    "name": "1 Phosphatidyl 1D myo inositol 4 phosphate"
+    "name": "1 Phosphatidyl 1D myo inositol 4 phosphate",
+    "bigg_name": "1 Phosphatidyl 1D myo inositol 4 phosphate C4440H7824O1600P200"
   },
   "mi145tp__D": {
     "name": "1D myo Inositol 1 4 5 trisphosphate"
   },
   "trpox": {
-    "name": "Oxidized trypanothione"
+    "name": "Oxidized trypanothione",
+    "bigg_name": "Oxidized trypanothione C27H45N9O10S2"
   },
   "trprd": {
-    "name": "Reduced trypanothione"
+    "name": "Reduced trypanothione",
+    "bigg_name": "Reduced trypanothione C27H47N9O10S2"
   },
   "fes": {
     "name": "Corrinoid Fe-S protein"
@@ -22509,7 +23080,8 @@
     "name": "Apo[acp]"
   },
   "cbflll": {
-    "name": "Cobalt-factor"
+    "name": "Cobalt-factor",
+    "bigg_name": "Cobalt-factor III"
   },
   "u45imzc": {
     "name": "4-ureido-5-imidazole carboxylate"
@@ -23124,7 +23696,8 @@
     "name": "Flavodoxin reduced"
   },
   "fmnh2": {
-    "name": "Reduced"
+    "name": "Reduced",
+    "bigg_name": "Reduced FMN"
   },
   "fprica": {
     "name": "5-Formamido-1-(5-phospho-D-ribosyl)imidazole-4-carboxamide"
@@ -23160,7 +23733,8 @@
     "name": "Kdo-phospho-heptosyl-phospho-heptosyl-heptosyl-kdo2-lipidA"
   },
   "moadamp": {
-    "name": "MoaD Protein with bound"
+    "name": "MoaD Protein with bound",
+    "bigg_name": "MoaD Protein with bound AMP"
   },
   "mococdp": {
     "name": "Molybdopterin cytosine dinucleotide"
