@@ -1,7 +1,7 @@
-Dynamic Flux Balance Analysis in Python with parsed kinetics data
+Dynamic Flux Balance Analysis in Python, with parsed kinetics data
 ________________________________________________________________________
 
-|PyPI version| |Downloads| |License|
+|License|
 
 .. |PyPI version| image:: https://img.shields.io/pypi/v/dfbapy.svg?logo=PyPI&logoColor=brightgreen
    :target: https://pypi.org/project/dfbapy/
@@ -43,7 +43,7 @@ The simulation environment is defined:
 .. code-block:: python
 
  import dfbapy
- dfba = dfbapy.dFBA(bigg_model_path, reaction_kinetics, verbose = False, printing = False)
+ dfba = dfbapy.dFBA(bigg_model_path, reaction_kinetics, verbose = False, printing = False, jupyter = False)
 
 - *bigg_model_path* ``str``: specifies path of the SBML file for the `BiGG model <http://bigg.ucsd.edu/>`_ that will be simulated. 
 - *kinetics_data* ``dict``: specifies kinetics data that will be implemented into the COBRA model. The dictionary must follow the structure of ``<enzymes>`` -> ``<sources>`` -> ``Parameters`` & ``SubstitutedRateLaw``, where the last two keys must be precisely identical to those presented. The ``Parameters`` key must contains sub-dictionaries for each parameter that comprises the rate law expression for the reaction, which contain keys of ``unit``, ``chemical``, and ``value``:
@@ -102,6 +102,7 @@ The ``SubstitutedRateLaw`` key must contain a mathematically valid string of the
  
 - *verbose* ``bool``: specifies whether simulation details and calculated values will be printed. This is valuable for trobuleshooting.
 - *printing* ``bool``: specifies whether simulation results will be printed. 
+- *jupyter* ``bool``: specifies whether simulation is being conducted in a Jupyter notebook, in which case the printed DataFrames will be expressed with the ``display()`` function. 
 
             
 ----------------------
@@ -166,3 +167,4 @@ The following list highlights stored content in the ``dFBA`` object after a simu
 - *cell_dry_mass* & *cell_liters* ``float``: The `dry mass <https://doi.org/10.1101/2021.12.30.474524>`_ and `volume <https://doi.org/10.1128/AEM.00117-14>`_ of a single cell, in base units of grams and liters, respectively. The citations for these values are hyperlinked with the respective value.
 - *changed* & *unchanged* ``set``: The unique and exclusive sets of metabolites that changed or did not change in concentration over the simulation, respectively.
 - *constrained* ``list``: The list of reactions that were constrained in the Cobra model with the calculated flux from the kinetics data.
+- *solutions* ``list``: A list of the Cobra solutions from the simulation -- one per timestep -- that are constitute the columns of the fluxes DataFrame.
