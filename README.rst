@@ -20,7 +20,7 @@ ________________________________________________________________________
    :alt: Downloads
 
 
-Reaction kinetics data can be parameterized and simulated in a genome-scale metabolic model (GEM) through dynamic Flux Balance Analysis (FBA). The ``dFBApy`` module supports this method of computational biology through concise and efficient functionality around `COBRApy <https://cobrapy.readthedocs.io/en/latest/>`_ , which is detailed in the following sections. The ``dFBApy`` module is available with the `MIT License <https://opensource.org/licenses/MIT>`_\. Examples Notebook are available in the examples directory of the `dFBApy GitHub repository <https://github.com/freiburgermsu/dfbapy>`_. Please submit errors, inquiries, or suggestions as `GitHub issues <https://github.com/freiburgermsu/dfbapy/issues>`_ where they can be addressed.
+Reaction kinetics data can be parameterized and simulated in a genome-scale metabolic model (GEM) through dynamic Flux Balance Analysis (FBA). The ``dFBApy`` module supports this method of computational biology through concise and efficient functionality around `COBRApy <https://cobrapy.readthedocs.io/en/latest/>`_ , which is detailed in the following sections. Examples Notebook are available in the examples directory of the `dFBApy GitHub repository <https://github.com/freiburgermsu/dfbapy>`_. Please submit errors, inquiries, or suggestions as `GitHub issues <https://github.com/freiburgermsu/dfbapy/issues>`_ where they can be addressed.
 
 
 ____________
@@ -148,13 +148,13 @@ A multitude of values are stored within the ``dFBA`` object, and can be subseque
 
 .. code-block:: python
 
- # conduct a ROSSpy simulation
+ # conduct a dFBA simulation
  from dfbapy import dFBA
  dfba = dFBA(bigg_model_path, reaction_kinetics)
  dfba.simulate(total_time, timestep)
- dba.export()
+ dfba.export()
  
- # evaluate the ROSSpy simulation contents
+ # evaluate the dFBA simulation contents
  print(dir(dfba))
 
 The following list highlights stored content in the ``dFBA`` object after a simulation:
