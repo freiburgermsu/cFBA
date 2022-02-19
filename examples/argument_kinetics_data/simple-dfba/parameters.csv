@@ -1,0 +1,6 @@
+,parameter,value
+0,bigg_model_name,e_coli_core.xml
+1,timesteps,4
+2,temperature,25
+3,pH,7
+4,simulation_path,C:\Users\Andrew Freiburger\Dropbox\My PC (DESKTOP-M302P50)\Documents\UVic Civil Engineering\dFBA\dFBApy\examples\argument_kinetics_data\simple-dfba

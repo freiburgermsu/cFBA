@@ -2,9 +2,10 @@
 
 # import statements
 from scipy.constants import micro, milli, nano, hour, minute, femto
+from matplotlib import pyplot
 from pprint import pprint
 from datetime import date
-from numpy import nan
+from numpy import nan, diff, nan, log10
 from math import inf 
 import cobra
 import pandas
@@ -14,12 +15,16 @@ import warnings, json, re, os
 # add the units of logarithm to the Magnesium concentration
 def isnumber(string):
     try:
-        string = str(string)
-        string = string.strip()
-        if re.sub('([0-9\.e-])', '',string) == '':
+        float(string)
+        if string is not nan:
             return True
     except:
-        return False
+        try:
+            int(string)
+            if string is not nan:
+                return True
+        except:
+            return False
     
 def average(num_1, num_2 = None):
     if isnumber(num_1): 
@@ -46,9 +51,7 @@ def average(num_1, num_2 = None):
 # define chemical concentrations
 class dFBA():
     def __init__(self, 
-                 bigg_model_path,    # BiGG model            
-                 kinetics_path: str = None, # the path of the kinetics data JSON file
-                 kinetics_data: dict = {}, # A dictionary of custom kinetics data
+                 bigg_model_path,    # BiGG model
                  verbose = False,
                  printing = False,
                  jupyter = False):
@@ -59,17 +62,8 @@ class dFBA():
         self.model = cobra.io.read_sbml_model(bigg_model_path)
         self.verbose = verbose
         self.printing = printing
-        self.jupyter = jupyter
-        
-        # define kinetics of the system
-        if type(kinetics_path) is str:
-            if not os.path.exists(kinetics_path):
-                raise ValueError('The path {kinetics_data} is not a valid path')
-            self.kinetics_data  = json.load(open(kinetics_path))
-        if kinetics_data != {}:
-            for data in kinetics_data:
-                self.kinetics_data[data] = kinetics_data[data]
-        
+        self.jupyter = jupyter        
+       
         # define the parameter and variable dictionaries
         self.parameters = {}
         self.parameters['bigg_model_name'] = os.path.basename(bigg_model_path)
@@ -77,7 +71,15 @@ class dFBA():
         self.variables = {}
         self.variables['concentrations'] = {}
         self.variables['time_series'] = {}
-        
+
+        # define a list of metabolite ids
+        self.model_ids = []
+        self.model_names = []
+        for met in self.model.metabolites:
+            self.model_names.append(met.name)
+            met = re.sub('(_.$)','',met.id)
+            self.model_ids.append(met)
+            
         # define a time-series value for each metabolite in the model
         for metabolite in self.model.metabolites:
             self.variables['time_series'][metabolite.name] = []
@@ -86,6 +88,54 @@ class dFBA():
 #        if 'bigg_name' in self.bigg_metabolites_ids[bigg_id]:
 #            return self.bigg_metabolites_ids[bigg_id]['bigg_name']
 #        return self.bigg_metabolites_ids[bigg_id]['name']
+            
+    def _initial_concentrations(self,kinetics_path,kinetics_data,initial_concentrations):
+        # define kinetics of the system
+        self.kinetics_data = {}
+        if type(kinetics_path) is str:
+            if not os.path.exists(kinetics_path):
+                raise ValueError('The path {kinetics_data} is not a valid path')
+            self.kinetics_data  = json.load(open(kinetics_path))
+        if kinetics_data != {}:
+            for data in kinetics_data:
+                self.kinetics_data[data] = kinetics_data[data]
+                
+        # define the DataFrames
+        self.col = f'{(1-1)*self.timestep_value} min'
+        self.conc_indices = set(met for met in self.model_names)
+        self.concentrations = pandas.DataFrame(index = self.conc_indices, columns = [self.col])
+        self.concentrations.index.name = 'metabolite (\u0394mM)'
+        
+        self.flux_indices = set(rxn.name for rxn in self.model.reactions)
+        self.fluxes = pandas.DataFrame(index = self.flux_indices, columns = [self.col])
+        self.fluxes.index.name = 'enzymes (mmol/g_(dw)/hr)'
+        
+        # assign the initial concentrations
+        for met in self.model_names:
+            self.concentrations.at[str(met), self.col] = float(0)
+        if self.kinetics_data != {}:  #!!! TODO: the initial concentration must be expanded to be the sum of concentrations for all reactions that contain the respective chemical
+            # incorporate initial content from the SABIO scraping
+            for enzyme in self.kinetics_data:
+                for condition in self.kinetics_data[enzyme]:
+                    for var in self.kinetics_data[enzyme][condition]['initial_concentrations_M']:
+                        bigg_id = None
+                        if self.kinetics_data[enzyme][condition]['variables_name'][var] in self.bigg_metabolites_names:
+                            bigg_id = self.bigg_metabolites_names[
+                                    self.kinetics_data[enzyme][condition]['variables_name'][var]
+                                    ]['id']
+                        if bigg_id in self.model_ids:
+                            self.concentrations.at[
+                                    self.kinetics_data[enzyme][condition]['variables_name'][var], self.col
+                                    ] = self.kinetics_data[enzyme][condition]['initial_concentrations_M'][var]/milli
+                        else:
+                            print(f"The {self.kinetics_data[enzyme][condition]['variables_name'][var]} metabolite is not in the BiGG model")
+        else:
+            raise NameError('Kinetics data must be defined.')
+            
+        if initial_concentrations != {}:
+            for met in self.model_names:
+                if met in initial_concentrations:
+                    self.concentrations.at[met, self.col] = initial_concentrations[met]
         
     def _find_data_match(self,enzyme, source):        
         # define the closest match of the data to the parameterized conditions
@@ -111,7 +161,6 @@ class dFBA():
             return 'w'
     
     def _calculate_kinetics(self):        
-        previous_column = f'{(self.timestep-1)*self.timestep_value} min'
 #        parameter_values = {}
         for enzyme in self.kinetics_data:
             fluxes = []
@@ -126,22 +175,21 @@ class dFBA():
                         for var in self.kinetics_data[enzyme][source]['variables_name']:
                             name = source_instance['variables_name'][var]
                             if len(var) == 1:
-                                if not name in self.concentrations.index:
+                                if not name in self.model_names:
                                     uncalculable = True
                                     break
-                                conc_dict[var] = self.concentrations.at[name, self.col]   
+                                conc_dict[var] = self.concentrations.at[name, self.previous_col]*milli
                                 
                         if uncalculable:
                             warnings.warn(f'MetaboliteError: The {name} variable is not described by the BiGG system')
                             break
 
-                        print(conc_dict)
+#                        print(conc_dict)
                         if conc_dict != {}:
-                            print(enzyme)
-                            print(source_instance["substituted_rate_law"])
+#                            print(enzyme)
+#                            print(source_instance["substituted_rate_law"])
                             locals().update(conc_dict)
                             flux = eval(source_instance["substituted_rate_law"])
-                            print(flux)
                             
                             # possible combine with previous fluxes, depending upon its match with the desired temperature and pH conditions
                             add_or_write = self._find_data_match(enzyme, source)
@@ -158,13 +206,17 @@ class dFBA():
                         
             flux = average(fluxes)
             if isnumber(flux):
-                self._set_constraints(enzyme, flux)
-                self.fluxes.at[enzyme, self.col] = flux 
-                if self.printing:
-                    print(f'{enzyme} flux:', flux)
-                    if average(fluxes) == 0:
-                        print('fluxes:', fluxes)
-                    print('\n')
+#                print('flux', flux)
+                if enzyme in self.defined_reactions:
+                    self._set_constraints(enzyme, flux)
+                    self.fluxes.at[enzyme, self.col] = flux 
+                    if self.printing:
+    #                    print(f'{enzyme} flux:', flux)
+                        if average(fluxes) == 0:
+                            print('fluxes:', fluxes)
+                        print('\n')
+                else:
+                    warnings.warn(f'ReactionError: The {enzyme} reaction, with flux of {flux}, is not described by the BiGG model.')
             else:
                 warnings.warn(f'FluxError: The {enzyme} reaction flux {source_instance["substituted_rate_law"]} value {flux} is not a number.')
 
@@ -207,26 +259,97 @@ class dFBA():
         solution = self.model.optimize()
         self.solutions.append(solution)
         for rxn in self.model.reactions:
-            if not isnumber(self.fluxes.at[rxn.name, self.col]):
+            if isnumber(self.fluxes.at[rxn.name, self.col]):
                 self.fluxes.at[rxn.name, self.col] = solution.fluxes[rxn.id]
                 
-    def _define_timestep(self, conc_indices, flux_indices):
+    def _define_timestep(self,):
         self.col = f'{self.timestep*self.timestep_value} min'
-        self.concentrations[self.col] = [float(0) for ind in conc_indices]
-        self.fluxes[self.col] = [nan for ind in flux_indices]
-        print('timestep', self.timestep)
+        self.previous_col = f'{(self.timestep-1)*self.timestep_value} min'
+        self.concentrations[self.col] = [float(0) for ind in self.conc_indices]
+        self.fluxes[self.col] = [nan for ind in self.flux_indices]
+#        print('timestep', self.timestep)
+        
+    def _visualize(self,figure_title,included_metabolites,labeled_plots):
+        legend_list = []
+        times = [t*self.timestep_value for t in range(self.parameters['timesteps']+1)]
+        
+        pyplot.rcParams['figure.figsize'] = (11, 7)
+        pyplot.rcParams['figure.dpi'] = 150
+        self.figure, ax = pyplot.subplots()
+        ax.set_title(figure_title)
+        ax.set_xlabel('Time (min)')
+        ax.set_ylabel('Concentrations (mmol)') 
+        
+        # plot all of the chemicals that experienced changed concentrations during the simulation
+        bbox = (1,1)
+        if included_metabolites == []:
+            included_metabolites = self.changed
+            bbox = (1.7,1)
+        log_axis = False
+        minimum = inf
+        maximum = -inf
+        printed_concentrations = {}
+        for chem in self.changed:
+            if chem in included_metabolites:
+                concentrations = self.concentrations.loc[[chem]].values
+                for row in concentrations:
+                    concentrations = row.tolist()
+                
+                relative = False
+                concentrations = [0 if conc<1e-9 else conc for conc in concentrations]
+                if concentrations[0] == 0:
+                    relative = True
+    
+                max_conc = max(concentrations)
+                maximum = max(maximum, max_conc)
+                min_conc = min(concentrations)
+                minimum = min(minimum, min_conc)
+                if maximum - minimum > 10*minimum:
+                    log_axis = True
+                    ax.set_yscale('log')
+                    
+                if isnumber(max_conc) and isnumber(min_conc):
+                    ax.plot(
+                            times,
+                            concentrations
+                            )
+                    if not relative:
+                        legend_list.append(chem)
+                    else:
+                        legend_list.append(f'{chem} (rel)')
+                        
+                    if labeled_plots:
+                        for i, v in enumerate(concentrations):
+                            if v > 1e-9:
+                                x_value = i*self.timestep_value
+                                vertical_adjustment = 0
+                                if x_value in printed_concentrations:
+                                    vertical_adjustment = (maximum - minimum)*.05
+                                    if log_axis:
+                                        vertical_adjustment = log10(maximum - minimum)*(.008)
+                                ax.text(x_value, v+vertical_adjustment, f"{chem} - {v}", ha="left")
+                                printed_concentrations[x_value] = v
+                                break
+        ax.set_xticks(times)
+        ax.grid(True)
+        ax.legend(legend_list, title = 'Changed chemicals', loc='upper right', bbox_to_anchor = bbox, title_fontsize = 'x-large', fontsize = 'large') 
                             
     def simulate(self, 
-                 total_time: float,  # mintues
-                 timestep: float,  # minutes
-                 initial_concentrations: dict = None,
-                 temperature = 25, 
-                 p_h = 7, 
+                 kinetics_path: str = None, # the path of the kinetics data JSON file
+                 kinetics_data: dict = {}, # A dictionary of custom kinetics data
+                 initial_concentrations: dict = {}, # an option of a specific dictionary for the initial concentrations
+                 total_time: float = 200,  # mintues
+                 timestep: float = 20,  # minutes
+                 temperature: float = 25, 
+                 p_h: float = 7, 
+                 figure_title: str = 'Metabolic perturbation',
+                 included_metabolites: list = [],  # A list of the metabolites that will be graphically displayed
+                 labeled_plots: bool = True,
                  visualize = True
                  ):
         
         # define the dataframe for the time series content
-        self.parameters['timesteps'] = round(total_time/timestep)
+        self.parameters['timesteps'] = round(total_time/timestep)    
         self.timestep_value = timestep
         self.total_time = total_time
         self.cell_dry_mass = 0.2*femto  # Teemu P. Miettinen, Kevin S. Ly, Alice Lam, Scott R. Manalis, https://doi.org/10.1101/2021.12.30.474524 
@@ -237,64 +360,24 @@ class dFBA():
         self.constrained = []
         self.solutions = []
         
-        # define a list of metabolite ids
-        model_ids = []
-        model_names = []
-        for met in self.model.metabolites:
-            model_names.append(met.name)
-            met = re.sub('(_.$)','',met.id)
-            model_ids.append(met)
-        
-        # define the DataFrames
-        self.col =  '0 min'
-        conc_indices = set(met for met in model_names)
-        self.concentrations = pandas.DataFrame(index = conc_indices, columns = [self.col])
-        self.concentrations.index.name = 'metabolite (\u0394mM)'
-        
-        flux_indices = set(rxn.name for rxn in self.model.reactions)
-        self.fluxes = pandas.DataFrame(index = flux_indices, columns = [self.col])
-        self.fluxes.index.name = 'enzymes (mmol/g_(dw)/hr)'
-        
         # define experimental conditions
         self.parameters['temperature'] = temperature
         self.parameters['pH'] = p_h
         self.variables['elapsed_time'] = 0
         
-        # assign the initial concentrations
-        for met in model_names:
-            self.concentrations.at[str(met), self.col] = float(0)
-        if type(initial_concentrations) is dict:
-            for met in model_names:
-                if met in initial_concentrations:
-                    self.concentrations.at[met, self.col] = initial_concentrations[met]
-        else:
-            # incorporate initial content from the SABIO scraping
-            for enzyme in self.kinetics_data:
-                for condition in self.kinetics_data[enzyme]:
-                    for var in self.kinetics_data[enzyme][condition]['initial_concentrations_M']:
-                        bigg_id = None
-                        if self.kinetics_data[enzyme][condition]['variables_name'][var] in self.bigg_metabolites_names:
-                            bigg_id = self.bigg_metabolites_names[
-                                    self.kinetics_data[enzyme][condition]['variables_name'][var]
-                                    ]['id']
-                        if bigg_id in model_ids:
-                            self.concentrations.at[str(met), self.col] = self.kinetics_data[enzyme][condition]['initial_concentrations_M'][var]/milli
-                        else:
-                            print(f"The {self.kinetics_data[enzyme][condition]['variables_name'][var]} metabolite is not in the BiGG model")
+        # define initial concentrations
+        self._initial_concentrations(kinetics_path,kinetics_data,initial_concentrations)
         
         # determine the BiGG reactions for which kinetics are predefined
         self.defined_reactions = {}
         for rxn in self.model.reactions:
-            if rxn.name in self.kinetics_data:
+            if rxn.name in kinetics_data:
                 self.defined_reactions[rxn.name] = rxn
             
         # execute FBA for each timestep
         for self.timestep in range(1,self.parameters['timesteps']+1):
-#                if self.timestep == 0:
-#                    self._calculate_kinetics() 
-#                    continue
             # calculate custom fluxes, constrain the model, and update concentrations
-            self._define_timestep(conc_indices, flux_indices)
+            self._define_timestep()
             self._calculate_kinetics()                    
             self._execute_cobra()
             self._update_concentrations()
@@ -304,14 +387,19 @@ class dFBA():
                 print(f'\nobjective value for timestep {self.timestep}: ', self.solutions[-1].objective_value)                
         
         # identify the chemicals that dynamically changed in concentrations
-        for met in model_names:
-            first = self.concentrations.at[met,'0 min']
+        for met in self.model_names:
+            first = self.concentrations.at[met,f'{(1-1)*self.timestep_value} min']
             final = self.concentrations.at[met, self.col]
             if first != final:
                 self.changed.add(met)
             if first == final:
                 self.unchanged.add(met)
                 
+        # visualize concentration changes over time
+        if visualize:
+            self._visualize(figure_title,included_metabolites,labeled_plots)
+        
+        # view calculations and results
         if self.verbose:
             print('\n\nUnchanged metabolite concentrations', '\n', '='*2*len('unchanged metabolites'), '\n', self.unchanged)
             print('\n\nChanged metabolite  concentrations', '\n', '='*2*len('changed metabolites'), '\n', self.changed)
@@ -350,11 +438,12 @@ class dFBA():
         self.concentrations.to_csv(os.path.join(self.simulation_path, 'concentrations.csv'))
         
         times = self.fluxes.columns
-        with open(os.path.join(self.simulation_path, 'objective_values.txt'), 'w') as obj_val:            
+        with open(os.path.join(self.simulation_path, 'objective_values.csv'), 'w') as obj_val:   
+            obj_val.write(f'min,objective_value') 
             for sol in self.solutions:
                 index = self.solutions.index(sol)
-                time = times[index]
-                obj_val.write(f'{time}: {sol.objective_value}')              
+                time = re.sub('(\smin)', '', times[index])
+                obj_val.write(f'\n{time},{sol.objective_value}')              
         
         # export the parameters
         parameters = {'parameter':[], 'value':[]}
@@ -364,3 +453,10 @@ class dFBA():
             
         parameters_table = pandas.DataFrame(parameters)
         parameters_table.to_csv(os.path.join(self.simulation_path, 'parameters.csv'))
+        
+        # export the figure
+        self.figure.savefig(os.path.join(self.simulation_path, 'changed_concentrations.svg'))
+        if self.verbose:
+            if not self.jupyter:
+                self.figure.show()
+                
