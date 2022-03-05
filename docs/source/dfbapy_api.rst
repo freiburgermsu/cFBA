@@ -1,9 +1,9 @@
 dFBApy API
 --------------
 
-
++++++++
 dFBA()
------------
++++++++
 
 The simulation environment is defined:
 
