@@ -23,9 +23,6 @@ ________________________________________________________________________
 Reaction kinetics data can be parameterized and simulated in a genome-scale metabolic model (GEM) through dynamic Flux Balance Analysis (FBA). The ``dFBApy`` module supports this method of computational biology through concise and efficient functionality around `COBRApy <https://cobrapy.readthedocs.io/en/latest/>`_ , which is detailed in the following sections. Examples Notebook are available in the examples directory of the `dFBApy GitHub repository <https://github.com/freiburgermsu/dfbapy>`_. Please submit errors, inquiries, or suggestions as `GitHub issues <https://github.com/freiburgermsu/dfbapy/issues>`_ where they can be addressed.
 
 
-____________
-
-
 ----------------------
 Installation
 ----------------------
@@ -33,6 +30,11 @@ Installation
 dFBApy is installed in a command prompt, Powershell, Terminal, or Anaconda Command Prompt via ``pip``::
 
  pip install dfbapy
+   
+   
+Contents
+--------
 
+.. toctree::
 
-The full documentation is available on `ReadTheDocs <https://dfbapy.readthedocs.io/en/latest/>`_.
+   dfbapy_api
