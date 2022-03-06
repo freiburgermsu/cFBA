@@ -55,7 +55,7 @@ def average(num_1, num_2 = None):
 class dFBA():
     def __init__(self, 
                  bigg_model_path: str, 
-                 solver: str = 'cplex',
+                 solver: str = 'glpk',
                  verbose: bool = False,
                  printing: bool = False,
                  jupyter: bool = False

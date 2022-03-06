@@ -24,7 +24,7 @@ bigg_model_path = os.path.join(os.path.dirname(__file__),'iSB619.xml')
 kinetics_path = os.path.join(os.path.dirname(__file__),'model_kinetics.json')
 
 def test_init():
-    dfba = dfbapy.dFBA(bigg_model_path)
+    dfba = dfbapy.dFBA(bigg_model_path, 'glpk')
     
     # assert qualities of the content
     for dic in [
