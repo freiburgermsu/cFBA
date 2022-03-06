@@ -5,21 +5,18 @@ Created on Sat Mar  5 12:03:59 2022
 @author: Andrew Freiburger
 """
 import matplotlib, pandas
+import shutil
 import dfbapy
 import os
 
 def isnumber(string):
     try:
         float(string)
-        remainder = re.sub('([0-9.-eE]+)', '', str(string))
-        if remainder == '':
-            return True
+        return True
     except:
         try:
             int(string)
-            remainder = re.sub('[0-9.-eE]+)', '', str(string))
-            if remainder == '':
-                return True
+            return True
         except:
             return False
 
@@ -48,8 +45,8 @@ def test_init():
         
 def test_simulate():
     # load the model
-    dfba = dfbapy.dFBA(bigg_model_path)
-    dfba.simulate(kinetics_path)
+    dfba = dfbapy.dFBA(bigg_model_path, 'glpk')
+    dfba.simulate(kinetics_path, export_name = 'test_dfba')
     
     # assert qualities of the simulation
     for dic in [dfba.kinetics_data,dfba.defined_reactions]:
@@ -71,6 +68,9 @@ def test_simulate():
             ]:
         assert isnumber(quant)
     for fig in [dfba.figure]:
-        assert type(dfba.figure) is matplotlib.pyplot
+        assert type(dfba.figure) is matplotlib.figure.Figure
     for st in [dfba.changed,dfba.unchanged]:
         assert type(st) is set
+        
+    assert os.path.exists(os.path.join(os.getcwd(), 'test_dfba'))
+    shutil.rmtree(dfba.simulation_path)

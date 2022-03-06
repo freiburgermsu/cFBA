@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 # import statements
-from scipy.constants import micro, milli, nano, hour, minute, femto
+from scipy.constants import milli, hour, minute, femto
 from matplotlib import pyplot
 from pprint import pprint
 from datetime import date
 from sigfig import round
-from numpy import nan, diff, nan, log10
+from numpy import log10, nan
 from math import inf 
 import cobra
 import pandas
@@ -17,13 +17,13 @@ import warnings, json, re, os
 def isnumber(string):
     try:
         float(string)
-        remainder = re.sub('([0-9.-eE]+)', '', str(string))
+        remainder = re.sub('([0-9.-eE])', '', str(string))
         if remainder == '':
             return True
     except:
         try:
             int(string)
-            remainder = re.sub('[0-9.-eE]+)', '', str(string))
+            remainder = re.sub('[0-9.-eE])', '', str(string))
             if remainder == '':
                 return True
         except:
@@ -54,16 +54,18 @@ def average(num_1, num_2 = None):
 # define chemical concentrations
 class dFBA():
     def __init__(self, 
-                 bigg_model_path,    # BiGG model
-                 verbose = False,
-                 printing = False,
-                 jupyter = False
+                 bigg_model_path: str, 
+                 solver: str = 'cplex',
+                 verbose: bool = False,
+                 printing: bool = False,
+                 jupyter: bool = False
                  ):
         
         # define object content
         self.bigg_metabolites_ids = json.load(open(os.path.join(os.path.dirname(__file__), 'BiGG_metabolites, parsed.json')))
         self.bigg_metabolites_names = json.load(open(os.path.join(os.path.dirname(__file__), 'BiGG_metabolite_names, parsed.json')))
         self.model = cobra.io.read_sbml_model(bigg_model_path)
+        self.model.solver = solver
         self.verbose = verbose
         self.printing = printing
         self.jupyter = jupyter        
@@ -80,10 +82,10 @@ class dFBA():
         self.model_ids = []
         self.model_names = []
         for met in self.model.metabolites:
+            met_id = re.sub('(_.$)','',met.id)
+            self.model_ids.append(met_id)
             self.model_names.append(met.name)
-            met = re.sub('(_.$)','',met.id)
-            self.model_ids.append(met)
-            
+                
         # define a time-series value for each metabolite in the model
         for metabolite in self.model.metabolites:
             self.variables['time_series'][metabolite.name] = []
@@ -128,8 +130,14 @@ class dFBA():
                                     self.kinetics_data[enzyme][condition]['variables_name'][var]
                                     ]['id']
                         if bigg_id in self.model_ids:
+                            name = self.kinetics_data[enzyme][condition]['variables_name'][var]
+                            if name not in self.model_names:
+                                for model_name in self.model_names:
+                                    if re.search(f'^{name} ', model_name):
+                                        name = re.search(f'(^{name} .+)', model_name).group()
+                                        break
                             self.concentrations.at[
-                                    self.kinetics_data[enzyme][condition]['variables_name'][var], self.col
+                                    name, self.col
                                     ] = self.kinetics_data[enzyme][condition]['initial_concentrations_M'][var]/milli
                         else:
                             print(f"The {self.kinetics_data[enzyme][condition]['variables_name'][var]} metabolite is not in the BiGG model")
@@ -140,7 +148,7 @@ class dFBA():
             for met in self.model_names:
                 if met in initial_concentrations:
                     self.concentrations.at[met, self.col] = initial_concentrations[met]
-        
+                    
     def _find_data_match(self,enzyme, source):        
         # define the closest match of the data to the parameterized conditions
         if isnumber(self.kinetics_data[enzyme][source]['metadata']["Temperature"]):
@@ -273,7 +281,6 @@ class dFBA():
         self.previous_col = f'{(self.timestep-1)*self.timestep_value} min'
         self.concentrations[self.col] = [float(0) for ind in self.conc_indices]
         self.fluxes[self.col] = [nan for ind in self.flux_indices]
-#        print('timestep', self.timestep)
         
     def _visualize(self,figure_title,included_metabolites,labeled_plots):
         legend_list = []
@@ -291,7 +298,7 @@ class dFBA():
         if included_metabolites == []:
             bbox = (1.7,1)
             for chem in self.changed:
-                concentrations = self.concentrations.loc[[chem]].values[0].to_list()
+                concentrations = self.concentrations.loc[[chem]].values[0].tolist()
                 if max([x for x in concentrations]) > 1e-2:
                     included_metabolites.append(chem)
         
@@ -300,9 +307,7 @@ class dFBA():
         maximum = -inf
         for chem in self.changed:
             if chem in included_metabolites:
-                concentrations = self.concentrations.loc[[chem]].values
-                for row in concentrations:
-                    concentrations = row.tolist()
+                concentrations = self.concentrations.loc[[chem]].values[0].tolist()
                 max_conc = max([x if x > 1e-9 else 0 for x in concentrations])
                 maximum = max(maximum, max_conc)
                 min_conc = min([x if x > 1e-9 else 0 for x in concentrations])
@@ -316,9 +321,7 @@ class dFBA():
         printed_concentrations = {}
         for chem in self.changed:
             if chem in included_metabolites:
-                concentrations = self.concentrations.loc[[chem]].values
-                for row in concentrations:
-                    concentrations = row.tolist()
+                concentrations = self.concentrations.loc[[chem]].values[0].tolist()
                 
                 relative = False
                 if concentrations[0] < 1e-9:

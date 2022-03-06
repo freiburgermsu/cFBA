@@ -1,0 +1,26 @@
+name: Test dFBApy
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Python 3
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+      - name: Install Pip, pytest, codons
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+          pip install dfbapy
+          pip show dfbapy
+      - name: Run tests
+        run: python -m pytest test\test_dfbapy.py
