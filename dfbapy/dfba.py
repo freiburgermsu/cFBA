@@ -59,9 +59,9 @@ class dFBA():
                  verbose: bool = False, printing: bool = False, jupyter: bool = False
                  ):
         # define bigg dictionaries
-        with open(os.path.join(os.path.dirname(__file__), '..', 'data', 'BiGG_metabolites, parsed.json')) as parsed_metabolites:
+        with open(os.path.join(os.path.dirname(__file__), 'BiGG_metabolites, parsed.json')) as parsed_metabolites:
             self.bigg_metabolites_ids = json.load(parsed_metabolites)
-        with open(os.path.join(os.path.dirname(__file__), '..', 'data', 'BiGG_metabolite_names, parsed.json')) as parsed_met_names:
+        with open(os.path.join(os.path.dirname(__file__), 'BiGG_metabolite_names, parsed.json')) as parsed_met_names:
             self.bigg_metabolites_names = json.load(parsed_met_names)
             
         # define simulation conditions
