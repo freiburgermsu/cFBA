@@ -12,9 +12,9 @@ setup(
 	'dfbapy':['*'],
     'test': ['*']
   },
-  version = '0.0.3',
+  version = '0.0.4',
   license = 'MIT',
-  description = "Simulates dynamic Flux Balance Analysis (dFBA) of a BiGG-formatted XML model and with kinetics data in the format of the BiGG-SABIO module.", 
+  description = "Simulate dynamic Flux Balance Analysis (dFBA) of BiGG models, with compatibility to the BiGG-SABIO module.", 
   long_description = readme,
   author = 'Andrew Freiburger',               
   author_email = 'andrewfreiburger@gmail.com',

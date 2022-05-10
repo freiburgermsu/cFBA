@@ -1,7 +1,11 @@
 Dynamic Flux Balance Analysis in Python, with parsed kinetics data
 ________________________________________________________________________
 
-|PyPI version| |Downloads| |License|
+|PyPI version| |docs| |Downloads| |Actions Status| |License|
+
+.. |docs| image:: https://readthedocs.org/projects/rosspy/badge/?version=latest
+   :target: https://rosspy.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
 
 .. |PyPI version| image:: https://img.shields.io/pypi/v/dfbapy.svg?logo=PyPI&logoColor=brightgreen
    :target: https://pypi.org/project/dfbapy/
